@@ -34,7 +34,7 @@
     { threshold: 0.4 }
   );
 
-  document.querySelectorAll(".trust-metrics strong").forEach(function (el) {
+  document.querySelectorAll(".trust-metrics strong, .about-stats strong").forEach(function (el) {
     observer.observe(el);
   });
 })();
