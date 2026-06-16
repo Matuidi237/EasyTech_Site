@@ -69,6 +69,7 @@
     ]
   },
   "services": {
+    "eyebrow": "Notre expertise",
     "title": "Notre expertise Moodle, à votre service",
     "subtitle": "De la conception au support quotidien, nous prenons en charge l'ensemble du cycle de vie de votre plateforme de formation.",
     "cards": [
