@@ -8,9 +8,9 @@
     "cta": "Request a demo"
   },
   "hero": {
-    "trustBar": "Already trusted by incubators, consulting firms and training centers in Cameroon",
-    "title": "Give your organization a training platform worthy of its ambitions",
-    "subtitle": "ThinkTech Solutions designs, deploys and supports secure Moodle platforms, accessible on smartphone, tablet and computer so every university, company or organization can train without limits, wherever their learners are.",
+    "trustBar": "Partner to incubators, consulting firms and training centers in Cameroon",
+    "title": "The online training platform worthy of your ambitions",
+    "subtitle": "ThinkTech Solutions designs and deploys your custom Moodle platforms. Give your learners simple, secure access on every device, so you can train without limits, anywhere.",
     "ctaPrimary": "Request a demo",
     "ctaSecondary": "Discover our services",
     "heroImageAlt": "Learner using a training platform on a smartphone",
@@ -26,19 +26,19 @@
     "platforms": [
       {
         "name": "Bouka Creativ' Learning",
-        "description": "In partnership with Boukarou incubator: training 42,000 young people across Cameroon's 10 regions.",
+        "description": "In partnership with the Boukarou incubator, we designed this platform to support the upskilling of 42,000 young people across Cameroon's 10 regions, fostering digital inclusion and access to quality training.",
         "image": "/images/platforms/bouka-creativ-home.png",
         "url": "https://boukacreativ-learning.com/"
       },
       {
         "name": "Training To Rise",
-        "description": "With Cabinet Audit & Conseil MAXIMMACS: certified training in Management, Tax, Audit, Accounting and AI.",
+        "description": "In collaboration with the audit and consulting firm MAXIMMACS, we deployed an LMS dedicated to certified training. This solution structures and digitizes learning in strategic fields such as management, tax, audit, accounting and artificial intelligence.",
         "image": "/images/platforms/training-to-rise-home.png",
         "url": null
       },
       {
-        "name": "Online training platform",
-        "description": "Deployed for German language training centers, operational and ready to onboard learners.",
+        "name": "Erfolg Zentrum Online",
+        "description": "We designed and launched this platform for a training center based in Germany. Fully operational, it offers a smooth, intuitive learning experience, ready to welcome learners from their very first login.",
         "image": "/images/platforms/plateforme-allemand-home.png",
         "url": "https://test.thinktech-academy.com/"
       }

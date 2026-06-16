@@ -8,9 +8,9 @@
     "cta": "Demander une démo"
   },
   "hero": {
-    "trustBar": "Déjà aux côtés d'incubateurs, cabinets de conseil et centres de formation au Cameroun",
-    "title": "Donnez à votre organisation une plateforme de formation digne de ses ambitions",
-    "subtitle": "ThinkTech Solutions conçoit, déploie et accompagne des plateformes Moodle sécurisées, accessibles sur smartphone, tablette et ordinateur pour que chaque université, entreprise ou organisation puisse former sans limites, où que ses apprenants se trouvent.",
+    "trustBar": "Partenaire des incubateurs, cabinets de conseil et centres de formation au Cameroun",
+    "title": "La plateforme de formation en ligne à la hauteur de vos ambitions",
+    "subtitle": "ThinkTech Solutions conçoit et déploie vos plateformes Moodle sur-mesure. Offrez à vos apprenants un accès simple et sécurisé, sur tous vos supports, pour former sans limites et partout.",
     "ctaPrimary": "Demander une démo",
     "ctaSecondary": "Découvrir nos services",
     "heroImageAlt": "Apprenant utilisant une plateforme de formation sur smartphone",
@@ -26,19 +26,19 @@
     "platforms": [
       {
         "name": "Bouka Creativ' Learning",
-        "description": "En partenariat avec l'incubateur Boukarou : former 42 000 jeunes dans les 10 régions du Cameroun.",
+        "description": "En partenariat avec l'incubateur Boukarou, nous avons conçu cette plateforme pour accompagner la montée en compétences de 42 000 jeunes à travers les 10 régions du Cameroun, favorisant ainsi l'inclusion numérique et l'accès à une formation de qualité.",
         "image": "/images/platforms/bouka-creativ-home.png",
         "url": "https://boukacreativ-learning.com/"
       },
       {
         "name": "Training To Rise",
-        "description": "Avec le Cabinet Audit & Conseil MAXIMMACS : formations certifiantes en Management, Fiscalité, Audit, Comptabilité et IA.",
+        "description": "En collaboration avec le cabinet d'audit et de conseil MAXIMMACS, nous avons déployé un LMS dédié aux formations certifiantes. Cette solution structure et digitalise l'apprentissage dans des domaines stratégiques tels que le management, la fiscalité, l'audit, la comptabilité et l'intelligence artificielle.",
         "image": "/images/platforms/training-to-rise-home.png",
         "url": null
       },
       {
-        "name": "Plateforme de formation en ligne",
-        "description": "Déployée pour des centres de formation en allemand, opérationnelle et prête à accueillir les apprenants.",
+        "name": "Erfolg Zentrum Online",
+        "description": "Nous avons conçu et mis en service cette plateforme pour un centre de formation basé en Allemagne. Entièrement opérationnelle, elle offre une expérience d'apprentissage fluide et intuitive, prête à accueillir les apprenants dès leur première connexion.",
         "image": "/images/platforms/plateforme-allemand-home.png",
         "url": "https://test.thinktech-academy.com/"
       }
