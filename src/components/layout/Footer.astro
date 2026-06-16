@@ -1,0 +1,130 @@
+---
+import type { Lang } from "../../i18n/utils";
+import { useTranslations } from "../../i18n/utils";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const socials = [
+  {
+    name: "LinkedIn",
+    href: "#",
+    path: "M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"
+  },
+  {
+    name: "Facebook",
+    href: "#",
+    path: "M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.84c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.43-4.94 8.43-9.94Z"
+  },
+  {
+    name: "TikTok",
+    href: "#",
+    path: "M16.6 5.82a4.4 4.4 0 0 1-2.85-1.05V14.5a5.2 5.2 0 1 1-4.46-5.15v2.5a2.7 2.7 0 1 0 1.9 2.58V2h2.45a4.4 4.4 0 0 0 3.91 4.36v2.46a6.9 6.9 0 0 1-.95-.07v-2.93Z"
+  },
+  {
+    name: "Instagram",
+    href: "#",
+    path: "M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.24.64.41 1.37.46 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.43-.26.66-.6 1.21-1.15 1.76-.55.55-1.1.9-1.76 1.15-.64.24-1.37.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.24-.64-.41-1.37-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.43 2.54c.64-.24 1.37-.41 2.43-.46C8.94 2.01 9.28 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.05-9.45a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"
+  }
+];
+---
+
+<footer class="site-footer" role="contentinfo">
+  <div class="circle-deco circle-fill footer-circle-1" aria-hidden="true"></div>
+  <div class="circle-deco footer-circle-2" aria-hidden="true"></div>
+
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href={`/${lang}/`} class="footer-logo">
+        <img src="/images/brand/logo-white.png" alt="ThinkTech Solutions" width="54" height="54" />
+        <span>ThinkTech<small>Solutions</small></span>
+      </a>
+      <p>{t.footer.tagline}</p>
+      <ul class="social-links">
+        {socials.map((s) => (
+          <li>
+            <a href={s.href} aria-label={s.name}>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d={s.path} /></svg>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>{t.footer.navTitle}</h4>
+      <ul>
+        <li><a href={`/${lang}/`}>{t.nav.home}</a></li>
+        <li><a href={`/${lang}/about`}>{t.nav.about}</a></li>
+        <li><a href={`/${lang}/services`}>{t.nav.services}</a></li>
+        <li><a href={`/${lang}/contact`}>{t.nav.contact}</a></li>
+        <li><a href={`/${lang}/actualites`}>{t.nav.news}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>{t.footer.contactTitle}</h4>
+      <address>
+        <a href="mailto:contact@thinktech-solutions.com">contact@thinktech-solutions.com</a>
+        <a href="tel:+237689357969">+237 689 35 79 69</a>
+        <span>Douala, Cameroun</span>
+      </address>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span><a href="#">{t.footer.legal}</a> · <a href="#">{t.footer.privacy}</a></span>
+    <span>{t.footer.copyright}</span>
+  </div>
+</footer>
+
+<style>
+  .site-footer { position: relative; overflow: hidden; padding: 4rem 0 1.5rem; margin-top: 2rem; }
+  .footer-circle-1 { top: -80px; left: -60px; width: 220px; height: 220px; color: #fff; opacity: 0.06; }
+  .footer-circle-2 { bottom: -60px; right: 6%; width: 170px; height: 170px; color: #fff; opacity: 0.1; }
+
+  .footer-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 3rem; align-items: start; }
+
+  .footer-brand { padding-right: 1rem; }
+  .footer-logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+  .footer-logo img { width: 54px; height: 54px; }
+  .footer-logo span { font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1.1; }
+  .footer-logo small { display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 0.15rem; }
+  .footer-brand p { max-width: 280px; margin-bottom: 1.5rem; }
+
+  .social-links { display: flex; gap: 0.65rem; list-style: none; }
+  .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .social-links a:hover { background: var(--color-accent); transform: translateY(-2px); }
+
+  .footer-col h4 { color: #fff; margin-bottom: 1.1rem; font-size: 1rem; position: relative; padding-bottom: 0.6rem; }
+  .footer-col h4::after { content: ""; position: absolute; left: 0; bottom: 0; width: 28px; height: 2px; background: var(--color-accent-light); }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+  .footer-col a, .footer-col address, .footer-brand p { color: rgba(255,255,255,0.7); }
+  .footer-col a:hover { color: #fff; }
+  .footer-col address { display: flex; flex-direction: column; gap: 0.65rem; font-style: normal; }
+
+  .footer-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+  .footer-bottom a { color: rgba(255,255,255,0.55); }
+  .footer-bottom a:hover { color: #fff; }
+
+  @media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 560px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; }
+  }
+</style>

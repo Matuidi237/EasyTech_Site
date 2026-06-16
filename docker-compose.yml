@@ -1,0 +1,13 @@
+services:
+  thinktech-site:
+    build: .
+    container_name: thinktech-site
+    restart: unless-stopped
+    networks:
+      - npm_network
+    env_file:
+      - .env
+
+networks:
+  npm_network:
+    external: true

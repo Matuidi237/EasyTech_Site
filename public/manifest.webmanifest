@@ -1,0 +1,12 @@
+{
+  "name": "ThinkTech Solutions",
+  "short_name": "ThinkTech",
+  "description": "Plateformes de formation Moodle pour l'Afrique",
+  "start_url": "/fr/",
+  "display": "standalone",
+  "background_color": "#FAFAFC",
+  "theme_color": "#022179",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

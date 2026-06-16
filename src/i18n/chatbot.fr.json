@@ -1,0 +1,13 @@
+{
+  "greeting": "👋 Bonjour ! Je suis l'assistant ThinkTech. Choisissez un sujet ou posez votre question.",
+  "fallback": "Je n'ai pas bien compris votre question. Voici les sujets sur lesquels je peux vous aider :",
+  "inputPlaceholder": "Écrivez votre question...",
+  "topics": [
+    { "id": "delai", "label": "Délai de déploiement", "keywords": ["délai", "temps", "rapide", "combien de temps"], "answer": "Selon la complexité de votre projet, une plateforme peut être opérationnelle entre 2 et 6 semaines." },
+    { "id": "mobile", "label": "Compatibilité mobile", "keywords": ["mobile", "smartphone", "tablette", "téléphone"], "answer": "Oui, toutes nos plateformes sont conçues mobile-first, avec une faible consommation de données." },
+    { "id": "securite", "label": "Sécurité des données", "keywords": ["sécurité", "données", "protection", "rgpd"], "answer": "Vos données sont protégées : hébergement sécurisé, HTTPS, sauvegardes régulières et gestion stricte des accès." },
+    { "id": "tarifs", "label": "Tarifs", "keywords": ["prix", "tarif", "coût", "combien ça coûte"], "answer": "Chaque projet est unique : le tarif dépend du nombre d'apprenants et des fonctionnalités souhaitées. Réservez une démo gratuite pour recevoir un devis adapté." },
+    { "id": "integration", "label": "Intégration d'outils tiers", "keywords": ["intégration", "api", "outils", "tiers"], "answer": "Oui, nous pouvons connecter votre plateforme à vos outils existants (paiement, RH, visioconférence...)." },
+    { "id": "humain", "label": "Parler à un humain", "keywords": ["humain", "conseiller", "appeler", "rendez-vous"], "answer": "Avec plaisir ! Cliquez ci-dessous pour réserver une démonstration avec notre équipe.", "cta": { "label": "Demander une démo", "href": "#contact" } }
+  ]
+}

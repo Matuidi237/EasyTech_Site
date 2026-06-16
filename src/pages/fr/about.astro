@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import About from "../../components/sections/About.astro";
+import ChatbotWidget from "../../components/chatbot/ChatbotWidget.astro";
+
+const lang = "fr";
+---
+
+<BaseLayout
+  lang={lang}
+  title="À propos ThinkTech Solutions"
+  description="Depuis 2024 à Douala, ThinkTech Solutions accompagne universités, entreprises et ONG dans le déploiement de plateformes de formation Moodle en Afrique."
+>
+  <Header lang={lang} />
+  <main id="main-content">
+    <About lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ChatbotWidget lang={lang} />
+</BaseLayout>

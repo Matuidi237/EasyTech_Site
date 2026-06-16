@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import Services from "../../components/sections/Services.astro";
+import ChatbotWidget from "../../components/chatbot/ChatbotWidget.astro";
+
+const lang = "en";
+---
+
+<BaseLayout
+  lang={lang}
+  title="Our services ThinkTech Solutions"
+  description="Deployment, secure hosting, customization, integrations and support of Moodle platforms: discover ThinkTech Solutions' full range of expertise."
+>
+  <Header lang={lang} />
+  <main id="main-content">
+    <Services lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ChatbotWidget lang={lang} />
+</BaseLayout>

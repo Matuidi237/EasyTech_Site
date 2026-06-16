@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "news": "News",
+    "cta": "Request a demo"
+  },
+  "hero": {
+    "trustBar": "Already trusted by incubators, consulting firms and training centers in Cameroon",
+    "title": "Give your organization a training platform worthy of its ambitions",
+    "subtitle": "ThinkTech Solutions designs, deploys and supports secure Moodle platforms, accessible on smartphone, tablet and computer so every university, company or organization can train without limits, wherever their learners are.",
+    "ctaPrimary": "Request a demo",
+    "ctaSecondary": "Discover our services",
+    "heroImageAlt": "Learner using a training platform on a smartphone",
+    "platformsTitle": "Platforms we have designed and deployed",
+    "comingSoon": "Link coming soon",
+    "partnersTitle": "They trust us",
+    "metrics": [
+      { "value": "2024", "label": "Year founded" },
+      { "value": "5", "label": "Dedicated experts" },
+      { "value": "42,000", "label": "Youth targeted (ongoing program)" },
+      { "value": "100%", "label": "Support in French and English" }
+    ],
+    "platforms": [
+      {
+        "name": "Bouka Creativ' Learning",
+        "description": "In partnership with Boukarou incubator: training 42,000 young people across Cameroon's 10 regions.",
+        "image": "/images/platforms/bouka-creativ-home.png",
+        "url": "https://boukacreativ-learning.com/"
+      },
+      {
+        "name": "Training To Rise",
+        "description": "With Cabinet Audit & Conseil MAXIMMACS: certified training in Management, Tax, Audit, Accounting and AI.",
+        "image": "/images/platforms/training-to-rise-home.png",
+        "url": null
+      },
+      {
+        "name": "Online training platform",
+        "description": "Deployed for German language training centers, operational and ready to onboard learners.",
+        "image": "/images/platforms/plateforme-allemand-home.png",
+        "url": "https://test.thinktech-academy.com/"
+      }
+    ],
+    "partners": [
+      { "name": "Boukarou", "logo": "/images/partners/boukarou-logo.jpeg" },
+      { "name": "Cabinet Audit & Conseil MAXIMMACS", "logo": "/images/partners/maximmacs-logo.png" },
+      { "name": "German training centers", "logo": "/images/partners/centres-allemand-logo.jpg" },
+      { "name": "Erfolg Zentrum", "logo": "/images/partners/erfolg-zentrum-logo.png" },
+      { "name": "Institut Français", "logo": "/images/partners/institut-francais-logo.png" },
+      { "name": "Lasalle", "logo": "/images/partners/lasalle-logo.png" }
+    ]
+  },
+  "about": {
+    "title": "Who we are",
+    "intro": "Founded in 2024 in Douala, ThinkTech Solutions was born from a simple conviction: training quality is one of the most powerful levers to build a better nation. Our team of 5 experts now supports universities, companies, NGOs and training centers across Cameroon in building high-performing, secure online learning platforms adapted to African realities.",
+    "intro2": "Led by Ignace MBOM ELOUGA, CEO and founder, ThinkTech Solutions puts accessibility and human support at the heart of every project.",
+    "teamImageAlt": "ThinkTech Solutions team",
+    "mission": { "title": "Mission", "text": "Make training accessible to everyone, everywhere." },
+    "visionMid": { "title": "Mid-term vision", "text": "Help young Africans embrace digital learning." },
+    "visionLong": { "title": "Long-term vision", "text": "Train a generation skilled and equipped for today's challenges." },
+    "valuesTitle": "Our values",
+    "values": [
+      { "icon": "lightbulb", "title": "Innovation", "text": "We constantly explore new ways to make training more engaging and effective." },
+      { "icon": "handshake", "title": "Closeness", "text": "We stay attentive to each organization, with human support at every step." },
+      { "icon": "shield", "title": "Security", "text": "Your data and your learners' data are protected to the highest standards." },
+      { "icon": "award", "title": "Excellence", "text": "We aim for quality in every deployment, every line of code, every interaction." }
+    ]
+  },
+  "services": {
+    "title": "Our Moodle expertise, at your service",
+    "subtitle": "From design to daily support, we handle the entire lifecycle of your training platform.",
+    "cards": [
+      { "icon": "rocket", "title": "Moodle platform deployment", "benefit": "An operational platform quickly, configured to your needs.", "points": ["Custom installation and setup", "Course space structuring", "Guided go-live"] },
+      { "icon": "server", "title": "Secure hosting", "benefit": "Constant availability and protected data.", "points": ["Reliable, monitored hosting", "Regular backups", "HTTPS certificate"] },
+      { "icon": "palette", "title": "Visual and functional customization", "benefit": "A platform that reflects your brand.", "points": ["Branding to your guidelines", "Specific feature additions", "Adapted learning paths"] },
+      { "icon": "plug", "title": "Third-party system integration", "benefit": "A platform connected to your existing tools.", "points": ["HR or payment tool connections", "User directory synchronization", "Custom APIs and integrations"] },
+      { "icon": "graduation-cap", "title": "Admin and trainer training", "benefit": "A self-sufficient team in the long run.", "points": ["Guided interface onboarding", "Online teaching best practices", "Documentation provided"] },
+      { "icon": "headset", "title": "Technical support and maintenance", "benefit": "Lasting peace of mind.", "points": ["Ongoing technical assistance", "Security updates", "Proactive performance monitoring"] }
+    ],
+    "whyTitle": "Why choose ThinkTech Solutions?",
+    "why": [
+      { "title": "African context expertise", "text": "We design every platform with local realities in mind." },
+      { "title": "Mobile optimization", "text": "Our platforms are designed mobile-first." },
+      { "title": "Low data consumption", "text": "Lightweight, fast platforms, even on limited connections." },
+      { "title": "Enhanced security", "text": "Protection of data, access and content." },
+      { "title": "End-to-end support", "text": "From needs analysis to daily support." },
+      { "title": "Responsive support", "text": "A team available and attentive." }
+    ],
+    "processTitle": "Our 4-step process",
+    "process": [
+      { "title": "Needs analysis", "text": "We discuss your goals and constraints with you." },
+      { "title": "Deployment", "text": "We configure and launch your platform." },
+      { "title": "Training", "text": "We train your administrators and trainers." },
+      { "title": "Ongoing support", "text": "We stay available for support and updates." }
+    ],
+    "cta": "Request a demo"
+  },
+  "contact": {
+    "title": "Ready to transform your training?",
+    "subtitle": "Let's talk about your project. In under 30 minutes, we'll show you how a well-designed Moodle platform can simplify your training management with no commitment.",
+    "form": {
+      "name": "Full name",
+      "organization": "Organization",
+      "email": "Email address",
+      "phone": "Phone number",
+      "orgType": "Organization type",
+      "orgTypeOptions": ["University / School", "Training center", "Company", "NGO", "Public institution", "Other"],
+      "need": "Your needs",
+      "needPlaceholder": "Describe your project: estimated number of learners, type of training, desired timeline...",
+      "submit": "Book a demo",
+      "success": "✅ Thank you! Your request has been received. Our team will contact you within 24-48 business hours. Meanwhile, check our FAQ or email us at contact@thinktech-solutions.com.",
+      "error": "An error occurred while sending. Please try again or email us directly at contact@thinktech-solutions.com."
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      { "q": "How long does it take to deploy a Moodle platform?", "a": "Depending on project complexity, a platform can be operational within 2 to 6 weeks." },
+      { "q": "Does the platform work on smartphones?", "a": "Yes, all our platforms are mobile-first, with low data consumption." },
+      { "q": "Can third-party tools be integrated?", "a": "Yes, we can connect your platform to existing tools (payment, HR, video conferencing...)." },
+      { "q": "Do you offer maintenance and support?", "a": "Yes, we support every client after launch with responsive technical support." },
+      { "q": "Is data secure?", "a": "Yes: protected hosting, HTTPS, regular backups and strict access management." }
+    ],
+    "ctaText": "Another question?",
+    "cta": "Request a demo"
+  },
+  "footer": {
+    "tagline": "Committed to educational excellence in Africa, we design and deploy online training platforms tailored to real needs on the ground.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "socialTitle": "Follow us",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "copyright": "© 2026 ThinkTech Solutions SARL. All rights reserved."
+  },
+  "theme": { "toggleLight": "Switch to light mode", "toggleDark": "Switch to dark mode" }
+}

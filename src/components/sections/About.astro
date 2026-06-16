@@ -1,0 +1,68 @@
+---
+import type { Lang } from "../../i18n/utils";
+import { useTranslations, highlightBrand } from "../../i18n/utils";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="about" class="about" aria-labelledby="about-title">
+  <div class="container">
+    <p class="eyebrow">Depuis 2024 à Douala</p>
+    <h2 id="about-title">{t.about.title}</h2>
+
+    <div class="about-content reveal">
+      <div class="about-text">
+        <p set:html={highlightBrand(t.about.intro)} />
+        <p set:html={highlightBrand(t.about.intro2)} />
+      </div>
+      <figure>
+        <img src="/images/about/team-placeholder.svg" alt={t.about.teamImageAlt} width="480" height="360" loading="lazy" />
+      </figure>
+    </div>
+
+    <div class="about-pillars">
+      <article><span class="pillar-label">{t.about.mission.title}</span><p>{t.about.mission.text}</p></article>
+      <article><span class="pillar-label">{t.about.visionMid.title}</span><p>{t.about.visionMid.text}</p></article>
+      <article><span class="pillar-label">{t.about.visionLong.title}</span><p>{t.about.visionLong.text}</p></article>
+    </div>
+
+    <h3 class="values-title">{t.about.valuesTitle}</h3>
+    <ul class="values-grid">
+      {t.about.values.map((v: any, i: number) => (
+        <li class="value-item">
+          <span class="value-num">{String(i + 1).padStart(2, "0")}</span>
+          <h4>{v.title}</h4>
+          <p>{v.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .about-content { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3.5rem; }
+  .about-text p { font-size: 1.05rem; }
+  .about-text p + p { margin-top: 1rem; }
+  .about-content img { border-radius: 4px; width: 100%; }
+
+  .about-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-bottom: 4rem; border-top: 1px solid var(--color-border); }
+  .about-pillars article { padding: 1.75rem 1.5rem 0; border-left: 1px solid var(--color-border); }
+  .about-pillars article:first-child { border-left: none; }
+  .pillar-label { display: block; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-accent); }
+
+  .values-title { margin-bottom: 1.5rem; }
+  .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; list-style: none; border-top: 1px solid var(--color-border); }
+  .value-item { padding: 1.75rem 1.5rem 0; border-left: 1px solid var(--color-border); }
+  .value-item:first-child { border-left: none; }
+  .value-num { color: var(--color-text-secondary); font-size: 0.9rem; opacity: 0.6; }
+  .value-item h4 { margin: 0.5rem 0 0.4rem; }
+
+  @media (max-width: 900px) {
+    .about-content { grid-template-columns: 1fr; }
+    .about-pillars, .values-grid { grid-template-columns: 1fr; border-top: none; }
+    .about-pillars article, .value-item { border-left: none; border-top: 1px solid var(--color-border); padding: 1.5rem 0 0; }
+    .about-pillars article:first-child, .value-item:first-child { border-top: none; }
+  }
+</style>

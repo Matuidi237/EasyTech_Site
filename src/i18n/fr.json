@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "news": "Actualités",
+    "cta": "Demander une démo"
+  },
+  "hero": {
+    "trustBar": "Déjà aux côtés d'incubateurs, cabinets de conseil et centres de formation au Cameroun",
+    "title": "Donnez à votre organisation une plateforme de formation digne de ses ambitions",
+    "subtitle": "ThinkTech Solutions conçoit, déploie et accompagne des plateformes Moodle sécurisées, accessibles sur smartphone, tablette et ordinateur pour que chaque université, entreprise ou organisation puisse former sans limites, où que ses apprenants se trouvent.",
+    "ctaPrimary": "Demander une démo",
+    "ctaSecondary": "Découvrir nos services",
+    "heroImageAlt": "Apprenant utilisant une plateforme de formation sur smartphone",
+    "platformsTitle": "Des plateformes que nous avons conçues et déployées",
+    "comingSoon": "Lien bientôt disponible",
+    "partnersTitle": "Ils nous font confiance",
+    "metrics": [
+      { "value": "2024", "label": "Année de création" },
+      { "value": "5", "label": "Experts dédiés" },
+      { "value": "42 000", "label": "Jeunes visés (programme en cours)" },
+      { "value": "100%", "label": "Support en français et anglais" }
+    ],
+    "platforms": [
+      {
+        "name": "Bouka Creativ' Learning",
+        "description": "En partenariat avec l'incubateur Boukarou : former 42 000 jeunes dans les 10 régions du Cameroun.",
+        "image": "/images/platforms/bouka-creativ-home.png",
+        "url": "https://boukacreativ-learning.com/"
+      },
+      {
+        "name": "Training To Rise",
+        "description": "Avec le Cabinet Audit & Conseil MAXIMMACS : formations certifiantes en Management, Fiscalité, Audit, Comptabilité et IA.",
+        "image": "/images/platforms/training-to-rise-home.png",
+        "url": null
+      },
+      {
+        "name": "Plateforme de formation en ligne",
+        "description": "Déployée pour des centres de formation en allemand, opérationnelle et prête à accueillir les apprenants.",
+        "image": "/images/platforms/plateforme-allemand-home.png",
+        "url": "https://test.thinktech-academy.com/"
+      }
+    ],
+    "partners": [
+      { "name": "Boukarou", "logo": "/images/partners/boukarou-logo.jpeg" },
+      { "name": "Cabinet Audit & Conseil MAXIMMACS", "logo": "/images/partners/maximmacs-logo.png" },
+      { "name": "Centres de formation en allemand", "logo": "/images/partners/centres-allemand-logo.jpg" },
+      { "name": "Erfolg Zentrum", "logo": "/images/partners/erfolg-zentrum-logo.png" },
+      { "name": "Institut Français", "logo": "/images/partners/institut-francais-logo.png" },
+      { "name": "Lasalle", "logo": "/images/partners/lasalle-logo.png" }
+    ]
+  },
+  "about": {
+    "title": "Qui sommes-nous ?",
+    "intro": "Fondée en 2024 à Douala, ThinkTech Solutions est née d'une conviction simple : la qualité de la formation est l'un des leviers les plus puissants pour bâtir une nation meilleure. Notre équipe de 5 experts accompagne aujourd'hui des universités, entreprises, ONG et centres de formation à travers le Cameroun dans la création de plateformes d'apprentissage en ligne performantes, sécurisées et adaptées aux réalités africaines.",
+    "intro2": "Sous la direction d'Ignace MBOM ELOUGA, CEO et fondateur, ThinkTech Solutions place l'accessibilité et l'accompagnement humain au cœur de chaque projet.",
+    "teamImageAlt": "Équipe ThinkTech Solutions",
+    "mission": { "title": "Mission", "text": "Rendre la formation accessible à tous et pour tous." },
+    "visionMid": { "title": "Vision (moyen terme)", "text": "Familiariser durablement les jeunes africains à l'apprentissage grâce au numérique." },
+    "visionLong": { "title": "Vision (long terme)", "text": "Former une génération compétente et outillée pour relever les défis contemporains." },
+    "valuesTitle": "Nos valeurs",
+    "values": [
+      { "icon": "lightbulb", "title": "Innovation", "text": "Nous explorons sans cesse de nouvelles façons de rendre la formation plus engageante et plus efficace." },
+      { "icon": "handshake", "title": "Proximité", "text": "Nous restons à l'écoute de chaque organisation, avec un accompagnement humain à chaque étape." },
+      { "icon": "shield", "title": "Sécurité", "text": "Vos données et celles de vos apprenants sont protégées selon les meilleurs standards." },
+      { "icon": "award", "title": "Excellence", "text": "Nous visons la qualité dans chaque déploiement, chaque ligne de code, chaque interaction." }
+    ]
+  },
+  "services": {
+    "title": "Notre expertise Moodle, à votre service",
+    "subtitle": "De la conception au support quotidien, nous prenons en charge l'ensemble du cycle de vie de votre plateforme de formation.",
+    "cards": [
+      { "icon": "rocket", "title": "Déploiement de plateformes Moodle", "benefit": "Une plateforme opérationnelle rapidement, configurée selon vos besoins.", "points": ["Installation et configuration sur mesure", "Structuration des espaces de cours", "Mise en ligne accompagnée"] },
+      { "icon": "server", "title": "Hébergement sécurisé", "benefit": "Une disponibilité constante et des données protégées.", "points": ["Hébergement performant et surveillé", "Sauvegardes régulières", "Certificat HTTPS"] },
+      { "icon": "palette", "title": "Personnalisation graphique et fonctionnelle", "benefit": "Une plateforme qui porte votre image.", "points": ["Habillage selon votre charte graphique", "Ajout de fonctionnalités spécifiques", "Parcours pédagogiques adaptés"] },
+      { "icon": "plug", "title": "Intégration de systèmes tiers", "benefit": "Une plateforme connectée à vos outils existants.", "points": ["Connexion à vos outils RH ou de paiement", "Synchronisation des annuaires utilisateurs", "API et intégrations sur mesure"] },
+      { "icon": "graduation-cap", "title": "Formation des administrateurs et formateurs", "benefit": "Une équipe autonome sur la durée.", "points": ["Prise en main guidée de l'interface", "Bonnes pratiques pédagogiques en ligne", "Support documentaire fourni"] },
+      { "icon": "headset", "title": "Support technique et maintenance", "benefit": "Une tranquillité d'esprit durable.", "points": ["Assistance technique continue", "Mises à jour de sécurité", "Suivi proactif des performances"] }
+    ],
+    "whyTitle": "Pourquoi choisir ThinkTech Solutions ?",
+    "why": [
+      { "title": "Expertise du contexte africain", "text": "Nous concevons chaque plateforme en tenant compte des réalités locales." },
+      { "title": "Optimisation mobile", "text": "Nos plateformes sont pensées d'abord pour le smartphone." },
+      { "title": "Faible consommation de données", "text": "Des plateformes légères et rapides, même avec une connexion limitée." },
+      { "title": "Sécurité renforcée", "text": "Protection des données, des accès et des contenus." },
+      { "title": "Accompagnement de bout en bout", "text": "De l'analyse de vos besoins au support quotidien." },
+      { "title": "Support réactif", "text": "Une équipe disponible et à l'écoute." }
+    ],
+    "processTitle": "Notre processus en 4 étapes",
+    "process": [
+      { "title": "Analyse des besoins", "text": "Nous échangeons avec vous pour comprendre vos objectifs et contraintes." },
+      { "title": "Déploiement", "text": "Nous configurons et mettons en ligne votre plateforme." },
+      { "title": "Formation", "text": "Nous formons vos administrateurs et formateurs." },
+      { "title": "Accompagnement continu", "text": "Nous restons disponibles pour le support et les évolutions." }
+    ],
+    "cta": "Demander une démo"
+  },
+  "contact": {
+    "title": "Prêt à transformer votre formation ?",
+    "subtitle": "Parlons de votre projet. En moins de 30 minutes, nous vous montrons comment une plateforme Moodle bien pensée peut simplifier la gestion de vos formations sans engagement de votre part.",
+    "form": {
+      "name": "Nom complet",
+      "organization": "Organisation",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "orgType": "Type d'organisation",
+      "orgTypeOptions": ["Université / Établissement scolaire", "Centre de formation", "Entreprise", "ONG", "Institution publique", "Autre"],
+      "need": "Besoin exprimé",
+      "needPlaceholder": "Décrivez votre projet : nombre d'apprenants estimé, type de formations, délai souhaité...",
+      "submit": "Réserver une démonstration",
+      "success": "✅ Merci ! Votre demande a bien été reçue. Notre équipe vous contactera dans les 24 à 48 heures ouvrées. En attendant, n'hésitez pas à consulter notre FAQ ou à nous écrire à contact@thinktech-solutions.com.",
+      "error": "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à contact@thinktech-solutions.com."
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      { "q": "Combien de temps faut-il pour déployer une plateforme Moodle ?", "a": "Selon la complexité de votre projet, une plateforme peut être opérationnelle entre 2 et 6 semaines." },
+      { "q": "La plateforme fonctionne-t-elle sur smartphone ?", "a": "Oui, toutes nos plateformes sont conçues mobile-first, avec une faible consommation de données." },
+      { "q": "Est-il possible d'intégrer des outils tiers ?", "a": "Oui, nous pouvons connecter votre plateforme à vos outils existants (paiement, RH, visioconférence...)." },
+      { "q": "Proposez-vous la maintenance et le support ?", "a": "Oui, nous accompagnons chaque client après la mise en ligne avec un support réactif." },
+      { "q": "Les données sont-elles sécurisées ?", "a": "Oui : hébergement protégé, HTTPS, sauvegardes régulières et gestion stricte des accès." }
+    ],
+    "ctaText": "Une autre question ?",
+    "cta": "Demander une démo"
+  },
+  "footer": {
+    "tagline": "Engagés au service de l'excellence éducative en Afrique, nous concevons et déployons des plateformes de formation en ligne adaptées aux besoins réels du terrain.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "socialTitle": "Suivez-nous",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "copyright": "© 2026 ThinkTech Solutions SARL. Tous droits réservés."
+  },
+  "theme": { "toggleLight": "Activer le mode clair", "toggleDark": "Activer le mode sombre" }
+}

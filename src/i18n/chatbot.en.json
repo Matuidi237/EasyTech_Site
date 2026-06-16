@@ -1,0 +1,13 @@
+{
+  "greeting": "👋 Hi! I'm the ThinkTech assistant. Pick a topic or ask your question.",
+  "fallback": "I didn't quite understand. Here are the topics I can help with:",
+  "inputPlaceholder": "Type your question...",
+  "topics": [
+    { "id": "delai", "label": "Deployment time", "keywords": ["time", "deadline", "fast", "how long"], "answer": "Depending on project complexity, a platform can be operational within 2 to 6 weeks." },
+    { "id": "mobile", "label": "Mobile compatibility", "keywords": ["mobile", "smartphone", "tablet", "phone"], "answer": "Yes, all our platforms are mobile-first, with low data consumption." },
+    { "id": "securite", "label": "Data security", "keywords": ["security", "data", "protection", "gdpr"], "answer": "Your data is protected: secure hosting, HTTPS, regular backups and strict access management." },
+    { "id": "tarifs", "label": "Pricing", "keywords": ["price", "pricing", "cost", "how much"], "answer": "Every project is unique: pricing depends on the number of learners and desired features. Book a free demo to get a tailored quote." },
+    { "id": "integration", "label": "Third-party integration", "keywords": ["integration", "api", "tools", "third-party"], "answer": "Yes, we can connect your platform to your existing tools (payment, HR, video conferencing...)." },
+    { "id": "humain", "label": "Talk to a human", "keywords": ["human", "advisor", "call", "appointment"], "answer": "Happy to help! Click below to book a demo with our team.", "cta": { "label": "Request a demo", "href": "#contact" } }
+  ]
+}

@@ -1,0 +1,80 @@
+---
+import type { Lang } from "../../i18n/utils";
+import { useTranslations } from "../../i18n/utils";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="services" class="services" aria-labelledby="services-title">
+  <div class="container">
+    <p class="eyebrow">Notre expertise</p>
+    <h2 id="services-title">{t.services.title}</h2>
+    <p class="services-subtitle">{t.services.subtitle}</p>
+
+    <ul class="services-grid">
+      {t.services.cards.map((c: any, i: number) => (
+        <li class="service-card">
+          <span class="service-num">{String(i + 1).padStart(2, "0")}</span>
+          <h3>{c.title}</h3>
+          <p class="benefit">{c.benefit}</p>
+          <ul>
+            {c.points.map((p: string) => <li>{p}</li>)}
+          </ul>
+        </li>
+      ))}
+    </ul>
+
+    <div class="why-us">
+      <h3>{t.services.whyTitle}</h3>
+      <ul class="why-grid">
+        {t.services.why.map((w: any) => (
+          <li class="why-item">
+            <h4>{w.title}</h4>
+            <p>{w.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <h3 class="process-title">{t.services.processTitle}</h3>
+    <ol class="process-steps">
+      {t.services.process.map((s: any, i: number) => (
+        <li>
+          <span class="step-number">{i + 1}</span>
+          <h4>{s.title}</h4>
+          <p>{s.text}</p>
+        </li>
+      ))}
+    </ol>
+
+    <div class="services-cta">
+      <a href={`/${lang}/contact`} class="btn btn-primary">{t.services.cta}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-subtitle { max-width: 700px; margin-bottom: 2.5rem; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; list-style: none; margin-bottom: 3.5rem; border-top: 1px solid var(--color-border); }
+  .service-card { padding: 1.75rem 1.75rem 1.5rem; border-left: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+  .service-card:nth-child(3n+1) { border-left: none; }
+  .service-num { color: var(--color-accent); font-size: 1.1rem; }
+  .service-card .benefit { font-weight: 500; color: var(--color-text); margin: 0.5rem 0; }
+  .service-card ul { margin-top: 0.5rem; padding-left: 1.1rem; color: var(--color-text-secondary); font-size: 0.9rem; }
+
+  .why-us { margin-bottom: 3.5rem; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 2rem; list-style: none; margin-top: 1.25rem; }
+  .why-item h4::before { content: ""; color: var(--color-accent); }
+
+  .process-title { margin-bottom: 1.5rem; }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; list-style: none; margin-bottom: 3rem; }
+  .step-number { display: block; font-size: 1.75rem; color: var(--color-accent); margin-bottom: 0.5rem; }
+  .services-cta { text-align: center; }
+
+  @media (max-width: 900px) {
+    .services-grid, .why-grid, .process-steps { grid-template-columns: 1fr; }
+    .service-card { border-left: none; }
+  }
+</style>

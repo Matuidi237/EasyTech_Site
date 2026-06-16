@@ -1,0 +1,60 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-x 30s linear infinite;
+}
+.carousel:hover .carousel-track { animation-play-state: paused; }
+
+@keyframes scroll-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+details > summary { cursor: pointer; }
+details[open] summary::after { transform: rotate(180deg); }
+summary::after {
+  content: "▾";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+@keyframes drift-dots {
+  0%, 100% { background-position: 0 0; }
+  50% { background-position: 16px 22px; }
+}
+
+.dot-pattern {
+  animation: drift-dots 14s ease-in-out infinite;
+}
+
+@keyframes float-circle {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-16px, 20px); }
+}
+
+.circle-deco {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  color: var(--color-accent);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-circle 18s ease-in-out infinite;
+}
+.circle-deco.circle-delay { animation-delay: -9s; }
+.circle-deco.circle-fill {
+  border: none;
+  background: currentColor;
+  opacity: 0.08;
+}

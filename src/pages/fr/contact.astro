@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import Contact from "../../components/sections/Contact.astro";
+import Faq from "../../components/sections/Faq.astro";
+import ChatbotWidget from "../../components/chatbot/ChatbotWidget.astro";
+
+const lang = "fr";
+---
+
+<BaseLayout
+  lang={lang}
+  title="Demander une démo ThinkTech Solutions"
+  description="Réservez une démonstration gratuite et découvrez comment ThinkTech Solutions peut déployer votre plateforme Moodle en quelques semaines."
+>
+  <Header lang={lang} />
+  <main id="main-content">
+    <Contact lang={lang} />
+    <Faq lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ChatbotWidget lang={lang} />
+</BaseLayout>
