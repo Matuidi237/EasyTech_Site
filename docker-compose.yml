@@ -4,10 +4,10 @@ services:
     container_name: thinktech-site
     restart: unless-stopped
     networks:
-      - npm_network
+      - webproxy
     env_file:
       - .env
 
 networks:
-  npm_network:
+  webproxy:
     external: true
