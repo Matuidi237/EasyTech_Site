@@ -7,71 +7,76 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 const f = t.contact.form;
 
-const africaCountries = [
-  { flag: "🇿🇦", name: lang === "fr" ? "Afrique du Sud"        : "South Africa",             code: "+27"  },
-  { flag: "🇩🇿", name: lang === "fr" ? "Algérie"               : "Algeria",                  code: "+213" },
-  { flag: "🇦🇴", name: "Angola",                                                              code: "+244" },
-  { flag: "🇧🇯", name: lang === "fr" ? "Bénin"                 : "Benin",                    code: "+229" },
-  { flag: "🇧🇼", name: "Botswana",                                                            code: "+267" },
-  { flag: "🇧🇫", name: "Burkina Faso",                                                        code: "+226" },
-  { flag: "🇧🇮", name: "Burundi",                                                             code: "+257" },
-  { flag: "🇨🇲", name: lang === "fr" ? "Cameroun"              : "Cameroon",                 code: "+237" },
-  { flag: "🇨🇻", name: lang === "fr" ? "Cap-Vert"             : "Cape Verde",               code: "+238" },
-  { flag: "🇨🇫", name: lang === "fr" ? "Centrafrique"          : "Central African Republic", code: "+236" },
-  { flag: "🇰🇲", name: lang === "fr" ? "Comores"              : "Comoros",                  code: "+269" },
-  { flag: "🇨🇬", name: lang === "fr" ? "Congo (Brazzaville)"  : "Congo (Brazzaville)",      code: "+242" },
-  { flag: "🇨🇩", name: lang === "fr" ? "Congo (Kinshasa)"     : "Congo (Kinshasa)",         code: "+243" },
-  { flag: "🇨🇮", name: lang === "fr" ? "Côte d'Ivoire"        : "Ivory Coast",              code: "+225" },
-  { flag: "🇩🇯", name: "Djibouti",                                                            code: "+253" },
-  { flag: "🇪🇬", name: lang === "fr" ? "Égypte"               : "Egypt",                    code: "+20"  },
-  { flag: "🇪🇷", name: lang === "fr" ? "Érythrée"             : "Eritrea",                  code: "+291" },
-  { flag: "🇪🇹", name: lang === "fr" ? "Éthiopie"             : "Ethiopia",                 code: "+251" },
-  { flag: "🇬🇦", name: "Gabon",                                                              code: "+241" },
-  { flag: "🇬🇲", name: lang === "fr" ? "Gambie"               : "Gambia",                   code: "+220" },
-  { flag: "🇬🇭", name: "Ghana",                                                              code: "+233" },
-  { flag: "🇬🇳", name: lang === "fr" ? "Guinée"               : "Guinea",                   code: "+224" },
-  { flag: "🇬🇶", name: lang === "fr" ? "Guinée équatoriale"   : "Equatorial Guinea",         code: "+240" },
-  { flag: "🇬🇼", name: lang === "fr" ? "Guinée-Bissau"        : "Guinea-Bissau",            code: "+245" },
-  { flag: "🇰🇪", name: "Kenya",                                                              code: "+254" },
-  { flag: "🇱🇸", name: "Lesotho",                                                            code: "+266" },
-  { flag: "🇱🇷", name: "Liberia",                                                            code: "+231" },
-  { flag: "🇱🇾", name: lang === "fr" ? "Libye"                : "Libya",                    code: "+218" },
-  { flag: "🇲🇬", name: "Madagascar",                                                         code: "+261" },
-  { flag: "🇲🇼", name: "Malawi",                                                             code: "+265" },
-  { flag: "🇲🇱", name: "Mali",                                                               code: "+223" },
-  { flag: "🇲🇦", name: lang === "fr" ? "Maroc"                : "Morocco",                  code: "+212" },
-  { flag: "🇲🇺", name: lang === "fr" ? "Maurice"              : "Mauritius",                code: "+230" },
-  { flag: "🇲🇷", name: lang === "fr" ? "Mauritanie"           : "Mauritania",               code: "+222" },
-  { flag: "🇲🇿", name: "Mozambique",                                                         code: "+258" },
-  { flag: "🇳🇦", name: lang === "fr" ? "Namibie"              : "Namibia",                  code: "+264" },
-  { flag: "🇳🇪", name: "Niger",                                                              code: "+227" },
-  { flag: "🇳🇬", name: "Nigeria",                                                            code: "+234" },
-  { flag: "🇺🇬", name: "Ouganda",                                                            code: "+256" },
-  { flag: "🇷🇼", name: "Rwanda",                                                             code: "+250" },
-  { flag: "🇸🇹", name: lang === "fr" ? "São Tomé-et-Príncipe" : "São Tomé and Príncipe",    code: "+239" },
-  { flag: "🇸🇳", name: lang === "fr" ? "Sénégal"              : "Senegal",                  code: "+221" },
-  { flag: "🇸🇨", name: "Seychelles",                                                         code: "+248" },
-  { flag: "🇸🇱", name: "Sierra Leone",                                                       code: "+232" },
-  { flag: "🇸🇴", name: lang === "fr" ? "Somalie"              : "Somalia",                  code: "+252" },
-  { flag: "🇸🇩", name: lang === "fr" ? "Soudan"               : "Sudan",                    code: "+249" },
-  { flag: "🇸🇸", name: lang === "fr" ? "Soudan du Sud"        : "South Sudan",              code: "+211" },
-  { flag: "🇹🇿", name: lang === "fr" ? "Tanzanie"             : "Tanzania",                 code: "+255" },
-  { flag: "🇹🇩", name: lang === "fr" ? "Tchad"                : "Chad",                     code: "+235" },
-  { flag: "🇹🇬", name: "Togo",                                                              code: "+228" },
-  { flag: "🇹🇳", name: lang === "fr" ? "Tunisie"              : "Tunisia",                  code: "+216" },
-  { flag: "🇿🇲", name: lang === "fr" ? "Zambie"               : "Zambia",                   code: "+260" },
-  { flag: "🇿🇼", name: "Zimbabwe",                                                           code: "+263" },
+const allCountries = [
+  { iso: "za", abbr: "ZAF", name: lang==="fr"?"Afrique du Sud":"South Africa",            code:"+27",  ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "dz", abbr: "DZA", name: lang==="fr"?"Algérie":"Algeria",                        code:"+213", ph:"XXX XX XX XX",  group:"africa" },
+  { iso: "ao", abbr: "AGO", name: "Angola",                                                code:"+244", ph:"XXX XXX XXX",   group:"africa" },
+  { iso: "bj", abbr: "BEN", name: lang==="fr"?"Bénin":"Benin",                            code:"+229", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "bw", abbr: "BWA", name: "Botswana",                                              code:"+267", ph:"XX XXX XXX",    group:"africa" },
+  { iso: "bf", abbr: "BFA", name: "Burkina Faso",                                          code:"+226", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "bi", abbr: "BDI", name: "Burundi",                                               code:"+257", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "cm", abbr: "CMR", name: lang==="fr"?"Cameroun":"Cameroon",                       code:"+237", ph:"6XX XXX XXX",   group:"africa" },
+  { iso: "cv", abbr: "CPV", name: lang==="fr"?"Cap-Vert":"Cape Verde",                    code:"+238", ph:"XXX XX XX",     group:"africa" },
+  { iso: "cf", abbr: "CAF", name: lang==="fr"?"Centrafrique":"Central African Republic",   code:"+236", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "km", abbr: "COM", name: lang==="fr"?"Comores":"Comoros",                        code:"+269", ph:"XXX XX XX",     group:"africa" },
+  { iso: "cg", abbr: "COG", name: lang==="fr"?"Congo (Brazzaville)":"Congo (Brazzaville)",code:"+242", ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "cd", abbr: "COD", name: lang==="fr"?"Congo (Kinshasa)":"Congo (Kinshasa)",       code:"+243", ph:"XXX XXX XXX",   group:"africa" },
+  { iso: "ci", abbr: "CIV", name: lang==="fr"?"Côte d'Ivoire":"Ivory Coast",              code:"+225", ph:"XX XX XX XX XX",group:"africa" },
+  { iso: "dj", abbr: "DJI", name: "Djibouti",                                              code:"+253", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "eg", abbr: "EGY", name: lang==="fr"?"Égypte":"Egypt",                           code:"+20",  ph:"1XX XXX XXXX",  group:"africa" },
+  { iso: "er", abbr: "ERI", name: lang==="fr"?"Érythrée":"Eritrea",                       code:"+291", ph:"X XXX XXX",     group:"africa" },
+  { iso: "et", abbr: "ETH", name: lang==="fr"?"Éthiopie":"Ethiopia",                      code:"+251", ph:"9X XXX XXXX",   group:"africa" },
+  { iso: "ga", abbr: "GAB", name: "Gabon",                                                 code:"+241", ph:"X XX XX XX",    group:"africa" },
+  { iso: "gm", abbr: "GMB", name: lang==="fr"?"Gambie":"Gambia",                          code:"+220", ph:"XXX XXXX",      group:"africa" },
+  { iso: "gh", abbr: "GHA", name: "Ghana",                                                 code:"+233", ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "gn", abbr: "GIN", name: lang==="fr"?"Guinée":"Guinea",                          code:"+224", ph:"XXX XX XX XX",  group:"africa" },
+  { iso: "gq", abbr: "GNQ", name: lang==="fr"?"Guinée équatoriale":"Equatorial Guinea",   code:"+240", ph:"XXX XXX XXX",   group:"africa" },
+  { iso: "gw", abbr: "GNB", name: lang==="fr"?"Guinée-Bissau":"Guinea-Bissau",            code:"+245", ph:"XXX XXXX",      group:"africa" },
+  { iso: "ke", abbr: "KEN", name: "Kenya",                                                 code:"+254", ph:"7XX XXX XXX",   group:"africa" },
+  { iso: "ls", abbr: "LSO", name: "Lesotho",                                               code:"+266", ph:"XX XXX XXX",    group:"africa" },
+  { iso: "lr", abbr: "LBR", name: "Liberia",                                               code:"+231", ph:"XXX XXX XXX",   group:"africa" },
+  { iso: "ly", abbr: "LBY", name: lang==="fr"?"Libye":"Libya",                            code:"+218", ph:"91 XXX XXXX",   group:"africa" },
+  { iso: "mg", abbr: "MDG", name: "Madagascar",                                             code:"+261", ph:"XX XX XXX XX",  group:"africa" },
+  { iso: "mw", abbr: "MWI", name: "Malawi",                                                code:"+265", ph:"X XXX XXXX",    group:"africa" },
+  { iso: "ml", abbr: "MLI", name: "Mali",                                                  code:"+223", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "ma", abbr: "MAR", name: lang==="fr"?"Maroc":"Morocco",                          code:"+212", ph:"6XX XXX XXX",   group:"africa" },
+  { iso: "mu", abbr: "MUS", name: lang==="fr"?"Maurice":"Mauritius",                      code:"+230", ph:"X XXX XXXX",    group:"africa" },
+  { iso: "mr", abbr: "MRT", name: lang==="fr"?"Mauritanie":"Mauritania",                  code:"+222", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "mz", abbr: "MOZ", name: "Mozambique",                                             code:"+258", ph:"8X XXX XXXX",   group:"africa" },
+  { iso: "na", abbr: "NAM", name: lang==="fr"?"Namibie":"Namibia",                        code:"+264", ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "ne", abbr: "NER", name: "Niger",                                                 code:"+227", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "ng", abbr: "NGA", name: "Nigeria",                                               code:"+234", ph:"XXX XXX XXXX",  group:"africa" },
+  { iso: "ug", abbr: "UGA", name: lang==="fr"?"Ouganda":"Uganda",                         code:"+256", ph:"7XX XXX XXX",   group:"africa" },
+  { iso: "rw", abbr: "RWA", name: "Rwanda",                                                code:"+250", ph:"7XX XXX XXX",   group:"africa" },
+  { iso: "st", abbr: "STP", name: lang==="fr"?"São Tomé-et-Príncipe":"São Tomé & Príncipe",code:"+239",ph:"XXX XXXX",      group:"africa" },
+  { iso: "sn", abbr: "SEN", name: lang==="fr"?"Sénégal":"Senegal",                        code:"+221", ph:"7X XXX XX XX",  group:"africa" },
+  { iso: "sc", abbr: "SYC", name: "Seychelles",                                             code:"+248", ph:"X XXX XXX",     group:"africa" },
+  { iso: "sl", abbr: "SLE", name: "Sierra Leone",                                           code:"+232", ph:"XX XXX XXX",    group:"africa" },
+  { iso: "so", abbr: "SOM", name: lang==="fr"?"Somalie":"Somalia",                        code:"+252", ph:"XX XXX XXX",    group:"africa" },
+  { iso: "sd", abbr: "SDN", name: lang==="fr"?"Soudan":"Sudan",                           code:"+249", ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "ss", abbr: "SSD", name: lang==="fr"?"Soudan du Sud":"South Sudan",              code:"+211", ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "tz", abbr: "TZA", name: lang==="fr"?"Tanzanie":"Tanzania",                      code:"+255", ph:"7XX XXX XXX",   group:"africa" },
+  { iso: "td", abbr: "TCD", name: lang==="fr"?"Tchad":"Chad",                             code:"+235", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "tg", abbr: "TGO", name: "Togo",                                                  code:"+228", ph:"XX XX XX XX",   group:"africa" },
+  { iso: "tn", abbr: "TUN", name: lang==="fr"?"Tunisie":"Tunisia",                        code:"+216", ph:"XX XXX XXX",    group:"africa" },
+  { iso: "zm", abbr: "ZMB", name: lang==="fr"?"Zambie":"Zambia",                          code:"+260", ph:"XX XXX XXXX",   group:"africa" },
+  { iso: "zw", abbr: "ZWE", name: "Zimbabwe",                                              code:"+263", ph:"7X XXX XXXX",   group:"africa" },
+  { iso: "de", abbr: "DEU", name: lang==="fr"?"Allemagne":"Germany",                      code:"+49",  ph:"1XX XXXXXXXX",  group:"intl"   },
+  { iso: "be", abbr: "BEL", name: lang==="fr"?"Belgique":"Belgium",                       code:"+32",  ph:"4XX XX XX XX",  group:"intl"   },
+  { iso: "ca", abbr: "CAN", name: "Canada",                                                code:"+1",   ph:"XXX XXX XXXX",  group:"intl"   },
+  { iso: "fr", abbr: "FRA", name: "France",                                                code:"+33",  ph:"6 XX XX XX XX", group:"intl"   },
+  { iso: "gb", abbr: "GBR", name: lang==="fr"?"Royaume-Uni":"United Kingdom",             code:"+44",  ph:"7XXX XXXXXX",   group:"intl"   },
+  { iso: "ch", abbr: "CHE", name: lang==="fr"?"Suisse":"Switzerland",                     code:"+41",  ph:"XX XXX XXXX",   group:"intl"   },
+  { iso: "us", abbr: "USA", name: lang==="fr"?"États-Unis":"United States",               code:"+1",   ph:"XXX XXX XXXX",  group:"intl"   },
 ];
 
-const intlCountries = [
-  { flag: "🇩🇪", name: lang === "fr" ? "Allemagne"            : "Germany",                  code: "+49"  },
-  { flag: "🇧🇪", name: lang === "fr" ? "Belgique"             : "Belgium",                  code: "+32"  },
-  { flag: "🇨🇦", name: "Canada",                                                             code: "+1"   },
-  { flag: "🇫🇷", name: "France",                                                             code: "+33"  },
-  { flag: "🇬🇧", name: lang === "fr" ? "Royaume-Uni"          : "United Kingdom",           code: "+44"  },
-  { flag: "🇨🇭", name: lang === "fr" ? "Suisse"               : "Switzerland",              code: "+41"  },
-  { flag: "🇺🇸", name: lang === "fr" ? "États-Unis"           : "United States",            code: "+1"   },
-];
+const defaultIso = "cm";
+const defaultCode = "+237";
+const defaultName = lang === "fr" ? "Cameroun" : "Cameroon";
+
+const successMsg = lang === "fr"
+  ? { title: "Demande envoyée !", body: "Notre équipe vous contactera sous 24 à 48 heures ouvrées. À très bientôt !", close: "Fermer" }
+  : { title: "Request sent!", body: "Our team will contact you within 24 to 48 business hours. Talk soon!", close: "Close" };
 ---
 
 <section id="contact" class="contact" aria-labelledby="contact-title">
@@ -104,29 +109,45 @@ const intlCountries = [
         <div class="form-field">
           <label for="phone">{f.phone} *</label>
           <div class="phone-row">
-            <select id="country-code" name="countryCode" class="country-select" aria-label={lang === "fr" ? "Indicatif pays" : "Country code"}>
-              <optgroup label={lang === "fr" ? "── Afrique ──" : "── Africa ──"}>
-                {africaCountries.map(c => (
-                  <option
-                    value={c.code}
-                    data-flag={c.flag}
-                    selected={c.code === "+237" && (c.name.includes("Cameroun") || c.name.includes("Cameroon")) ? true : undefined}
-                  >
-                    {c.name} ({c.code})
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label={lang === "fr" ? "── International ──" : "── International ──"}>
-                {intlCountries.map(c => (
-                  <option value={c.code} data-flag={c.flag}>{c.name} ({c.code})</option>
-                ))}
-              </optgroup>
-            </select>
-            <div class="phone-input-wrap">
-              <span class="phone-prefix" id="phone-prefix">🇨🇲 +237</span>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel"
-                placeholder="6XX XXX XXX" pattern="^[0-9\s\-]{5,15}$" />
+            <div class="phone-country">
+              <img
+                id="country-flag-img"
+                src={`https://flagcdn.com/w20/${defaultIso}.png`}
+                srcset={`https://flagcdn.com/w40/${defaultIso}.png 2x`}
+                width="20" height="15"
+                alt={defaultName}
+              />
+              <span id="country-abbr" aria-hidden="true">CMR +237</span>
+              <select
+                id="country-code"
+                name="countryCode"
+                class="country-select"
+                aria-label={lang === "fr" ? "Indicatif pays" : "Country code"}
+              >
+                <optgroup label={lang === "fr" ? "── Afrique ──" : "── Africa ──"}>
+                  {allCountries.filter(c => c.group === "africa").map(c => (
+                    <option
+                      value={c.code}
+                      data-iso={c.iso}
+                      data-abbr={c.abbr}
+                      data-ph={c.ph}
+                      selected={c.iso === defaultIso ? true : undefined}
+                    >
+                      {c.name} ({c.code})
+                    </option>
+                  ))}
+                </optgroup>
+                <optgroup label={lang === "fr" ? "── International ──" : "── International ──"}>
+                  {allCountries.filter(c => c.group === "intl").map(c => (
+                    <option value={c.code} data-iso={c.iso} data-abbr={c.abbr} data-ph={c.ph}>
+                      {c.name} ({c.code})
+                    </option>
+                  ))}
+                </optgroup>
+              </select>
             </div>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel"
+              placeholder="6XX XXX XXX" pattern="^[0-9\s\-]{5,15}$" class="phone-input" />
           </div>
         </div>
       </div>
@@ -155,6 +176,21 @@ const intlCountries = [
     </form>
   </div>
 </section>
+
+<!-- Success modal -->
+<div id="success-modal" class="modal-overlay" hidden aria-modal="true" role="dialog">
+  <div class="modal-card">
+    <div class="modal-icon" aria-hidden="true">
+      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="26" cy="26" r="25" stroke="currentColor" stroke-width="2"/>
+        <path d="M14 26.5L22 34.5L38 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h3>{successMsg.title}</h3>
+    <p>{successMsg.body}</p>
+    <button class="btn btn-primary modal-close-btn" id="modal-close">{successMsg.close}</button>
+  </div>
+</div>
 
 <style>
   .contact { position: relative; overflow: hidden; padding-top: 1rem; }
@@ -195,85 +231,141 @@ const intlCountries = [
   }
 
   /* Phone row */
-  .phone-row { display: flex; gap: 0; align-items: stretch; width: 100%; min-width: 0; }
-  .country-select {
-    flex: 0 1 160px;
-    min-width: 0;
-    border-radius: 8px 0 0 8px;
-    border-right: none !important;
-    font-size: 0.85rem;
-    padding: 0.75rem 0.5rem;
-    background: var(--color-bg-secondary);
-    color: var(--color-text);
+  .phone-row { display: flex; min-width: 0; }
+
+  .phone-country {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0 0.6rem 0 0.75rem;
     border: 1px solid var(--color-border);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    background: var(--color-bg-secondary);
+    flex-shrink: 0;
+    white-space: nowrap;
     cursor: pointer;
-    appearance: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .country-select:focus {
-    outline: none;
+  .phone-country img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: block;
+    pointer-events: none;
+  }
+  #country-abbr {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text);
+    pointer-events: none;
+    letter-spacing: 0.01em;
+  }
+  .country-select {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+  }
+  .phone-country:focus-within {
     border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(164, 37, 147, 0.15);
     z-index: 1;
   }
-  .phone-input-wrap {
-    flex: 1 1 0;
+
+  .phone-input {
+    flex: 1;
     min-width: 0;
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--color-border);
-    border-left: none;
-    border-radius: 0 8px 8px 0;
-    background: var(--color-bg);
-    overflow: hidden;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 0 8px 8px 0 !important;
+    border-left: none !important;
   }
-  .phone-input-wrap:focus-within {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(164, 37, 147, 0.15);
+  .phone-input:focus {
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 0 3px rgba(164, 37, 147, 0.15) !important;
+    z-index: 1;
+    position: relative;
   }
-  .phone-prefix {
-    padding: 0 0.5rem 0 0.6rem;
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    white-space: nowrap;
-    border-right: 1px solid var(--color-border);
-    line-height: 1;
-    user-select: none;
-    flex-shrink: 0;
-  }
-  .phone-input-wrap input[type="tel"] {
-    flex: 1 1 0;
-    min-width: 0;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 0;
-    padding: 0.75rem 0.6rem;
-    background: transparent;
-  }
-  .phone-input-wrap input[type="tel"]:focus { outline: none; }
 
   @media (max-width: 560px) {
     .phone-row { flex-direction: column; }
-    .country-select { flex: none; width: 100%; border-radius: 8px; border-right: 1px solid var(--color-border) !important; }
-    .phone-input-wrap { flex: none; border-left: 1px solid var(--color-border); border-radius: 8px; }
+    .phone-country { border-right: 1px solid var(--color-border); border-radius: 8px; border-bottom: none; border-radius: 8px 8px 0 0; max-width: 100%; }
+    .phone-input { border-left: 1px solid var(--color-border) !important; border-radius: 0 0 8px 8px !important; }
   }
 
   .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-
   .form-submit-row { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.5rem; }
   .contact-form .btn-primary { padding: 0.85rem 2rem; }
   .form-note { font-size: 0.85rem; color: var(--color-text-secondary); }
   .form-feedback { margin-top: 1.25rem; font-weight: 500; }
-  .form-feedback.success { color: var(--color-success); }
+  .form-feedback.success { color: var(--color-success, #1a7a4a); }
   .form-feedback.error { color: #C0392B; }
 
   @media (max-width: 700px) {
     .form-row { grid-template-columns: 1fr; }
     .contact-form { padding: 1.75rem 1.5rem; }
+  }
+
+  /* Success modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 14, 46, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: modal-fade-in 0.25s ease;
+  }
+  .modal-overlay[hidden] { display: none; }
+
+  @keyframes modal-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .modal-card {
+    background: var(--color-card-bg);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 40px 80px rgba(2, 33, 121, 0.2);
+    animation: modal-slide-up 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes modal-slide-up {
+    from { transform: translateY(32px) scale(0.96); opacity: 0; }
+    to   { transform: translateY(0) scale(1);      opacity: 1; }
+  }
+
+  .modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.25rem;
+    color: var(--color-accent);
+  }
+  .modal-icon svg { width: 100%; height: 100%; }
+
+  .modal-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+  }
+  .modal-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
   }
 </style>
 
@@ -281,25 +373,79 @@ const intlCountries = [
   document.getElementById("loadedAt")?.setAttribute("value", String(Date.now()));
 
   const countrySelect = document.getElementById("country-code") as HTMLSelectElement | null;
-  const phonePrefix  = document.getElementById("phone-prefix");
-  const phoneInput   = document.getElementById("phone") as HTMLInputElement | null;
-  const demoForm     = document.getElementById("demo-form") as HTMLFormElement | null;
+  const flagImg       = document.getElementById("country-flag-img") as HTMLImageElement | null;
+  const abbrSpan      = document.getElementById("country-abbr");
+  const phoneInput    = document.getElementById("phone") as HTMLInputElement | null;
+  const demoForm      = document.getElementById("demo-form") as HTMLFormElement | null;
+  const modal         = document.getElementById("success-modal") as HTMLElement | null;
+  const modalClose    = document.getElementById("modal-close");
 
-  function updatePrefix() {
-    if (!countrySelect || !phonePrefix) return;
-    const selected = countrySelect.options[countrySelect.selectedIndex] as HTMLOptionElement & { dataset: DOMStringMap };
-    const flag = (selected as any).dataset.flag ?? "";
-    phonePrefix.textContent = flag ? `${flag} ${countrySelect.value}` : countrySelect.value;
+  function updateCountry() {
+    if (!countrySelect) return;
+    const sel = countrySelect.options[countrySelect.selectedIndex] as any;
+    const iso  = sel.dataset.iso  ?? "cm";
+    const abbr = sel.dataset.abbr ?? iso.toUpperCase();
+    const ph   = sel.dataset.ph   ?? "XXXXXXXXX";
+    if (flagImg) {
+      flagImg.src    = `https://flagcdn.com/w20/${iso}.png`;
+      flagImg.srcset = `https://flagcdn.com/w40/${iso}.png 2x`;
+      flagImg.alt    = sel.text.split("(")[0].trim();
+    }
+    if (abbrSpan) abbrSpan.textContent = `${abbr} ${countrySelect.value}`;
+    if (phoneInput) phoneInput.placeholder = ph;
   }
 
-  updatePrefix();
-  countrySelect?.addEventListener("change", updatePrefix);
+  updateCountry();
+  countrySelect?.addEventListener("change", updateCountry);
 
-  demoForm?.addEventListener("submit", () => {
-    if (phoneInput && countrySelect) {
-      const raw = phoneInput.value.trim().replace(/^0+/, "");
-      phoneInput.value = countrySelect.value + raw;
+  // Intercept submit: combine code + number, then call API manually to show modal
+  demoForm?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!phoneInput || !countrySelect) return;
+
+    // Combine indicatif + numéro
+    const raw = phoneInput.value.trim().replace(/^0+/, "");
+    phoneInput.value = countrySelect.value + raw;
+
+    const formData = new FormData(demoForm);
+    const feedback = demoForm.querySelector(".form-feedback") as HTMLElement | null;
+    const submitBtn = demoForm.querySelector("button[type=submit]") as HTMLButtonElement | null;
+
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = "0.7"; }
+
+    try {
+      const res = await fetch(demoForm.action, { method: "POST", body: formData });
+      if (res.ok) {
+        // Show success modal
+        if (modal) { modal.hidden = false; document.body.style.overflow = "hidden"; }
+        demoForm.reset();
+        updateFlag();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        if (feedback) {
+          feedback.textContent = feedback.dataset.error ?? "Une erreur est survenue.";
+          feedback.className = "form-feedback error";
+        }
+        // Restore phone field for resubmission
+        phoneInput.value = raw;
+      }
+    } catch {
+      if (feedback) {
+        feedback.textContent = feedback.dataset.error ?? "Une erreur est survenue.";
+        feedback.className = "form-feedback error";
+      }
+      phoneInput.value = raw;
+    } finally {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ""; }
     }
   });
+
+  // Close modal
+  function closeModal() {
+    if (modal) { modal.hidden = true; document.body.style.overflow = ""; }
+  }
+  modalClose?.addEventListener("click", closeModal);
+  modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
 </script>
 <script is:inline src="/scripts/form-validation.js"></script>

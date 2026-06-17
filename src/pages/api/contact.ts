@@ -54,7 +54,9 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         host: process.env.SMTP_HOST,
         port: Number(process.env.SMTP_PORT) || 587,
         secure: false,
+        requireTLS: true,
         auth: {
+          type: "LOGIN",
           user: process.env.SMTP_USER,
           pass: process.env.SMTP_PASSWORD
         }
