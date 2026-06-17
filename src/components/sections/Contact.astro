@@ -107,19 +107,23 @@ const intlCountries = [
             <select id="country-code" name="countryCode" class="country-select" aria-label={lang === "fr" ? "Indicatif pays" : "Country code"}>
               <optgroup label={lang === "fr" ? "── Afrique ──" : "── Africa ──"}>
                 {africaCountries.map(c => (
-                  <option value={c.code} selected={c.code === "+237" && c.name.includes("Cameroun") || c.code === "+237" && c.name.includes("Cameroon") ? true : undefined}>
-                    {c.flag} {c.name} ({c.code})
+                  <option
+                    value={c.code}
+                    data-flag={c.flag}
+                    selected={c.code === "+237" && (c.name.includes("Cameroun") || c.name.includes("Cameroon")) ? true : undefined}
+                  >
+                    {c.name} ({c.code})
                   </option>
                 ))}
               </optgroup>
               <optgroup label={lang === "fr" ? "── International ──" : "── International ──"}>
                 {intlCountries.map(c => (
-                  <option value={c.code}>{c.flag} {c.name} ({c.code})</option>
+                  <option value={c.code} data-flag={c.flag}>{c.name} ({c.code})</option>
                 ))}
               </optgroup>
             </select>
             <div class="phone-input-wrap">
-              <span class="phone-prefix" id="phone-prefix">+237</span>
+              <span class="phone-prefix" id="phone-prefix">🇨🇲 +237</span>
               <input type="tel" id="phone" name="phone" required autocomplete="tel"
                 placeholder="6XX XXX XXX" pattern="^[0-9\s\-]{5,15}$" />
             </div>
@@ -191,19 +195,21 @@ const intlCountries = [
   }
 
   /* Phone row */
-  .phone-row { display: flex; gap: 0; align-items: stretch; }
+  .phone-row { display: flex; gap: 0; align-items: stretch; width: 100%; min-width: 0; }
   .country-select {
-    flex: 0 0 auto;
-    width: 210px;
+    flex: 0 1 160px;
+    min-width: 0;
     border-radius: 8px 0 0 8px;
     border-right: none !important;
-    font-size: 0.88rem;
-    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
+    padding: 0.75rem 0.5rem;
     background: var(--color-bg-secondary);
     color: var(--color-text);
     border: 1px solid var(--color-border);
     cursor: pointer;
     appearance: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .country-select:focus {
@@ -213,7 +219,8 @@ const intlCountries = [
     z-index: 1;
   }
   .phone-input-wrap {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     align-items: center;
     border: 1px solid var(--color-border);
@@ -228,30 +235,31 @@ const intlCountries = [
     box-shadow: 0 0 0 3px rgba(164, 37, 147, 0.15);
   }
   .phone-prefix {
-    padding: 0 0.6rem 0 0.75rem;
-    font-size: 0.9rem;
+    padding: 0 0.5rem 0 0.6rem;
+    font-size: 0.88rem;
     font-weight: 600;
     color: var(--color-primary);
     white-space: nowrap;
     border-right: 1px solid var(--color-border);
     line-height: 1;
     user-select: none;
+    flex-shrink: 0;
   }
   .phone-input-wrap input[type="tel"] {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     border: none !important;
     box-shadow: none !important;
     border-radius: 0;
-    padding: 0.75rem 0.9rem;
+    padding: 0.75rem 0.6rem;
     background: transparent;
-    min-width: 0;
   }
   .phone-input-wrap input[type="tel"]:focus { outline: none; }
 
-  @media (max-width: 480px) {
-    .phone-row { flex-direction: column; gap: 0.5rem; }
-    .country-select { width: 100%; border-radius: 8px; border-right: 1px solid var(--color-border) !important; }
-    .phone-input-wrap { border-left: 1px solid var(--color-border); border-radius: 8px; }
+  @media (max-width: 560px) {
+    .phone-row { flex-direction: column; }
+    .country-select { flex: none; width: 100%; border-radius: 8px; border-right: 1px solid var(--color-border) !important; }
+    .phone-input-wrap { flex: none; border-left: 1px solid var(--color-border); border-radius: 8px; }
   }
 
   .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
@@ -279,10 +287,9 @@ const intlCountries = [
 
   function updatePrefix() {
     if (!countrySelect || !phonePrefix) return;
-    const selected = countrySelect.options[countrySelect.selectedIndex];
-    const label = (selected.textContent ?? "").trim();
-    const flag = [...label].slice(0, 2).join(""); // first 2 chars = flag emoji
-    phonePrefix.textContent = `${flag} ${countrySelect.value}`;
+    const selected = countrySelect.options[countrySelect.selectedIndex] as HTMLOptionElement & { dataset: DOMStringMap };
+    const flag = (selected as any).dataset.flag ?? "";
+    phonePrefix.textContent = flag ? `${flag} ${countrySelect.value}` : countrySelect.value;
   }
 
   updatePrefix();
