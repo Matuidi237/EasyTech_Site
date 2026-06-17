@@ -32,6 +32,24 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return new Response(JSON.stringify({ error: "Too many requests" }), { status: 429 });
   }
 
+  // Vérification Turnstile (si configuré)
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+  if (turnstileSecret) {
+    const token = data.get("cf-turnstile-response")?.toString() ?? "";
+    if (!token) {
+      return new Response(JSON.stringify({ error: "Vérification anti-bot manquante" }), { status: 400 });
+    }
+    const verif = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ secret: turnstileSecret, response: token }).toString()
+    });
+    const verifData = await verif.json() as { success: boolean };
+    if (!verifData.success) {
+      return new Response(JSON.stringify({ error: "Vérification anti-bot échouée" }), { status: 400 });
+    }
+  }
+
   const required = ["name", "organization", "email", "phone", "orgType", "need"];
   for (const field of required) {
     const val = data.get(field)?.toString().trim() ?? "";

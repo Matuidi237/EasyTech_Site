@@ -113,6 +113,9 @@
       "need": "Besoin exprimé",
       "needPlaceholder": "Décrivez votre projet : nombre d'apprenants estimé, type de formations, délai souhaité...",
       "submit": "Réserver une démonstration",
+      "consent": "J'accepte que mes données personnelles (nom, email, téléphone, organisation) soient traitées par ThinkTech Solutions uniquement pour répondre à ma demande de démo.",
+      "consentLink": "Politique de confidentialité",
+      "consentLinkHref": "/fr/privacy",
       "success": "✅ Merci ! Votre demande a bien été reçue. Notre équipe vous contactera dans les 24 à 48 heures ouvrées. En attendant, n'hésitez pas à consulter notre FAQ ou à nous écrire à contact@thinktech-solutions.com.",
       "error": "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à contact@thinktech-solutions.com."
     }

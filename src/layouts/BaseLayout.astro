@@ -83,6 +83,10 @@ const schemas = [
   <link rel="icon" href="/favicon.svg" />
   <link rel="manifest" href="/manifest.webmanifest" />
 
+  {import.meta.env.PUBLIC_TURNSTILE_SITE_KEY && (
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  )}
+
   {schemas.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
 </head>
 <body>

@@ -113,6 +113,9 @@
       "need": "Your needs",
       "needPlaceholder": "Describe your project: estimated number of learners, type of training, desired timeline...",
       "submit": "Book a demo",
+      "consent": "I agree that my personal data (name, email, phone, organization) may be processed by ThinkTech Solutions solely to respond to my demo request.",
+      "consentLink": "Privacy policy",
+      "consentLinkHref": "/en/privacy",
       "success": "✅ Thank you! Your request has been received. Our team will contact you within 24-48 business hours. Meanwhile, check our FAQ or email us at contact@thinktech-solutions.com.",
       "error": "An error occurred while sending. Please try again or email us directly at contact@thinktech-solutions.com."
     }

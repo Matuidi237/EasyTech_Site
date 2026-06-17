@@ -6,6 +6,7 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const f = t.contact.form;
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
 const allCountries = [
   { iso: "za", abbr: "ZAF", name: lang==="fr"?"Afrique du Sud":"South Africa",            code:"+27",  ph:"XX XXX XXXX",   group:"africa" },
@@ -178,6 +179,22 @@ const successMsg = lang === "fr"
         <span class="field-error" id="need-error" role="alert"></span>
       </div>
 
+      <div class="form-field consent-field">
+        <label class="consent-label">
+          <input type="checkbox" id="consent" name="consent" />
+          <span>
+            {f.consent}
+            {" "}
+            <a href={f.consentLinkHref} target="_blank" rel="noopener">{f.consentLink}</a>.
+          </span>
+        </label>
+        <span class="field-error" id="consent-error" role="alert"></span>
+      </div>
+
+      {turnstileSiteKey && (
+        <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light"></div>
+      )}
+
       <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <input type="hidden" name="loadedAt" id="loadedAt" />
 
@@ -312,6 +329,31 @@ const successMsg = lang === "fr"
     .phone-country { border-right: 1px solid var(--color-border); border-radius: 8px; border-bottom: none; border-radius: 8px 8px 0 0; max-width: 100%; }
     .phone-input { border-left: 1px solid var(--color-border) !important; border-radius: 0 0 8px 8px !important; }
   }
+
+  .consent-field { margin-top: 0.25rem; }
+  .consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .consent-label input[type="checkbox"] {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-accent);
+    cursor: pointer;
+  }
+  .consent-label a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .cf-turnstile { margin-top: 0.5rem; }
 
   .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .form-submit-row { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.5rem; }
@@ -486,6 +528,12 @@ const successMsg = lang === "fr"
     }
     if (need.length < 10) {
       setError("need", "need-error", isFr ? "Décrivez votre besoin (10 caractères min.)" : "Describe your need (min. 10 chars)");
+      ok = false;
+    }
+
+    const consent = document.getElementById("consent") as HTMLInputElement | null;
+    if (!consent?.checked) {
+      setError("consent", "consent-error", isFr ? "Vous devez accepter la politique de confidentialité" : "You must accept the privacy policy");
       ok = false;
     }
 
