@@ -304,8 +304,7 @@ const successMsg = lang === "fr"
   .form-submit-row { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.5rem; }
   .contact-form .btn-primary { padding: 0.85rem 2rem; }
   .form-note { font-size: 0.85rem; color: var(--color-text-secondary); }
-  .form-feedback { margin-top: 1.25rem; font-weight: 500; }
-  .form-feedback.success { color: var(--color-success, #1a7a4a); }
+  .form-feedback { margin-top: 1.25rem; font-weight: 500; color: var(--color-text); }
   .form-feedback.error { color: #C0392B; }
 
   @media (max-width: 700px) {
@@ -448,4 +447,3 @@ const successMsg = lang === "fr"
   modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
 </script>
-<script is:inline src="/scripts/form-validation.js"></script>
