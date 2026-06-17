@@ -89,22 +89,32 @@ const successMsg = lang === "fr"
       <p class="contact-subtitle">{t.contact.subtitle}</p>
     </div>
 
-    <form id="demo-form" class="contact-form reveal" method="post" action="/api/contact" novalidate>
+    <form
+      id="demo-form"
+      class="contact-form reveal"
+      method="post"
+      action="/api/contact"
+      novalidate
+      data-lang={lang}
+    >
       <div class="form-row">
         <div class="form-field">
           <label for="name">{f.name} *</label>
-          <input type="text" id="name" name="name" required autocomplete="name" minlength="2" />
+          <input type="text" id="name" name="name" autocomplete="name" />
+          <span class="field-error" id="name-error" role="alert"></span>
         </div>
         <div class="form-field">
           <label for="org">{f.organization} *</label>
-          <input type="text" id="org" name="organization" required autocomplete="organization" minlength="2" />
+          <input type="text" id="org" name="organization" autocomplete="organization" />
+          <span class="field-error" id="org-error" role="alert"></span>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-field">
           <label for="email">{f.email} *</label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
+          <input type="email" id="email" name="email" autocomplete="email" />
+          <span class="field-error" id="email-error" role="alert"></span>
         </div>
         <div class="form-field">
           <label for="phone">{f.phone} *</label>
@@ -146,23 +156,26 @@ const successMsg = lang === "fr"
                 </optgroup>
               </select>
             </div>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel"
-              placeholder="6XX XXX XXX" pattern="^[0-9\s\-]{5,15}$" class="phone-input" />
+            <input type="tel" id="phone" name="phone" autocomplete="tel"
+              placeholder="6XX XXX XXX" class="phone-input" />
           </div>
+          <span class="field-error" id="phone-error" role="alert"></span>
         </div>
       </div>
 
       <div class="form-field">
         <label for="org-type">{f.orgType} *</label>
-        <select id="org-type" name="orgType" required>
-          <option value=""></option>
+        <select id="org-type" name="orgType">
+          <option value="">{lang === "fr" ? "-- Sélectionnez --" : "-- Select --"}</option>
           {f.orgTypeOptions.map((opt: string) => <option value={opt}>{opt}</option>)}
         </select>
+        <span class="field-error" id="orgtype-error" role="alert"></span>
       </div>
 
       <div class="form-field">
         <label for="need">{f.need} *</label>
-        <textarea id="need" name="need" required rows="5" minlength="10" placeholder={f.needPlaceholder}></textarea>
+        <textarea id="need" name="need" rows="5" placeholder={f.needPlaceholder}></textarea>
+        <span class="field-error" id="need-error" role="alert"></span>
       </div>
 
       <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -172,7 +185,7 @@ const successMsg = lang === "fr"
         <button type="submit" class="btn btn-primary">{f.submit}</button>
         <span class="form-note">{t.contact.formNote ?? ""}</span>
       </div>
-      <p class="form-feedback" role="status" aria-live="polite" data-success={f.success} data-error={f.error}></p>
+      <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -304,7 +317,28 @@ const successMsg = lang === "fr"
   .form-submit-row { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.5rem; }
   .contact-form .btn-primary { padding: 0.85rem 2rem; }
   .form-note { font-size: 0.85rem; color: var(--color-text-secondary); }
-  .form-feedback { margin-top: 1.25rem; font-weight: 500; color: var(--color-text); }
+
+  .field-error {
+    display: none;
+    font-size: 0.8rem;
+    color: #C0392B;
+    margin-top: 0.2rem;
+  }
+  .field-error.visible { display: block; }
+  .form-field input.invalid,
+  .form-field select.invalid,
+  .form-field textarea.invalid,
+  .phone-input.invalid {
+    border-color: #C0392B !important;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15) !important;
+  }
+
+  .form-feedback {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    min-height: 1.2em;
+  }
   .form-feedback.error { color: #C0392B; }
 
   @media (max-width: 700px) {
@@ -369,19 +403,24 @@ const successMsg = lang === "fr"
 </style>
 
 <script>
+  // ── Init ──────────────────────────────────────────────────────────────────
   document.getElementById("loadedAt")?.setAttribute("value", String(Date.now()));
 
-  const countrySelect = document.getElementById("country-code") as HTMLSelectElement | null;
-  const flagImg       = document.getElementById("country-flag-img") as HTMLImageElement | null;
-  const abbrSpan      = document.getElementById("country-abbr");
-  const phoneInput    = document.getElementById("phone") as HTMLInputElement | null;
-  const demoForm      = document.getElementById("demo-form") as HTMLFormElement | null;
-  const modal         = document.getElementById("success-modal") as HTMLElement | null;
-  const modalClose    = document.getElementById("modal-close");
+  const form         = document.getElementById("demo-form") as HTMLFormElement | null;
+  const countrySelect= document.getElementById("country-code") as HTMLSelectElement | null;
+  const flagImg      = document.getElementById("country-flag-img") as HTMLImageElement | null;
+  const abbrSpan     = document.getElementById("country-abbr");
+  const phoneInput   = document.getElementById("phone") as HTMLInputElement | null;
+  const modal        = document.getElementById("success-modal") as HTMLElement | null;
+  const modalClose   = document.getElementById("modal-close");
+  const formFeedback = document.getElementById("form-feedback");
+  const lang         = form?.dataset.lang ?? "fr";
+  const isFr        = lang === "fr";
 
+  // ── Country selector ──────────────────────────────────────────────────────
   function updateCountry() {
     if (!countrySelect) return;
-    const sel = countrySelect.options[countrySelect.selectedIndex] as any;
+    const sel = countrySelect.options[countrySelect.selectedIndex] as HTMLOptionElement & { dataset: DOMStringMap };
     const iso  = sel.dataset.iso  ?? "cm";
     const abbr = sel.dataset.abbr ?? iso.toUpperCase();
     const ph   = sel.dataset.ph   ?? "XXXXXXXXX";
@@ -397,53 +436,123 @@ const successMsg = lang === "fr"
   updateCountry();
   countrySelect?.addEventListener("change", updateCountry);
 
-  // Intercept submit: combine code + number, then call API manually to show modal
-  demoForm?.addEventListener("submit", async (e) => {
+  // ── Validation helpers ────────────────────────────────────────────────────
+  function setError(inputId: string, errorId: string, message: string) {
+    const input = document.getElementById(inputId);
+    const errEl = document.getElementById(errorId);
+    input?.classList.add("invalid");
+    if (errEl) { errEl.textContent = message; errEl.classList.add("visible"); }
+  }
+
+  function clearErrors() {
+    form?.querySelectorAll(".invalid").forEach(el => el.classList.remove("invalid"));
+    form?.querySelectorAll(".field-error").forEach(el => {
+      el.textContent = "";
+      el.classList.remove("visible");
+    });
+    if (formFeedback) { formFeedback.textContent = ""; formFeedback.className = "form-feedback"; }
+  }
+
+  function validate(): boolean {
+    clearErrors();
+    let ok = true;
+
+    const name    = (document.getElementById("name")     as HTMLInputElement)?.value.trim() ?? "";
+    const org     = (document.getElementById("org")      as HTMLInputElement)?.value.trim() ?? "";
+    const email   = (document.getElementById("email")    as HTMLInputElement)?.value.trim() ?? "";
+    const orgType = (document.getElementById("org-type") as HTMLSelectElement)?.value ?? "";
+    const need    = (document.getElementById("need")     as HTMLTextAreaElement)?.value.trim() ?? "";
+    const rawPhone= (phoneInput?.value ?? "").trim().replace(/^0+/, "").replace(/[\s\-]/g, "");
+
+    if (name.length < 2) {
+      setError("name", "name-error", isFr ? "Nom requis (2 caractères min.)" : "Name required (min. 2 chars)");
+      ok = false;
+    }
+    if (org.length < 2) {
+      setError("org", "org-error", isFr ? "Organisation requise (2 caractères min.)" : "Organization required (min. 2 chars)");
+      ok = false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("email", "email-error", isFr ? "Adresse email invalide" : "Invalid email address");
+      ok = false;
+    }
+    if (rawPhone.length < 5 || !/^\d+$/.test(rawPhone)) {
+      setError("phone", "phone-error", isFr ? "Numéro requis (chiffres uniquement, sans indicatif)" : "Number required (digits only, without country code)");
+      ok = false;
+    }
+    if (!orgType) {
+      setError("org-type", "orgtype-error", isFr ? "Veuillez sélectionner un type d'organisation" : "Please select an organization type");
+      ok = false;
+    }
+    if (need.length < 10) {
+      setError("need", "need-error", isFr ? "Décrivez votre besoin (10 caractères min.)" : "Describe your need (min. 10 chars)");
+      ok = false;
+    }
+
+    return ok;
+  }
+
+  // ── Form submit ───────────────────────────────────────────────────────────
+  form?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    if (!phoneInput || !countrySelect) return;
+    if (!form || !phoneInput || !countrySelect) return;
 
-    // Combine indicatif + numéro
-    const raw = phoneInput.value.trim().replace(/^0+/, "");
-    phoneInput.value = countrySelect.value + raw;
+    if (!validate()) return;
 
-    const formData = new FormData(demoForm);
-    const feedback = demoForm.querySelector(".form-feedback") as HTMLElement | null;
-    const submitBtn = demoForm.querySelector("button[type=submit]") as HTMLButtonElement | null;
+    // Combine indicatif + numéro (rawPhone is digits only)
+    const rawPhone = phoneInput.value.trim().replace(/^0+/, "").replace(/[\s\-]/g, "");
+    phoneInput.value = `${countrySelect.value} ${rawPhone}`;
+
+    const formData = new FormData(form);
+    const submitBtn = form.querySelector("button[type=submit]") as HTMLButtonElement | null;
 
     if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = "0.7"; }
 
     try {
-      const res = await fetch(demoForm.action, { method: "POST", body: formData });
+      const res = await fetch(form.action, { method: "POST", body: formData });
+
       if (res.ok) {
-        // Show success modal
-        if (modal) { modal.hidden = false; document.body.style.overflow = "hidden"; }
-        demoForm.reset();
+        form.reset();
         updateCountry();
+        if (modal) { modal.hidden = false; document.body.style.overflow = "hidden"; }
       } else {
-        const data = await res.json().catch(() => ({}));
-        if (feedback) {
-          feedback.textContent = feedback.dataset.error ?? "Une erreur est survenue.";
-          feedback.className = "form-feedback error";
-        }
-        // Restore phone field for resubmission
-        phoneInput.value = raw;
+        const status = res.status;
+        const msg = status === 429
+          ? (isFr ? "Trop de tentatives. Réessayez dans quelques minutes." : "Too many attempts. Please try again in a few minutes.")
+          : (isFr ? "Une erreur est survenue. Réessayez ou écrivez-nous à contact@thinktech-solutions.com." : "An error occurred. Please retry or email us at contact@thinktech-solutions.com.");
+        if (formFeedback) { formFeedback.textContent = msg; formFeedback.className = "form-feedback error"; }
+        // Restore phone for resubmission
+        phoneInput.value = rawPhone;
       }
     } catch {
-      if (feedback) {
-        feedback.textContent = feedback.dataset.error ?? "Une erreur est survenue.";
-        feedback.className = "form-feedback error";
+      if (formFeedback) {
+        formFeedback.textContent = isFr
+          ? "Connexion impossible. Vérifiez votre connexion internet."
+          : "Connection failed. Check your internet connection.";
+        formFeedback.className = "form-feedback error";
       }
-      phoneInput.value = raw;
+      phoneInput.value = rawPhone;
     } finally {
       if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ""; }
     }
   });
 
-  // Close modal
+  // Clear field error on input
+  form?.querySelectorAll("input, select, textarea").forEach(el => {
+    el.addEventListener("input", () => {
+      const id = (el as HTMLElement).id;
+      el.classList.remove("invalid");
+      const errEl = form.querySelector(`#${id}-error, #${id.replace("-", "")}type-error`);
+      if (errEl) { errEl.textContent = ""; errEl.classList.remove("visible"); }
+      if (formFeedback) { formFeedback.textContent = ""; formFeedback.className = "form-feedback"; }
+    });
+  });
+
+  // ── Modal ─────────────────────────────────────────────────────────────────
   function closeModal() {
     if (modal) { modal.hidden = true; document.body.style.overflow = ""; }
   }
   modalClose?.addEventListener("click", closeModal);
   modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && modal && !modal.hidden) closeModal(); });
 </script>

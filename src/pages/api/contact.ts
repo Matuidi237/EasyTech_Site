@@ -34,9 +34,20 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
 
   const required = ["name", "organization", "email", "phone", "orgType", "need"];
   for (const field of required) {
-    if (!data.get(field)?.toString().trim()) {
-      return new Response(JSON.stringify({ error: `Champ manquant : ${field}` }), { status: 400 });
+    const val = data.get(field)?.toString().trim() ?? "";
+    if (!val || val.length < (field === "need" ? 10 : 2)) {
+      return new Response(JSON.stringify({ error: `Champ manquant ou invalide : ${field}` }), { status: 400 });
     }
+  }
+
+  const email = data.get("email")?.toString().trim() ?? "";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return new Response(JSON.stringify({ error: "Email invalide" }), { status: 400 });
+  }
+
+  const phone = data.get("phone")?.toString().trim() ?? "";
+  if (phone.replace(/[\s\+\-]/g, "").length < 5) {
+    return new Response(JSON.stringify({ error: "Téléphone invalide" }), { status: 400 });
   }
 
   const payload = {
@@ -48,24 +59,24 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     need: data.get("need")?.toString()
   };
 
-  try {
-    if (process.env.SMTP_HOST && process.env.SMTP_USER) {
-      const port = Number(process.env.SMTP_PORT) || 465;
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port,
-        secure: port === 465,
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASSWORD
-        }
-      });
+  if (process.env.SMTP_HOST && process.env.SMTP_USER) {
+    const port = Number(process.env.SMTP_PORT) || 465;
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port,
+      secure: port === 465,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD
+      }
+    });
 
+    try {
       await transporter.sendMail({
         from: process.env.SMTP_FROM,
         to: process.env.SMTP_TO,
         replyTo: payload.email,
-        subject: `Nouvelle demande de démo ${payload.organization}`,
+        subject: `Nouvelle demande de démo – ${payload.organization}`,
         text: [
           `Nom : ${payload.name}`,
           `Organisation : ${payload.organization}`,
@@ -75,13 +86,14 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
           `Besoin exprimé : ${payload.need}`
         ].join("\n")
       });
-    } else {
-      console.log("[demo-request] SMTP non configuré demande reçue :", payload);
+      console.log(`[contact] Email envoyé — ${payload.organization} <${payload.email}>`);
+    } catch (err: any) {
+      console.error("[contact] Erreur SMTP :", err?.message ?? err);
+      return new Response(JSON.stringify({ error: "Erreur d'envoi" }), { status: 500 });
     }
-
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
-  } catch (err) {
-    console.error("Erreur d'envoi e-mail :", err);
-    return new Response(JSON.stringify({ error: "Erreur d'envoi" }), { status: 500 });
+  } else {
+    console.log("[contact] SMTP non configuré — demande reçue :", payload);
   }
+
+  return new Response(JSON.stringify({ success: true }), { status: 200 });
 };
