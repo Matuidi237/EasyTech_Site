@@ -11,7 +11,7 @@ Security for an online training platform is often seen as a topic reserved for l
 
 ## Encrypt every connection, no exceptions
 
-A valid HTTPS certificate is no longer optional — it's the baseline. It protects login credentials, personal data, and file exchanges from interception. If your platform still shows "not secure" in the browser, that's the first thing to fix, even with a free solution like Let's Encrypt in the meantime.
+A valid HTTPS certificate is no longer optional: it's the baseline. It protects login credentials, personal data, and file exchanges from interception. If your platform still shows "not secure" in the browser, that's the first thing to fix, even with a free solution like Let's Encrypt in the meantime.
 
 ## Set up automatic, tested backups
 
@@ -27,7 +27,7 @@ Moodle offers a very complete role system, but it's often underused. An administ
 
 ## Keep the platform up to date
 
-Security updates fix known vulnerabilities — ignoring them is like leaving a door open on purpose. A regular update schedule (monthly or quarterly depending on criticality) should be part of routine maintenance, just like backups.
+Security updates fix known vulnerabilities: ignoring them is like leaving a door open on purpose. A regular update schedule (monthly or quarterly depending on criticality) should be part of routine maintenance, just like backups.
 
 ## Train your users
 

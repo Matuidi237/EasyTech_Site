@@ -27,7 +27,7 @@ Moodle propose un système de rôles très complet, mais il est souvent sous-exp
 
 ## Maintenir la plateforme à jour
 
-Les mises à jour de sécurité corrigent des vulnérabilités connues — les ignorer revient à laisser une porte ouverte volontairement. Un calendrier de mise à jour régulier (mensuel ou trimestriel selon la criticité) doit faire partie de la routine de maintenance, au même titre que les sauvegardes.
+Les mises à jour de sécurité corrigent des vulnérabilités connues : les ignorer revient à laisser une porte ouverte volontairement. Un calendrier de mise à jour régulier (mensuel ou trimestriel selon la criticité) doit faire partie de la routine de maintenance, au même titre que les sauvegardes.
 
 ## Sensibiliser les utilisateurs
 

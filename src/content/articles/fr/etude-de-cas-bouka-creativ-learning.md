@@ -17,18 +17,20 @@ Quand Boukarou nous a contactés, le besoin était clair mais exigeant : une pla
 
 Nous avons structuré le projet autour de trois priorités :
 
-1. **Performance sur connexion limitée** — chaque page a été optimisée pour charger rapidement même en 3G, avec une attention particulière portée au poids des images et des vidéos.
-2. **Simplicité d'usage** — l'inscription, la navigation entre les modules et le suivi de progression devaient être compréhensibles sans formation préalable.
-3. **Robustesse à l'échelle** — l'infrastructure devait pouvoir absorber des pics de connexions simultanées sans dégradation de service.
+1. **Performance sur connexion limitée** : chaque page a été optimisée pour charger rapidement même en 3G, avec une attention particulière portée au poids des images et des vidéos.
+2. **Simplicité d'usage** : l'inscription, la navigation entre les modules et le suivi de progression devaient être compréhensibles sans formation préalable.
+3. **Robustesse à l'échelle** : l'infrastructure devait pouvoir absorber des pics de connexions simultanées sans dégradation de service.
 
 ## Les résultats
 
 Aujourd'hui, Bouka Creativ' Learning est pleinement opérationnelle et continue d'accueillir de nouveaux apprenants chaque semaine. Au-delà des chiffres, c'est l'impact concret qui nous motive : des jeunes de régions souvent moins desservies par l'offre de formation classique accèdent désormais à des parcours de qualité, sans avoir à se déplacer.
 
-> « L'objectif n'était pas seulement de digitaliser une formation, mais de créer un véritable levier d'inclusion numérique pour la jeunesse camerounaise. » — équipe ThinkTech Solutions
+> « L'objectif n'était pas seulement de digitaliser une formation, mais de créer un véritable levier d'inclusion numérique pour la jeunesse camerounaise. »
+>
+> *Équipe ThinkTech Solutions*
 
 ## Ce que ce projet nous a appris
 
-Travailler à cette échelle nous a confirmé une conviction : une plateforme pensée pour le contexte africain — mobile-first, légère en données, simple d'usage — change réellement la donne pour l'accès à la formation. C'est cette approche que nous appliquons désormais à chaque nouveau projet, quelle que soit sa taille.
+Travailler à cette échelle nous a confirmé une conviction : une plateforme pensée pour le contexte africain (mobile-first, légère en données, simple d'usage) change réellement la donne pour l'accès à la formation. C'est cette approche que nous appliquons désormais à chaque nouveau projet, quelle que soit sa taille.
 
 Vous portez un projet de formation à fort impact ? [Parlons-en ensemble](/fr/contact).
