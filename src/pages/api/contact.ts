@@ -53,7 +53,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   const required = ["name", "organization", "email", "phone", "orgType", "need"];
   for (const field of required) {
     const val = data.get(field)?.toString().trim() ?? "";
-    if (!val || val.length < (field === "need" ? 10 : 2)) {
+    const min = field === "need" ? 10 : 1;
+    if (!val || val.length < min) {
       return new Response(JSON.stringify({ error: `Champ manquant ou invalide : ${field}` }), { status: 400 });
     }
   }

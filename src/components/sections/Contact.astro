@@ -254,6 +254,7 @@ const successMsg = lang === "fr"
     font-size: 0.95rem;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
+  .form-field textarea { resize: none; }
   .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
     outline: none;
     border-color: var(--color-accent);
@@ -507,11 +508,11 @@ const successMsg = lang === "fr"
     const rawPhone= (phoneInput?.value ?? "").trim().replace(/^0+/, "").replace(/[\s\-]/g, "");
 
     if (name.length < 2) {
-      setError("name", "name-error", isFr ? "Nom requis (2 caractères min.)" : "Name required (min. 2 chars)");
+      setError("name", "name-error", isFr ? "Veuillez renseigner votre nom complet" : "Please enter your full name");
       ok = false;
     }
     if (org.length < 2) {
-      setError("org", "org-error", isFr ? "Organisation requise (2 caractères min.)" : "Organization required (min. 2 chars)");
+      setError("org", "org-error", isFr ? "Veuillez renseigner le nom de votre organisation" : "Please enter your organization name");
       ok = false;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
