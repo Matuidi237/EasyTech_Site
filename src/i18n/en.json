@@ -10,7 +10,7 @@
   "hero": {
     "trustBar": "Partner to incubators, consulting firms and training centers in Cameroon",
     "title": "Boost the performance and profitability of your training",
-    "subtitle": "ThinkTech Solutions designs and deploys Moodle-based platforms built to be smooth and secure. Give your learners an intuitive experience on every device, so they can train without limits, anywhere and fully on their own.",
+    "subtitle": "ThinkTech Solutions designs and deploys Moodle-based e-learning platforms in Cameroon and Central Africa, built to be smooth and secure. Give your learners an intuitive experience on every device, so they can train without limits, anywhere and fully on their own.",
     "ctaPrimary": "Request a demo",
     "ctaSecondary": "Discover our services",
     "heroImageAlt": "Learner using a training platform on a smartphone",
@@ -54,7 +54,7 @@
   },
   "about": {
     "title": "Who we are",
-    "intro": "Founded in 2024 in Douala, ThinkTech Solutions was born from a simple conviction: training quality is one of the most powerful levers to build a better nation. Our team of 5 experts now supports universities, companies, NGOs and training centers across Cameroon in building high-performing, secure online learning platforms adapted to African realities.",
+    "intro": "Founded in 2024 in Douala, ThinkTech Solutions was born from a simple conviction: training quality is one of the most powerful levers to build a better nation. Our team of 5 experts now supports universities, companies, NGOs and training centers across Cameroon and Central Africa in building high-performing, secure e-learning platforms adapted to real-world conditions.",
     "intro2": "Driven by its founder Ignace MBOM ELOUGA, ThinkTech Solutions puts accessibility and human support at the heart of every digital transformation project.",
     "teamImageAlt": "ThinkTech Solutions team",
     "mission": { "title": "Mission", "text": "Make training accessible to everyone, everywhere." },
@@ -127,7 +127,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Ready to transform your training?",
-    "subtitle": "Let's talk about your project. In under 30 minutes, we'll show you how a well-designed Moodle platform can simplify your training management with no commitment.",
+    "subtitle": "Let's talk about your project. Based in Douala, we support organizations across Cameroon and Central Africa: in under 30 minutes, we'll show you how a well-designed Moodle platform can transform your training management, with no commitment.",
     "formNote": "Response within 24 to 48 business hours.",
     "form": {
       "name": "Full name",
@@ -161,7 +161,7 @@
     "cta": "Request a demo"
   },
   "footer": {
-    "tagline": "Committed to educational excellence in Africa, we design and deploy online training platforms tailored to real needs on the ground.",
+    "tagline": "Based in Douala, we design and deploy Moodle e-learning platforms for universities, companies and NGOs across Cameroon and Central Africa.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "socialTitle": "Follow us",

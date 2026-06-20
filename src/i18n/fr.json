@@ -10,7 +10,7 @@
   "hero": {
     "trustBar": "Partenaire des incubateurs, cabinets de conseil et centres de formation au Cameroun",
     "title": "Boostez la performance et la rentabilité de vos formations",
-    "subtitle": "ThinkTech Solutions conçoit et déploie des plateformes basées sur Moodle, conçues pour être fluides et sécurisées. Offrez à vos apprenants une expérience intuitive sur tous supports, pour former sans limites, partout et en toute autonomie.",
+    "subtitle": "ThinkTech Solutions conçoit et déploie des plateformes e-learning basées sur Moodle au Cameroun et en Afrique centrale, fluides et sécurisées. Offrez à vos apprenants une expérience intuitive sur tous supports, pour former sans limites, partout et en toute autonomie.",
     "ctaPrimary": "Demander une démo",
     "ctaSecondary": "Découvrir nos services",
     "heroImageAlt": "Apprenant utilisant une plateforme de formation sur smartphone",
@@ -54,7 +54,7 @@
   },
   "about": {
     "title": "Qui sommes-nous ?",
-    "intro": "Fondée en 2024 à Douala, ThinkTech Solutions est née d'une conviction simple : la qualité de la formation est l'un des leviers les plus puissants pour bâtir une nation meilleure. Notre équipe de 5 experts accompagne aujourd'hui des universités, entreprises, ONG et centres de formation à travers le Cameroun dans la création de plateformes d'apprentissage en ligne performantes, sécurisées et adaptées aux réalités africaines.",
+    "intro": "Fondée en 2024 à Douala, ThinkTech Solutions est née d'une conviction simple : la qualité de la formation est l'un des leviers les plus puissants pour bâtir une nation meilleure. Notre équipe de 5 experts accompagne aujourd'hui des universités, entreprises, ONG et centres de formation à travers le Cameroun et l'Afrique centrale dans la création de plateformes e-learning performantes, sécurisées et adaptées aux réalités du terrain.",
     "intro2": "Sous l'impulsion de son fondateur Ignace MBOM ELOUGA, ThinkTech Solutions place l'accessibilité et l'accompagnement humain au cœur de chaque projet de transformation digitale.",
     "teamImageAlt": "Équipe ThinkTech Solutions",
     "mission": { "title": "Mission", "text": "Rendre la formation accessible à tous et pour tous." },
@@ -127,7 +127,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Prêt à transformer votre formation ?",
-    "subtitle": "Parlons de votre projet. En moins de 30 minutes, nous vous montrons comment une plateforme Moodle bien pensée peut simplifier la gestion de vos formations sans engagement de votre part.",
+    "subtitle": "Parlons de votre projet. Basés à Douala, nous accompagnons les organisations au Cameroun et en Afrique centrale : en moins de 30 minutes, nous vous montrons comment une plateforme Moodle bien pensée peut transformer la gestion de vos formations, sans engagement.",
     "formNote": "Réponse sous 24 à 48 heures ouvrées.",
     "form": {
       "name": "Nom complet",
@@ -161,7 +161,7 @@
     "cta": "Demander une démo"
   },
   "footer": {
-    "tagline": "Engagés au service de l'excellence éducative en Afrique, nous concevons et déployons des plateformes de formation en ligne adaptées aux besoins réels du terrain.",
+    "tagline": "Basés à Douala, nous concevons et déployons des plateformes e-learning Moodle pour les universités, entreprises et ONG au Cameroun et en Afrique centrale.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "socialTitle": "Suivez-nous",
