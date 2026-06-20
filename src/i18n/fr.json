@@ -342,20 +342,24 @@
     "projects": [
       {
         "name": "Bouka Creativ' Learning",
-        "client": "Boukarou — Incubateur",
+        "client": "Boukarou — Incubateur jeunesse",
         "sector": "Inclusion numérique",
         "metric": {
           "value": "42 000",
           "label": "jeunes ciblés"
+        },
+        "metric2": {
+          "value": "10",
+          "label": "régions du Cameroun couvertes"
         },
         "tags": [
           "Moodle",
           "Mobile-first",
           "Formation jeunesse"
         ],
-        "description": "En partenariat avec l'incubateur Boukarou, nous avons conçu et déployé cette plateforme pour accompagner la montée en compétences de 42 000 jeunes à travers les 10 régions du Cameroun.",
-        "challenge": "Créer une plateforme accessible en zone rurale et semi-urbaine, optimisée pour les smartphones d'entrée de gamme et capable d'absorber des milliers d'inscriptions simultanées.",
-        "solution": "Architecture légère, contenus optimisés pour faible débit, UX simplifiée pensée pour des apprenants sans expérience préalable du e-learning.",
+        "description": "En partenariat avec l'incubateur Boukarou, nous avons conçu et déployé une plateforme e-learning pour accompagner la montée en compétences de 42 000 jeunes répartis dans les 10 régions du Cameroun. Le projet répond à un double enjeu : rendre la formation accessible sur smartphone en zone rurale, et structurer un catalogue de contenus adapté à des apprenants peu familiers avec le numérique.",
+        "challenge": "Créer une plateforme accessible en zone rurale et semi-urbaine, optimisée pour les smartphones d'entrée de gamme et capable d'absorber des milliers d'inscriptions simultanées, sans exclure les territoires à faible débit.",
+        "solution": "Architecture Moodle légère, médias compressés, UX épurée pensée pour une première expérience e-learning, et tests de charge réalisés avant le lancement pour garantir la stabilité à grande échelle.",
         "image": "/images/platforms/bouka-creativ-home.png",
         "url": "https://boukacreativ-learning.com/"
       },
@@ -367,14 +371,18 @@
           "value": "5",
           "label": "domaines certifiants"
         },
+        "metric2": {
+          "value": "100%",
+          "label": "parcours accessibles en ligne"
+        },
         "tags": [
           "LMS",
           "Certifications",
           "Finance & Audit"
         ],
-        "description": "En collaboration avec ThinkTech Academy, nous avons déployé un LMS dédié aux formations certifiantes en management, fiscalité, audit, comptabilité et intelligence artificielle.",
-        "challenge": "Digitaliser un catalogue de formations certifiantes dans des domaines techniques exigeants, tout en préservant la rigueur et la crédibilité du cabinet.",
-        "solution": "Parcours pédagogiques structurés par domaine, gestion fine des certifications et des accès, interface professionnelle alignée sur l'identité visuelle du cabinet.",
+        "description": "En collaboration avec ThinkTech Academy, nous avons déployé un LMS dédié aux formations certifiantes couvrant 5 domaines stratégiques : management, fiscalité, audit, comptabilité et intelligence artificielle. La plateforme permet une gestion fine des parcours, des certifications et des accès, avec une interface alignée sur l'identité visuelle du cabinet.",
+        "challenge": "Digitaliser un catalogue de formations certifiantes dans des domaines techniques exigeants, tout en préservant la rigueur, la traçabilité et la crédibilité attendues dans le secteur de l'audit et du conseil.",
+        "solution": "Parcours pédagogiques structurés par domaine avec progression verrouillée, gestion des certifications, des délais et des résultats, interface professionnelle et accompagnement des formateurs à la prise en main.",
         "image": "/images/platforms/training-to-rise-home.png",
         "url": null
       },
@@ -383,17 +391,21 @@
         "client": "Erfolg Zentrum — Centre de formation (Allemagne)",
         "sector": "Formation en langue allemande",
         "metric": {
+          "value": "J+1",
+          "label": "mise en service effective"
+        },
+        "metric2": {
           "value": "100%",
-          "label": "opérationnel dès J+1"
+          "label": "déploiement à distance"
         },
         "tags": [
           "Moodle",
           "International",
           "Clé en main"
         ],
-        "description": "Nous avons conçu et mis en service cette plateforme pour un centre de formation basé en Allemagne, entièrement opérationnelle et prête à accueillir les apprenants dès le premier jour.",
-        "challenge": "Livrer une solution complète et clé en main pour un client international, avec des standards de qualité élevés et un accompagnement entièrement à distance.",
-        "solution": "Déploiement structuré, configuration complète des espaces de cours, formation des administrateurs à distance et documentation fournie dès la livraison.",
+        "description": "Pour ce centre de formation basé en Allemagne, nous avons livré une plateforme Moodle entièrement clé en main : configuration complète, espaces de cours prêts à l'emploi, formation des administrateurs à distance et documentation fournie dès la livraison. La plateforme était opérationnelle dès le lendemain du lancement, sans aucune intervention sur site.",
+        "challenge": "Livrer une solution complète et opérationnelle pour un client international situé à plusieurs milliers de kilomètres, avec des standards de qualité élevés et un accompagnement entièrement à distance.",
+        "solution": "Méthodologie de déploiement structurée en phases, sessions de formation en visioconférence, documentation technique et pédagogique exhaustive remise à la livraison, et support post-lancement inclus.",
         "image": "/images/platforms/plateforme-allemand-home.png",
         "url": "https://test.thinktech-academy.com/"
       },
@@ -402,17 +414,21 @@
         "client": "École Supérieure Technique LaSalle — Douala",
         "sector": "Enseignement supérieur technique",
         "metric": {
-          "value": "En cours",
-          "label": "transformation progressive"
+          "value": "Phase 1",
+          "label": "dématérialisation des CC lancée"
+        },
+        "metric2": {
+          "value": "3",
+          "label": "filières intégrées dès le démarrage"
         },
         "tags": [
           "Moodle",
           "Université",
           "Dématérialisation"
         ],
-        "description": "En collaboration avec l'EST LaSalle de Douala, nous pilotons une transformation numérique progressive de l'établissement : dématérialisation des contrôles continus, suivi pédagogique en ligne et structuration des parcours de formation.",
-        "challenge": "Accompagner un établissement d'enseignement supérieur dans la transition vers le numérique sans perturber le fonctionnement existant, en impliquant progressivement enseignants et étudiants.",
-        "solution": "Approche par phases : démarrage par la dématérialisation des contrôles continus, avec un LMS Moodle configuré sur mesure, des sessions de formation du corps enseignant et un support continu.",
+        "description": "En collaboration avec l'EST LaSalle de Douala, nous pilotons une transformation numérique progressive de l'établissement. La première phase porte sur la dématérialisation des contrôles continus : les enseignants créent et soumettent leurs évaluations en ligne, les étudiants y répondent depuis n'importe quel appareil, et les résultats sont centralisés automatiquement.",
+        "challenge": "Accompagner un établissement d'enseignement supérieur dans sa transition numérique sans perturber le calendrier pédagogique, tout en impliquant progressivement un corps enseignant peu familier avec les outils e-learning.",
+        "solution": "Approche par phases : démarrage ciblé sur les contrôles continus avec un Moodle configuré sur mesure, sessions de formation pratiques pour les enseignants, support réactif et feuille de route d'expansion validée avec la direction.",
         "image": "/images/platforms/lasalle-1.png",
         "url": null
       },
@@ -422,16 +438,20 @@
         "sector": "Formation QHSE industrielle",
         "metric": {
           "value": "3",
-          "label": "modules QHSE certifiants"
+          "label": "modules QHSE structurés"
+        },
+        "metric2": {
+          "value": "10",
+          "label": "quiz chronométrés avec classement"
         },
         "tags": [
           "Moodle",
           "QHSE",
           "Induction"
         ],
-        "description": "Pour le port minéralier d'Owendo au Gabon, nous avons conçu un parcours d'induction QHSE complet : vidéos de sensibilisation, quiz chronométrés, barre de progression gamifiée et classement en temps réel pour impliquer chaque collaborateur et prestataire.",
-        "challenge": "Former rapidement et efficacement des centaines de collaborateurs et prestataires aux exigences QHSE d'un site industriel portuaire, avec traçabilité des résultats et engagement actif des apprenants.",
-        "solution": "Parcours Moodle structuré en 3 sections (accès & comportement, EPIs, signalement de dangers), avec vidéos Powtoon, quiz à temps limité, système de points et classement en direct.",
+        "description": "Pour le port minéralier d'Owendo au Gabon, nous avons conçu un parcours d'induction QHSE complet à destination des collaborateurs et prestataires externes. Le programme couvre les règles d'accès et de comportement sur site, l'utilisation des équipements de protection individuelle (EPIs) et la procédure de signalement des dangers — avec vidéos animées, quiz chronométrés, barre de progression et classement en temps réel.",
+        "challenge": "Former rapidement et de manière traçable des centaines de collaborateurs et prestataires aux exigences QHSE d'un site industriel portuaire à hauts risques, tout en maintenant un niveau d'engagement élevé tout au long du parcours.",
+        "solution": "Parcours Moodle en 3 sections avec contenus vidéo Powtoon, quiz à temps limité (10 questions par section), système de gamification avec points et classement, et tableau de bord administrateur pour le suivi des résultats.",
         "image": "/images/platforms/omp-1.png",
         "url": null
       }

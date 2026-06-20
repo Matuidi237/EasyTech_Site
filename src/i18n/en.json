@@ -342,20 +342,24 @@
     "projects": [
       {
         "name": "Bouka Creativ' Learning",
-        "client": "Boukarou — Incubator",
+        "client": "Boukarou — Youth incubator",
         "sector": "Digital inclusion",
         "metric": {
           "value": "42,000",
           "label": "youth targeted"
+        },
+        "metric2": {
+          "value": "10",
+          "label": "regions of Cameroon covered"
         },
         "tags": [
           "Moodle",
           "Mobile-first",
           "Youth training"
         ],
-        "description": "In partnership with the Boukarou incubator, we designed and deployed this platform to support the upskilling of 42,000 young people across Cameroon's 10 regions.",
-        "challenge": "Build a platform accessible in rural and semi-urban areas, optimized for entry-level smartphones, and able to handle thousands of simultaneous registrations.",
-        "solution": "Lightweight architecture, low-bandwidth content optimization, simplified UX designed for learners with no prior e-learning experience.",
+        "description": "In partnership with the Boukarou incubator, we designed and deployed an e-learning platform to support the upskilling of 42,000 young people across all 10 regions of Cameroon. The project addresses a dual challenge: making training accessible on smartphones in rural areas, and structuring a content catalogue suited to learners new to digital tools.",
+        "challenge": "Build a platform accessible in rural and semi-urban areas, optimized for entry-level smartphones, and able to handle thousands of simultaneous registrations without excluding low-bandwidth territories.",
+        "solution": "Lightweight Moodle architecture, compressed media, streamlined UX designed for a first e-learning experience, and load testing before launch to guarantee stability at scale.",
         "image": "/images/platforms/bouka-creativ-home.png",
         "url": "https://boukacreativ-learning.com/"
       },
@@ -367,14 +371,18 @@
           "value": "5",
           "label": "certified domains"
         },
+        "metric2": {
+          "value": "100%",
+          "label": "online learning pathways"
+        },
         "tags": [
           "LMS",
           "Certifications",
           "Finance & Audit"
         ],
-        "description": "In collaboration with ThinkTech Academy, we deployed an LMS dedicated to certified training in management, tax, audit, accounting and artificial intelligence.",
-        "challenge": "Digitize a catalogue of certified training in demanding technical fields, while preserving the rigor and credibility of the firm.",
-        "solution": "Domain-structured learning paths, fine-grained certification and access management, professional interface aligned with the firm's visual identity.",
+        "description": "In collaboration with ThinkTech Academy, we deployed an LMS covering 5 strategic certified domains: management, tax, audit, accounting and artificial intelligence. The platform enables fine-grained management of pathways, certifications and access rights, with an interface aligned with the organisation's visual identity.",
+        "challenge": "Digitize a catalogue of certified training in technically demanding fields while preserving the rigour, traceability and credibility expected in the audit and consulting sector.",
+        "solution": "Domain-structured learning paths with locked progression, certification and deadline management, professional interface, and hands-on trainer onboarding.",
         "image": "/images/platforms/training-to-rise-home.png",
         "url": null
       },
@@ -383,17 +391,21 @@
         "client": "Erfolg Zentrum — Training center (Germany)",
         "sector": "German language training",
         "metric": {
+          "value": "Day 1",
+          "label": "effective go-live"
+        },
+        "metric2": {
           "value": "100%",
-          "label": "operational from day one"
+          "label": "remote deployment"
         },
         "tags": [
           "Moodle",
           "International",
           "Turnkey"
         ],
-        "description": "We designed and launched this platform for a training center based in Germany — fully operational and ready to welcome learners from the very first day.",
-        "challenge": "Deliver a complete turnkey solution for an international client, with high quality standards and fully remote support.",
-        "solution": "Structured deployment, complete course space configuration, remote admin training and documentation delivered at handover.",
+        "description": "For this training centre based in Germany, we delivered a fully turnkey Moodle platform: complete configuration, ready-to-use course spaces, remote admin training and documentation handed over at delivery. The platform was live and fully operational the day after launch — with no on-site intervention required.",
+        "challenge": "Deliver a complete, operational solution for an international client thousands of kilometres away, meeting high quality standards with fully remote support.",
+        "solution": "Phased deployment methodology, training sessions via video call, comprehensive technical and pedagogical documentation delivered at handover, and post-launch support included.",
         "image": "/images/platforms/plateforme-allemand-home.png",
         "url": "https://test.thinktech-academy.com/"
       },
@@ -402,17 +414,21 @@
         "client": "École Supérieure Technique LaSalle — Douala",
         "sector": "Higher technical education",
         "metric": {
-          "value": "In progress",
-          "label": "progressive transformation"
+          "value": "Phase 1",
+          "label": "assessment dematerialization live"
+        },
+        "metric2": {
+          "value": "3",
+          "label": "departments integrated at launch"
         },
         "tags": [
           "Moodle",
           "University",
           "Dematerialization"
         ],
-        "description": "In collaboration with EST LaSalle in Douala, we are driving a progressive digital transformation: dematerialization of continuous assessments, online academic tracking, and structured learning pathways.",
-        "challenge": "Guide a higher education institution through digital transition without disrupting existing operations, progressively involving teachers and students.",
-        "solution": "Phased approach: starting with the dematerialization of continuous assessments, with a custom-configured Moodle LMS, faculty training sessions, and ongoing support.",
+        "description": "In collaboration with EST LaSalle in Douala, we are driving a progressive digital transformation of the institution. Phase 1 focuses on the dematerialization of continuous assessments: lecturers create and publish their evaluations online, students complete them from any device, and results are automatically centralised.",
+        "challenge": "Guide a higher education institution through digital transition without disrupting the academic calendar, while progressively engaging a teaching staff unfamiliar with e-learning tools.",
+        "solution": "Phased rollout starting with continuous assessments on a custom Moodle LMS, practical training workshops for lecturers, responsive support, and a validated expansion roadmap agreed with management.",
         "image": "/images/platforms/lasalle-1.png",
         "url": null
       },
@@ -422,7 +438,11 @@
         "sector": "Industrial QHSE training",
         "metric": {
           "value": "3",
-          "label": "QHSE certified modules"
+          "label": "structured QHSE modules"
+        },
+        "metric2": {
+          "value": "10",
+          "label": "timed quizzes with live leaderboard"
         },
         "tags": [
           "Moodle",
