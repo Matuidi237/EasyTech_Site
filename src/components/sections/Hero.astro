@@ -37,19 +37,16 @@ const t = useTranslations(lang);
       <div class="pc-viewport" id="pcViewport">
         <div class="platforms-grid" id="platformsGrid">
           {t.hero.platforms.map((p: any) => {
-            const Tag = p.url ? "a" : "div";
-            const linkProps = p.url ? { href: p.url, target: "_blank", rel: "noopener noreferrer" } : {};
             return (
-              <Tag class={`platform-card ${!p.url ? "is-disabled" : ""}`} {...linkProps}>
+              <a class="platform-card" href={`/${lang}/realisations`}>
                 <div class="platform-thumb">
                   <img src={p.image} alt={p.name} width="400" height="260" loading="eager" />
                 </div>
                 <div class="platform-info">
                   <h3>{p.name}</h3>
                   <p>{p.description}</p>
-                  {!p.url && <span class="platform-soon">{t.hero.comingSoon}</span>}
                 </div>
-              </Tag>
+              </a>
             );
           })}
         </div>
@@ -124,14 +121,12 @@ const t = useTranslations(lang);
     border: 1px solid var(--color-border);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
-  .platform-card:not(.is-disabled) { cursor: pointer; }
-  .platform-card:not(.is-disabled):hover,
-  .platform-card:not(.is-disabled):focus-visible {
+  .platform-card:hover,
+  .platform-card:focus-visible {
     transform: translateY(-6px);
     box-shadow: 0 22px 40px -16px rgba(2, 33, 121, 0.28);
     border-color: var(--color-accent);
   }
-  .platform-card.is-disabled { cursor: default; }
 
   .platform-thumb {
     aspect-ratio: 16 / 10;
@@ -147,7 +142,6 @@ const t = useTranslations(lang);
   .platform-info { padding: 1.25rem 1.5rem 1.5rem; }
   .platform-info h3 { margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
   .platform-info p { font-size: 0.9rem; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .platform-soon { display: inline-block; margin-top: 0.75rem; font-size: 0.78rem; font-weight: 600; color: var(--color-text-secondary); border: 1px solid var(--color-border); border-radius: 999px; padding: 0.25rem 0.7rem; }
 
   .carousel { overflow: hidden; }
   .partner-logo {
