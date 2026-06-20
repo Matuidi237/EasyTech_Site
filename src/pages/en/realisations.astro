@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import Realisations from "../../components/sections/Realisations.astro";
+import ChatbotWidget from "../../components/chatbot/ChatbotWidget.astro";
+
+const lang = "en";
+---
+
+<BaseLayout
+  lang={lang}
+  title="Our work — ThinkTech Solutions"
+  description="Explore the Moodle platforms designed and deployed by ThinkTech Solutions in Cameroon and Central Africa: Bouka Creativ' Learning, Training To Rise and Erfolg Zentrum."
+>
+  <Header lang={lang} />
+  <main id="main-content">
+    <Realisations lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ChatbotWidget lang={lang} />
+</BaseLayout>

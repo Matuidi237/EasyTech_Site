@@ -5,6 +5,7 @@
     "services": "Services",
     "contact": "Contact",
     "news": "News",
+    "realisations": "Our work",
     "cta": "Request a demo"
   },
   "hero": {
@@ -159,6 +160,54 @@
     ],
     "ctaText": "Another question?",
     "cta": "Request a demo"
+  },
+  "realisations": {
+    "eyebrow": "Our projects",
+    "title": "Platforms that actually train people",
+    "subtitle": "Each project is concrete proof of our approach: understand the context, deliver a solution that scales, and stay present after launch.",
+    "ctaTitle": "Your project will be our next success story",
+    "cta": "Request a demo",
+    "challengeLabel": "The challenge",
+    "solutionLabel": "Our response",
+    "visitLabel": "Visit the platform",
+    "projects": [
+      {
+        "name": "Bouka Creativ' Learning",
+        "client": "Boukarou — Incubator",
+        "sector": "Digital inclusion",
+        "metric": { "value": "42,000", "label": "youth targeted" },
+        "tags": ["Moodle", "Mobile-first", "Youth training"],
+        "description": "In partnership with the Boukarou incubator, we designed and deployed this platform to support the upskilling of 42,000 young people across Cameroon's 10 regions.",
+        "challenge": "Build a platform accessible in rural and semi-urban areas, optimized for entry-level smartphones, and able to handle thousands of simultaneous registrations.",
+        "solution": "Lightweight architecture, low-bandwidth content optimization, simplified UX designed for learners with no prior e-learning experience.",
+        "image": "/images/platforms/bouka-creativ-home.png",
+        "url": "https://boukacreativ-learning.com/"
+      },
+      {
+        "name": "Training To Rise",
+        "client": "MAXIMMACS — Audit & consulting firm",
+        "sector": "Professional certified training",
+        "metric": { "value": "5", "label": "certified domains" },
+        "tags": ["LMS", "Certifications", "Finance & Audit"],
+        "description": "In collaboration with the MAXIMMACS firm, we deployed an LMS dedicated to certified training in management, tax, audit, accounting and artificial intelligence.",
+        "challenge": "Digitize a catalogue of certified training in demanding technical fields, while preserving the rigor and credibility of the firm.",
+        "solution": "Domain-structured learning paths, fine-grained certification and access management, professional interface aligned with the firm's visual identity.",
+        "image": "/images/platforms/training-to-rise-home.png",
+        "url": null
+      },
+      {
+        "name": "Erfolg Zentrum Online",
+        "client": "Erfolg Zentrum — Training center (Germany)",
+        "sector": "German language training",
+        "metric": { "value": "100%", "label": "operational from day one" },
+        "tags": ["Moodle", "International", "Turnkey"],
+        "description": "We designed and launched this platform for a training center based in Germany — fully operational and ready to welcome learners from the very first day.",
+        "challenge": "Deliver a complete turnkey solution for an international client, with high quality standards and fully remote support.",
+        "solution": "Structured deployment, complete course space configuration, remote admin training and documentation delivered at handover.",
+        "image": "/images/platforms/plateforme-allemand-home.png",
+        "url": "https://test.thinktech-academy.com/"
+      }
+    ]
   },
   "footer": {
     "tagline": "Based in Douala, we design and deploy Moodle e-learning platforms for universities, companies and NGOs across Cameroon and Central Africa.",

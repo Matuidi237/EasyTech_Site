@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import Realisations from "../../components/sections/Realisations.astro";
+import ChatbotWidget from "../../components/chatbot/ChatbotWidget.astro";
+
+const lang = "fr";
+---
+
+<BaseLayout
+  lang={lang}
+  title="Nos réalisations — ThinkTech Solutions"
+  description="Découvrez les plateformes Moodle conçues et déployées par ThinkTech Solutions au Cameroun et en Afrique centrale : Bouka Creativ' Learning, Training To Rise et Erfolg Zentrum."
+>
+  <Header lang={lang} />
+  <main id="main-content">
+    <Realisations lang={lang} />
+  </main>
+  <Footer lang={lang} />
+  <ChatbotWidget lang={lang} />
+</BaseLayout>

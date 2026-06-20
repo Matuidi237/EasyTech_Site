@@ -5,6 +5,7 @@
     "services": "Services",
     "contact": "Contact",
     "news": "Actualités",
+    "realisations": "Réalisations",
     "cta": "Demander une démo"
   },
   "hero": {
@@ -159,6 +160,54 @@
     ],
     "ctaText": "Une autre question ?",
     "cta": "Demander une démo"
+  },
+  "realisations": {
+    "eyebrow": "Nos projets",
+    "title": "Des plateformes qui forment, vraiment",
+    "subtitle": "Chaque réalisation est une preuve concrète de notre méthode : comprendre le contexte, livrer une solution qui tient à l'échelle, et rester présents après le lancement.",
+    "ctaTitle": "Votre projet sera notre prochaine réalisation",
+    "cta": "Demander une démo",
+    "challengeLabel": "Le défi",
+    "solutionLabel": "Notre réponse",
+    "visitLabel": "Visiter la plateforme",
+    "projects": [
+      {
+        "name": "Bouka Creativ' Learning",
+        "client": "Boukarou — Incubateur",
+        "sector": "Inclusion numérique",
+        "metric": { "value": "42 000", "label": "jeunes ciblés" },
+        "tags": ["Moodle", "Mobile-first", "Formation jeunesse"],
+        "description": "En partenariat avec l'incubateur Boukarou, nous avons conçu et déployé cette plateforme pour accompagner la montée en compétences de 42 000 jeunes à travers les 10 régions du Cameroun.",
+        "challenge": "Créer une plateforme accessible en zone rurale et semi-urbaine, optimisée pour les smartphones d'entrée de gamme et capable d'absorber des milliers d'inscriptions simultanées.",
+        "solution": "Architecture légère, contenus optimisés pour faible débit, UX simplifiée pensée pour des apprenants sans expérience préalable du e-learning.",
+        "image": "/images/platforms/bouka-creativ-home.png",
+        "url": "https://boukacreativ-learning.com/"
+      },
+      {
+        "name": "Training To Rise",
+        "client": "MAXIMMACS — Cabinet d'audit & conseil",
+        "sector": "Formation professionnelle certifiante",
+        "metric": { "value": "5", "label": "domaines certifiants" },
+        "tags": ["LMS", "Certifications", "Finance & Audit"],
+        "description": "En collaboration avec le cabinet MAXIMMACS, nous avons déployé un LMS dédié aux formations certifiantes en management, fiscalité, audit, comptabilité et intelligence artificielle.",
+        "challenge": "Digitaliser un catalogue de formations certifiantes dans des domaines techniques exigeants, tout en préservant la rigueur et la crédibilité du cabinet.",
+        "solution": "Parcours pédagogiques structurés par domaine, gestion fine des certifications et des accès, interface professionnelle alignée sur l'identité visuelle du cabinet.",
+        "image": "/images/platforms/training-to-rise-home.png",
+        "url": null
+      },
+      {
+        "name": "Erfolg Zentrum Online",
+        "client": "Erfolg Zentrum — Centre de formation (Allemagne)",
+        "sector": "Formation en langue allemande",
+        "metric": { "value": "100%", "label": "opérationnel dès J+1" },
+        "tags": ["Moodle", "International", "Clé en main"],
+        "description": "Nous avons conçu et mis en service cette plateforme pour un centre de formation basé en Allemagne, entièrement opérationnelle et prête à accueillir les apprenants dès le premier jour.",
+        "challenge": "Livrer une solution complète et clé en main pour un client international, avec des standards de qualité élevés et un accompagnement entièrement à distance.",
+        "solution": "Déploiement structuré, configuration complète des espaces de cours, formation des administrateurs à distance et documentation fournie dès la livraison.",
+        "image": "/images/platforms/plateforme-allemand-home.png",
+        "url": "https://test.thinktech-academy.com/"
+      }
+    ]
   },
   "footer": {
     "tagline": "Basés à Douala, nous concevons et déployons des plateformes e-learning Moodle pour les universités, entreprises et ONG au Cameroun et en Afrique centrale.",

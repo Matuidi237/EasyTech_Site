@@ -30,22 +30,28 @@ const icons: Record<string, string> = {
 };
 ---
 
+<!-- ══ HERO ══ -->
 <section class="services-hero" aria-labelledby="services-hero-title">
   <div class="services-hero-bg" aria-hidden="true"></div>
-  <div class="container services-hero-inner reveal">
-    <p class="eyebrow eyebrow-light">{t.services.eyebrow ?? "Notre expertise"}</p>
-    <h1 id="services-hero-title">{t.services.title}</h1>
-    <p class="services-hero-subtitle">{t.services.subtitle}</p>
-    <a href={`/${lang}/contact`} class="btn-hero">
-      {t.services.cta}
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-    </a>
+  <div class="container">
+    <div class="services-hero-inner reveal">
+      <p class="eyebrow eyebrow-light">{t.services.eyebrow ?? "Notre expertise"}</p>
+      <h1 id="services-hero-title">{t.services.title}</h1>
+      <p class="services-hero-subtitle">{t.services.subtitle}</p>
+      <a href={`/${lang}/contact`} class="btn-hero">
+        {t.services.cta}
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
+<!-- ══ SERVICES + WHY ══ -->
 <section id="services" class="services" aria-labelledby="services-title">
   <div class="circle-deco services-circle-1" aria-hidden="true"></div>
   <div class="container">
+
+    <!-- Services grid -->
     <ul class="services-grid">
       {t.services.cards.map((c: any, i: number) => (
         <li class="service-card reveal" style={`transition-delay:${(i % 3) * 0.08}s`}>
@@ -60,48 +66,60 @@ const icons: Record<string, string> = {
       ))}
     </ul>
 
+    <!-- Why us — split screen -->
     <div class="why-us">
       <div class="why-header reveal">
         <h2>{t.services.whyTitle}</h2>
         <p class="why-subtitle">{t.services.whySubtitle}</p>
       </div>
 
-      <!-- Carousel -->
-      <div class="why-carousel" role="region" aria-label={t.services.whyTitle}>
-        <button class="carousel-btn carousel-prev" aria-label="Précédent">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <div class="carousel-viewport">
-          <ul class="carousel-track">
-            {t.services.why.map((w: any, i: number) => (
-              <li class="why-card" data-index={i}>
-                <div class="why-card-icon" aria-hidden="true" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${icons[w.icon] ?? icons["check-circle"]}</svg>`} />
-                <div class="why-card-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</div>
-                <h3>{w.title}</h3>
-                <p>{w.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <button class="carousel-btn carousel-next" aria-label="Suivant">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
+      <div class="why-split" role="region" aria-label={t.services.whyTitle}>
+        <!-- Left: navigation list -->
+        <ul class="wsl" role="tablist">
+          {t.services.why.map((w: any, i: number) => (
+            <li
+              class={`wsl-item${i === 0 ? " wsl-active" : ""}`}
+              role="tab"
+              tabindex={i === 0 ? 0 : -1}
+              aria-selected={i === 0 ? "true" : "false"}
+              aria-controls={`why-panel-${i}`}
+              id={`why-tab-${i}`}
+              data-i={i}
+            >
+              <div class="wsl-bar" aria-hidden="true"></div>
+              <div class="wsl-body">
+                <span class="wsl-num">{String(i + 1).padStart(2, "0")}</span>
+                <span class="wsl-title">{w.title}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
 
-      <!-- Dots -->
-      <div class="carousel-dots" role="tablist" aria-label="Navigation carrousel">
-        {t.services.why.map((_: any, i: number) => (
-          <button
-            class="carousel-dot"
-            role="tab"
-            aria-selected={i === 0 ? "true" : "false"}
-            aria-label={`Carte ${i + 1}`}
-            data-dot={i}
-          />
-        ))}
+        <!-- Right: content panels -->
+        <div class="wsp-wrap">
+          {t.services.why.map((w: any, i: number) => (
+            <div
+              class={`wsp${i === 0 ? " wsp-visible" : ""}`}
+              role="tabpanel"
+              id={`why-panel-${i}`}
+              aria-labelledby={`why-tab-${i}`}
+              hidden={i !== 0}
+            >
+              <div class="wsp-icon" aria-hidden="true" set:html={`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${icons[w.icon] ?? icons["check-circle"]}</svg>`} />
+              <span class="wsp-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+              <h3 class="wsp-title">{w.title}</h3>
+              <p class="wsp-text">{w.text}</p>
+            </div>
+          ))}
+          <!-- Progress bar -->
+          <div class="wsp-progress" aria-hidden="true">
+            <div class="wsp-progress-fill"></div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Process -->
     <h3 class="process-title reveal">{t.services.processTitle}</h3>
     <ol class="process-steps">
       {t.services.process.map((s: any, i: number) => (
@@ -113,6 +131,7 @@ const icons: Record<string, string> = {
       ))}
     </ol>
 
+    <!-- CTA -->
     <div class="services-cta reveal">
       <h3>{t.services.ctaTitle}</h3>
       <a href={`/${lang}/contact`} class="btn btn-primary">{t.services.cta}</a>
@@ -146,16 +165,21 @@ const icons: Record<string, string> = {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      135deg,
-      rgba(2, 33, 121, 0.88) 0%,
-      rgba(164, 37, 147, 0.60) 100%
+      105deg,
+      rgba(2, 33, 121, 0.92) 0%,
+      rgba(2, 33, 121, 0.75) 50%,
+      rgba(164, 37, 147, 0.30) 100%
     );
   }
-  .services-hero-inner {
+  /* Force the container to take full width inside the flex hero */
+  .services-hero .container {
     position: relative;
     z-index: 1;
-    max-width: 640px;
-    padding-left: 2rem;
+    width: 100%;
+  }
+  .services-hero-inner {
+    max-width: 560px;
+    /* no margin: auto — stays at the left of the container */
   }
   .eyebrow-light {
     color: rgba(255, 255, 255, 0.75);
@@ -173,8 +197,6 @@ const icons: Record<string, string> = {
     line-height: 1.7;
     margin-bottom: 2.25rem;
   }
-
-  /* Hero CTA button */
   .btn-hero {
     display: inline-flex;
     align-items: center;
@@ -186,39 +208,25 @@ const icons: Record<string, string> = {
     font-weight: 700;
     font-size: 0.95rem;
     text-decoration: none;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22), 0 0 0 3px rgba(255,255,255,0.18);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.22);
     transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
     white-space: nowrap;
   }
   .btn-hero svg { width: 18px; height: 18px; transition: transform 0.22s ease; }
-  .btn-hero:hover {
-    background: #f5f5f5;
-    transform: translateY(-3px);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28), 0 0 0 3px rgba(255,255,255,0.25);
-  }
+  .btn-hero:hover { background: #f5f5f5; transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,0.28); }
   .btn-hero:hover svg { transform: translateX(4px); }
 
-  /* Mobile hero */
   @media (max-width: 600px) {
-    .services-hero {
-      min-height: unset;
-      padding: 5rem 0 4rem;
-      align-items: flex-end;
-    }
+    .services-hero { min-height: unset; padding: 5rem 0 4rem; align-items: flex-end; }
     .services-hero-bg { background-position: 70% center; }
     .services-hero-bg::after {
-      background: linear-gradient(
-        180deg,
-        rgba(2, 33, 121, 0.55) 0%,
-        rgba(2, 33, 121, 0.92) 60%,
-        rgba(2, 33, 121, 0.98) 100%
+      background: linear-gradient(180deg,
+        rgba(2,33,121,0.5) 0%,
+        rgba(2,33,121,0.93) 55%,
+        rgba(2,33,121,0.99) 100%
       );
     }
-    .services-hero-inner {
-      max-width: 100%;
-      padding-left: 0;
-      text-align: left;
-    }
+    .services-hero-inner { max-width: 100%; }
   }
 
   /* ══════════════════════════════════════
@@ -230,27 +238,16 @@ const icons: Record<string, string> = {
 
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; list-style: none; margin: 0 0 4rem; }
   .service-card {
-    position: relative;
-    padding: 2rem 1.75rem 1.75rem;
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
+    position: relative; padding: 2rem 1.75rem 1.75rem;
+    border: 1px solid var(--color-border); border-radius: 12px;
     background: var(--color-card-bg);
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
   }
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 22px 40px rgba(2, 33, 121, 0.12);
-    border-color: var(--color-accent);
-  }
+  .service-card:hover { transform: translateY(-8px); box-shadow: 0 22px 40px rgba(2,33,121,0.12); border-color: var(--color-accent); }
   .service-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    background: var(--color-bg-secondary);
-    color: var(--color-accent);
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px; border-radius: 10px;
+    background: var(--color-bg-secondary); color: var(--color-accent);
     margin-bottom: 1rem;
     transition: background 0.28s ease, color 0.28s ease, transform 0.28s ease;
   }
@@ -262,239 +259,150 @@ const icons: Record<string, string> = {
   .service-card ul li + li { margin-top: 0.2rem; }
 
   /* ══════════════════════════════════════
-     WHY US — CAROUSEL
+     WHY US — SPLIT SCREEN
   ══════════════════════════════════════ */
   .why-us {
     margin-bottom: 4rem;
-    padding: 4rem 0 3rem;
+    padding: 4rem 2.5rem 3.5rem;
     background: linear-gradient(160deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
     border-radius: 20px;
-    overflow: hidden;
   }
-  .why-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 0 1.5rem;
-  }
+  .why-header { text-align: center; margin-bottom: 3rem; }
   .why-header h2 { margin-bottom: 1rem; }
   .why-subtitle {
-    max-width: 640px;
-    margin: 0 auto;
-    color: var(--color-text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.7;
+    max-width: 640px; margin: 0 auto;
+    color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.7;
   }
 
-  /* Carousel shell */
-  .why-carousel {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 1rem;
-  }
-  .carousel-viewport {
-    flex: 1;
-    overflow: hidden;
-    border-radius: 16px;
-    min-width: 0;
-  }
-  .carousel-track {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 1rem 0.25rem 1.5rem;
-    gap: 1.25rem;
-    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
+  /* Split layout */
+  .why-split {
+    display: grid;
+    grid-template-columns: 38% 1fr;
+    gap: 2.5rem;
+    align-items: start;
   }
 
-  /* Cards */
-  .why-card {
-    position: relative;
-    flex: 0 0 calc(33.33% - 0.84rem);
-    border-radius: 16px;
-    padding: 2rem 1.75rem 2.5rem;
-    background: var(--color-card-bg) padding-box, var(--color-border) border-box;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 16px rgba(2, 33, 121, 0.06);
-    opacity: 0.55;
-    transform: scale(0.96);
-    transition:
-      transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1),
-      opacity 0.45s ease,
-      box-shadow 0.45s ease;
+  /* ── Left: nav list ── */
+  .wsl { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .wsl-item {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
     cursor: pointer;
-    user-select: none;
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    transition: background 0.2s;
+    outline: none;
   }
-  .why-card.active {
-    opacity: 1;
-    transform: scale(1.03);
-    background:
-      var(--color-card-bg) padding-box,
-      linear-gradient(135deg, #A42593, #022179, #C94BB0) border-box;
-    box-shadow:
-      0 24px 56px rgba(164, 37, 147, 0.20),
-      0 8px 20px rgba(2, 33, 121, 0.12);
+  .wsl-item:hover { background: var(--color-card-bg); }
+  .wsl-bar {
+    width: 3px;
+    border-radius: 4px;
+    background: var(--color-border);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: background 0.3s;
+    align-self: stretch;
+    min-height: 100%;
   }
+  .wsl-item.wsl-active .wsl-bar { background: linear-gradient(180deg, #A42593, #022179); }
+  .wsl-body { display: flex; flex-direction: column; gap: 0.15rem; }
+  .wsl-num {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+    color: var(--color-text-secondary); opacity: 0.6;
+    transition: color 0.2s, opacity 0.2s;
+  }
+  .wsl-item.wsl-active .wsl-num { color: var(--color-accent); opacity: 1; }
+  .wsl-title {
+    font-size: 0.95rem; font-weight: 600;
+    color: var(--color-text-secondary);
+    line-height: 1.35;
+    transition: color 0.2s;
+  }
+  .wsl-item.wsl-active .wsl-title { color: var(--color-text); }
 
-  /* Progress bar */
-  .why-card::after {
-    content: "";
-    position: absolute;
-    bottom: 0; left: 0;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(90deg, #A42593, #022179);
-    border-radius: 0 0 14px 14px;
-    transform: scaleX(0);
-    transform-origin: left;
-    opacity: 0;
-    transition: opacity 0.3s;
+  /* ── Right: content panel ── */
+  .wsp-wrap {
+    position: relative;
+    min-height: 280px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-card-bg);
+    overflow: hidden;
   }
-  .why-card.active::after {
-    opacity: 1;
-    animation: progress-run var(--why-duration, 3s) linear forwards;
+  .wsp {
+    padding: 2.25rem 2rem 3.5rem;
+    animation: wsp-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
-  @keyframes progress-run {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
+  .wsp[hidden] { display: none; }
+  @keyframes wsp-in {
+    from { opacity: 0; transform: translateX(22px); }
+    to   { opacity: 1; transform: translateX(0); }
   }
-
-  .why-card-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
+  .wsp-icon {
+    width: 56px; height: 56px; border-radius: 14px;
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.25rem;
-    transition: transform 0.3s ease;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
   }
-  .why-card.active .why-card-icon { transform: scale(1.1); }
-  .why-card-icon svg { width: 22px; height: 22px; }
-
-  .why-card-num {
-    position: absolute;
-    top: 1.4rem;
-    right: 1.5rem;
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    opacity: 0.05;
-    line-height: 1;
-    user-select: none;
-    transition: opacity 0.4s;
+  .wsp-icon svg { width: 26px; height: 26px; }
+  .wsp-num {
+    display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+    color: var(--color-accent); margin-bottom: 0.5rem;
   }
-  .why-card.active .why-card-num { opacity: 0.1; }
-  .why-card h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--color-text);
-    margin-bottom: 0.6rem;
+  .wsp-title {
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--color-text); margin-bottom: 0.85rem; line-height: 1.3;
   }
-  .why-card p {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    line-height: 1.65;
-    margin: 0;
+  .wsp-text {
+    font-size: 0.95rem; color: var(--color-text-secondary);
+    line-height: 1.75; margin: 0;
   }
 
-  /* Prev / Next buttons */
-  .carousel-btn {
-    flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1.5px solid var(--color-border);
-    background: var(--color-card-bg);
-    color: var(--color-text);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  /* Progress bar at bottom of panel */
+  .wsp-progress {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px; background: var(--color-border);
   }
-  .carousel-btn svg { width: 20px; height: 20px; }
-  .carousel-btn:hover {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-    color: #fff;
-    transform: scale(1.08);
-    box-shadow: 0 6px 18px rgba(164, 37, 147, 0.3);
+  .wsp-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #A42593, #022179);
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 0 2px 2px 0;
   }
-
-  /* Dots */
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
+  .wsp-progress-fill.running {
+    animation: prog-fill var(--why-duration, 3.5s) linear forwards;
   }
-  .carousel-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: none;
-    background: var(--color-border);
-    cursor: pointer;
-    padding: 0;
-    transition: background 0.3s, transform 0.3s, width 0.3s;
-  }
-  .carousel-dot[aria-selected="true"] {
-    background: var(--color-accent);
-    width: 28px;
-    border-radius: 4px;
-    transform: scaleY(1.1);
-  }
+  @keyframes prog-fill { to { transform: scaleX(1); } }
 
   /* ══════════════════════════════════════
      PROCESS TIMELINE
   ══════════════════════════════════════ */
   .process-title { margin-bottom: 2rem; }
   .process-steps {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3.5rem;
-    position: relative;
+    list-style: none; display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-bottom: 3.5rem; position: relative;
   }
   .process-steps::before {
-    content: "";
-    position: absolute;
-    top: 1.25rem;
-    left: 6%;
-    right: 6%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-border));
-    z-index: 0;
+    content: ""; position: absolute; top: 1.25rem; left: 6%; right: 6%;
+    height: 2px; background: linear-gradient(90deg, var(--color-accent), var(--color-border)); z-index: 0;
   }
   .process-steps li { position: relative; z-index: 1; }
   .step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: var(--color-accent);
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.85rem;
-    box-shadow: 0 8px 18px rgba(164, 37, 147, 0.35);
+    display: flex; align-items: center; justify-content: center;
+    width: 2.5rem; height: 2.5rem; border-radius: 50%;
+    background: var(--color-accent); color: #fff;
+    font-size: 1.1rem; font-weight: 700; margin-bottom: 0.85rem;
+    box-shadow: 0 8px 18px rgba(164,37,147,0.35);
   }
 
   /* ══════════════════════════════════════
      CLOSING CTA
   ══════════════════════════════════════ */
   .services-cta {
-    text-align: center;
-    padding: 3rem 2rem;
-    border-radius: 16px;
+    text-align: center; padding: 3rem 2rem; border-radius: 16px;
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     color: #fff;
   }
@@ -508,90 +416,73 @@ const icons: Record<string, string> = {
   @media (max-width: 900px) {
     .services-grid, .process-steps { grid-template-columns: 1fr 1fr; }
     .process-steps::before { display: none; }
-    /* Tablet: 2 cards visible */
-    .why-card { flex: 0 0 calc(50% - 0.63rem); }
+    .why-split { grid-template-columns: 1fr; gap: 1.5rem; }
+    /* On tablet/mobile, list becomes horizontal tabs */
+    .wsl { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
+    .wsl-item { flex-direction: column; align-items: flex-start; padding: 0.6rem 0.9rem; border: 1px solid var(--color-border); border-radius: 8px; gap: 0.2rem; }
+    .wsl-bar { width: 100%; height: 2px; min-height: unset; margin-right: 0; margin-bottom: 0.3rem; border-radius: 2px; }
+    .wsl-item.wsl-active { border-color: var(--color-accent); background: var(--color-card-bg); }
+    .wsl-title { font-size: 0.82rem; }
+    .wsp-wrap { min-height: 220px; }
+    .why-us { padding: 3rem 1.5rem 2.5rem; }
   }
   @media (max-width: 600px) {
     .services-grid { grid-template-columns: 1fr; }
     .process-steps { grid-template-columns: 1fr 1fr; }
-    /* Mobile: 1 card visible */
-    .why-card { flex: 0 0 100%; }
-    .why-carousel { gap: 0.25rem; padding: 0 0.25rem; }
-    .carousel-btn { width: 38px; height: 38px; }
-    .carousel-btn svg { width: 18px; height: 18px; }
+    .wsl-title { font-size: 0.78rem; }
+    .wsp { padding: 1.5rem 1.25rem 3rem; }
+    .wsp-title { font-size: 1.1rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .carousel-track { transition: none; }
-    .why-card, .why-card.active { transform: none !important; animation: none !important; opacity: 1 !important; }
-    .why-card.active { border-color: var(--color-accent); box-shadow: none; }
-    .why-card.active::after { animation: none !important; transform: scaleX(1); opacity: 1; }
+    .wsp { animation: none; }
+    .wsp-progress-fill, .wsp-progress-fill.running { animation: none; transform: scaleX(1); }
   }
 </style>
 
 <script>
 (function () {
-  const DURATION = 3200;
+  const DURATION = 3500;
 
-  const track = document.querySelector(".carousel-track") as HTMLElement | null;
-  const cards = Array.from(document.querySelectorAll(".why-card")) as HTMLElement[];
-  const dots  = Array.from(document.querySelectorAll(".carousel-dot")) as HTMLButtonElement[];
-  const btnPrev = document.querySelector(".carousel-prev") as HTMLButtonElement | null;
-  const btnNext = document.querySelector(".carousel-next") as HTMLButtonElement | null;
+  const tabs    = Array.from(document.querySelectorAll(".wsl-item"))   as HTMLElement[];
+  const panels  = Array.from(document.querySelectorAll(".wsp"))        as HTMLElement[];
+  const progFill = document.querySelector(".wsp-progress-fill")        as HTMLElement | null;
 
-  if (!track || !cards.length) return;
+  if (!tabs.length || !panels.length) return;
 
-  cards.forEach(c => c.style.setProperty("--why-duration", DURATION + "ms"));
+  progFill?.style.setProperty("--why-duration", DURATION + "ms");
 
-  const total = cards.length;
   let current = 0;
-  let paused  = false;
   let timer   = 0;
-  let startX  = 0;
+  let paused  = false;
 
-  /* ── How many cards are visible? ── */
-  function visibleCount(): number {
-    const vw = window.innerWidth;
-    if (vw <= 600) return 1;
-    if (vw <= 900) return 2;
-    return 3;
-  }
+  function goTo(i: number) {
+    current = ((i % tabs.length) + tabs.length) % tabs.length;
 
-  /* ── Compute translateX for a given index ── */
-  function getOffset(index: number): number {
-    const visible = visibleCount();
-    const cardEl  = cards[0];
-    const gap = 20; // matches 1.25rem gap
-    const cardW = cardEl.getBoundingClientRect().width;
-    const step  = cardW + gap;
-
-    /* Centre the active card when only 1 visible on mobile */
-    if (visible === 1) return index * step;
-
-    /* Otherwise slide so active is the first visible card, but clamp at end */
-    const maxOffset = (total - visible) * step;
-    return Math.min(index * step, maxOffset);
-  }
-
-  function goTo(index: number, instant = false) {
-    /* Wrap around */
-    current = ((index % total) + total) % total;
-
-    if (instant) track.style.transition = "none";
-    track.style.transform = `translateX(-${getOffset(current)}px)`;
-    if (instant) void track.offsetWidth; // force reflow
-
-    /* Update card states */
-    cards.forEach((card, i) => {
-      card.classList.toggle("active", i === current);
+    tabs.forEach((t, idx) => {
+      const active = idx === current;
+      t.classList.toggle("wsl-active", active);
+      t.setAttribute("aria-selected", active ? "true" : "false");
+      t.tabIndex = active ? 0 : -1;
     });
 
-    /* Update dots */
-    dots.forEach((dot, i) => {
-      const active = i === current;
-      dot.classList.toggle("active", active);
-      dot.setAttribute("aria-selected", active ? "true" : "false");
+    panels.forEach((p, idx) => {
+      if (idx === current) {
+        p.hidden = false;
+        p.classList.add("wsp-visible");
+      } else {
+        p.hidden = true;
+        p.classList.remove("wsp-visible");
+      }
     });
+
+    /* Restart progress bar */
+    if (progFill) {
+      progFill.classList.remove("running");
+      void progFill.offsetWidth;
+      progFill.style.setProperty("--why-duration", DURATION + "ms");
+      progFill.classList.add("running");
+    }
   }
 
   function startTimer() {
@@ -605,54 +496,22 @@ const icons: Record<string, string> = {
   goTo(0);
   startTimer();
 
-  /* Recalculate on resize */
-  let resizeTimer = 0;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(() => goTo(current, true), 120);
-  });
-
-  /* Prev / Next buttons */
-  btnPrev?.addEventListener("click", () => {
-    goTo(current - 1);
-    startTimer();
-  });
-  btnNext?.addEventListener("click", () => {
-    goTo(current + 1);
-    startTimer();
-  });
-
-  /* Dot clicks */
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
+  /* Tab clicks */
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => {
       goTo(i);
       startTimer();
     });
-  });
-
-  /* Card click */
-  cards.forEach((card, i) => {
-    card.addEventListener("click", () => {
-      goTo(i);
-      startTimer();
+    /* Keyboard navigation */
+    tab.addEventListener("keydown", (e: KeyboardEvent) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); goTo(current + 1); startTimer(); }
+      if (e.key === "ArrowUp"   || e.key === "ArrowLeft")  { e.preventDefault(); goTo(current - 1); startTimer(); }
     });
   });
 
-  /* Pause on hover (desktop) */
+  /* Pause on hover */
   const section = document.querySelector(".why-us");
   section?.addEventListener("mouseenter", () => { paused = true; });
   section?.addEventListener("mouseleave", () => { paused = false; });
-
-  /* Touch swipe */
-  track.addEventListener("touchstart", (e: TouchEvent) => {
-    startX = e.touches[0].clientX;
-    paused = true;
-  }, { passive: true });
-  track.addEventListener("touchend", (e: TouchEvent) => {
-    const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
-    paused = false;
-    startTimer();
-  }, { passive: true });
 })();
 </script>
