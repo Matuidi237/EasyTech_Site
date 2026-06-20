@@ -60,6 +60,12 @@
         "description": "En collaboration avec l'École Supérieure Technique LaSalle de Douala, nous entamons une transformation numérique progressive : dématérialisation des contrôles continus, suivi pédagogique en ligne et structuration des parcours de formation.",
         "image": "/images/platforms/lasalle-1.png",
         "url": null
+      },
+      {
+        "name": "Owendo Mineral Port",
+        "description": "Pour le port minier d'Owendo au Gabon, nous avons conçu un parcours d'induction QHSE complet sur Moodle : vidéos de sensibilisation, quiz chronométrés, barre de progression gamifiée et classement en temps réel pour impliquer chaque collaborateur.",
+        "image": "/images/platforms/omp-1.png",
+        "url": null
       }
     ],
     "partners": [
@@ -78,6 +84,14 @@
       {
         "name": "Erfolg Zentrum",
         "logo": "/images/partners/erfolg-zentrum-logo.png"
+      },
+      {
+        "name": "Owendo Mineral Port",
+        "logo": "/images/partners/omp-logo.png"
+      },
+      {
+        "name": "EasyTech",
+        "logo": "/images/partners/easytech-logo.png"
       },
       {
         "name": "Institut Français",
@@ -400,6 +414,25 @@
         "challenge": "Accompagner un établissement d'enseignement supérieur dans la transition vers le numérique sans perturber le fonctionnement existant, en impliquant progressivement enseignants et étudiants.",
         "solution": "Approche par phases : démarrage par la dématérialisation des contrôles continus, avec un LMS Moodle configuré sur mesure, des sessions de formation du corps enseignant et un support continu.",
         "image": "/images/platforms/lasalle-1.png",
+        "url": null
+      },
+      {
+        "name": "Owendo Mineral Port",
+        "client": "OMP — Port Minéralier d'Owendo (Gabon)",
+        "sector": "Formation QHSE industrielle",
+        "metric": {
+          "value": "3",
+          "label": "modules QHSE certifiants"
+        },
+        "tags": [
+          "Moodle",
+          "QHSE",
+          "Induction"
+        ],
+        "description": "Pour le port minéralier d'Owendo au Gabon, nous avons conçu un parcours d'induction QHSE complet : vidéos de sensibilisation, quiz chronométrés, barre de progression gamifiée et classement en temps réel pour impliquer chaque collaborateur et prestataire.",
+        "challenge": "Former rapidement et efficacement des centaines de collaborateurs et prestataires aux exigences QHSE d'un site industriel portuaire, avec traçabilité des résultats et engagement actif des apprenants.",
+        "solution": "Parcours Moodle structuré en 3 sections (accès & comportement, EPIs, signalement de dangers), avec vidéos Powtoon, quiz à temps limité, système de points et classement en direct.",
+        "image": "/images/platforms/omp-1.png",
         "url": null
       }
     ],

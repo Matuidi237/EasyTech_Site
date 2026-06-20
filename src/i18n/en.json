@@ -60,6 +60,12 @@
         "description": "In collaboration with the École Supérieure Technique LaSalle in Douala, we are leading a progressive digital transformation: dematerialization of continuous assessments, online academic tracking, and structured learning pathways.",
         "image": "/images/platforms/lasalle-1.png",
         "url": null
+      },
+      {
+        "name": "Owendo Mineral Port",
+        "description": "For the Owendo Mineral Port in Gabon, we designed a complete QHSE induction program on Moodle: awareness videos, timed quizzes, gamified progress bar and real-time leaderboard to engage every employee and contractor.",
+        "image": "/images/platforms/omp-1.png",
+        "url": null
       }
     ],
     "partners": [
@@ -78,6 +84,14 @@
       {
         "name": "Erfolg Zentrum",
         "logo": "/images/partners/erfolg-zentrum-logo.png"
+      },
+      {
+        "name": "Owendo Mineral Port",
+        "logo": "/images/partners/omp-logo.png"
+      },
+      {
+        "name": "EasyTech",
+        "logo": "/images/partners/easytech-logo.png"
       },
       {
         "name": "Institut Français",
@@ -400,6 +414,25 @@
         "challenge": "Guide a higher education institution through digital transition without disrupting existing operations, progressively involving teachers and students.",
         "solution": "Phased approach: starting with the dematerialization of continuous assessments, with a custom-configured Moodle LMS, faculty training sessions, and ongoing support.",
         "image": "/images/platforms/lasalle-1.png",
+        "url": null
+      },
+      {
+        "name": "Owendo Mineral Port",
+        "client": "OMP — Owendo Mineral Port (Gabon)",
+        "sector": "Industrial QHSE training",
+        "metric": {
+          "value": "3",
+          "label": "QHSE certified modules"
+        },
+        "tags": [
+          "Moodle",
+          "QHSE",
+          "Induction"
+        ],
+        "description": "For the Owendo Mineral Port in Gabon, we designed a complete QHSE induction program on Moodle: awareness videos, timed quizzes, a gamified progress bar and real-time leaderboard to actively engage every employee and external contractor.",
+        "challenge": "Rapidly and effectively train hundreds of employees and contractors on the QHSE requirements of an industrial port site, with result tracking and active learner engagement.",
+        "solution": "Moodle course structured in 3 sections (access & behavior, PPE, hazard reporting), with Powtoon videos, timed quizzes, a points system and live leaderboard.",
+        "image": "/images/platforms/omp-1.png",
         "url": null
       }
     ],
