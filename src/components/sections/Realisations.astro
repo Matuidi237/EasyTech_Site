@@ -30,14 +30,14 @@ const projectScreens: Record<string, string[]> = {
     "/images/platforms/Erfolg8.png",
   ],
   "lasalle": [
-    "/images/platforms/Lasalle-Courses-Page%20(1).png",
-    "/images/platforms/Lasalle-Courses-Page%20(2).png",
-    "/images/platforms/Lasalle-Courses-Page%20(3).png",
-    "/images/platforms/Lasalle-Courses-Page%20(4).png",
-    "/images/platforms/Lasalle-Courses-Page%20(5).png",
-    "/images/platforms/Lasalle-Courses-Page%20(6).png",
-    "/images/platforms/Lasalle-Courses-Page%20(7).png",
-    "/images/platforms/Lasalle-Courses-Page%20(8).png",
+    "/images/platforms/lasalle-1.png",
+    "/images/platforms/lasalle-2.png",
+    "/images/platforms/lasalle-3.png",
+    "/images/platforms/lasalle-4.png",
+    "/images/platforms/lasalle-5.png",
+    "/images/platforms/lasalle-6.png",
+    "/images/platforms/lasalle-7.png",
+    "/images/platforms/lasalle-8.png",
   ],
 };
 ---
@@ -266,7 +266,7 @@ const projectScreens: Record<string, string[]> = {
             <div class="rl-slide">
               <div class="rl-bar" aria-hidden="true"><span></span><span></span><span></span></div>
               <button class="rl-zoom-btn" data-src={src} data-idx={i} aria-label="Agrandir l'image">
-                <img src={src} alt={`${lasalle.name} — vue ${i + 1}`} width="700" height="420" loading="lazy" />
+                <img src={src} alt={`${lasalle.name} — vue ${i + 1}`} width="700" height="420" loading={i === 0 ? "eager" : "lazy"} />
                 <span class="rl-zoom-hint" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
                 </span>
