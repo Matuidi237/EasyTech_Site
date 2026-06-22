@@ -1,7 +1,7 @@
 services:
-  thinktech-site:
+  easytech-site:
     build: .
-    container_name: thinktech-site
+    container_name: easytech-site
     restart: unless-stopped
     networks:
       - webproxy
