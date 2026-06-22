@@ -7,7 +7,7 @@ export default defineConfig({
   output: "server",
   adapter: node({ mode: "standalone" }),
   integrations: [sitemap()],
-  server: { port: 4322 },
+  server: { port: 4322, host: true },
   i18n: {
     defaultLocale: "fr",
     locales: ["fr", "en"],
