@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/layout/Header.astro";
 import Footer from "../../components/layout/Footer.astro";
@@ -12,8 +12,8 @@ const t = useTranslations(lang);
 
 <BaseLayout
   lang={lang}
-  title="ThinkTech Solutions Plateformes Moodle pour la formation en Afrique"
-  description="Expert Moodle Cameroun. ThinkTech Solutions conçoit et déploie des plateformes e-learning sécurisées pour universités, entreprises et ONG à Douala et en Afrique centrale."
+  title="EasyTech Group Solutions IT pour les entreprises africaines"
+  description="EasyTech Group SA distribue des solutions informatiques (matériels et logiciels) pour équiper, sécuriser et faire évoluer les organisations en Afrique. +200 fabricants partenaires."
 >
   <Header lang={lang} />
   <main id="main-content">
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
           <p class="eyebrow">Notre histoire</p>
           <h2 id="home-about-title">{t.about.title}</h2>
           <p>{t.about.intro}</p>
-          <a href={`/${lang}/about`} class="link-arrow">En savoir plus sur ThinkTech →</a>
+          <a href={`/${lang}/about`} class="link-arrow">En savoir plus sur EasyTech Group →</a>
         </div>
         <ul class="home-values">
           {t.about.values.slice(0, 4).map((v: any) => (

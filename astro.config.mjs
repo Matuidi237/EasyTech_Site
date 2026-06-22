@@ -3,10 +3,11 @@ import sitemap from "@astrojs/sitemap";
 import node from "@astrojs/node";
 
 export default defineConfig({
-  site: "https://thinktech-solutions.com",
+  site: "https://easytechgroup.net",
   output: "server",
   adapter: node({ mode: "standalone" }),
   integrations: [sitemap()],
+  server: { port: 4322 },
   i18n: {
     defaultLocale: "fr",
     locales: ["fr", "en"],

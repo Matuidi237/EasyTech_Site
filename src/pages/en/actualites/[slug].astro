@@ -24,11 +24,11 @@ const articleSchema = {
   headline: article.data.title,
   description: article.data.description,
   datePublished: article.data.publishDate.toISOString(),
-  image: article.data.image ? `https://thinktech-solutions.com${article.data.image}` : "https://thinktech-solutions.com/images/og-cover.jpg",
-  author: { "@type": "Organization", name: "ThinkTech Solutions", url: "https://thinktech-solutions.com" },
-  publisher: { "@type": "Organization", name: "ThinkTech Solutions", logo: { "@type": "ImageObject", url: "https://thinktech-solutions.com/images/brand/logo-white.png" } },
+  image: article.data.image ? `https://easytechgroup.net${article.data.image}` : "https://easytechgroup.net/images/og-cover.jpg",
+  author: { "@type": "Organization", name: "EasyTech Group", url: "https://easytechgroup.net" },
+  publisher: { "@type": "Organization", name: "EasyTech Group", logo: { "@type": "ImageObject", url: "https://easytechgroup.net/images/brand/logo-white.png" } },
   inLanguage: "en-US",
-  url: `https://thinktech-solutions.com/en/actualites/${article.slug.replace(/^en\//, "")}`
+  url: `https://easytechgroup.net/en/actualites/${article.slug.replace(/^en\//, "")}`
 };
 
 const gradients: Record<string, string> = {
@@ -40,7 +40,7 @@ const fallbackGradient = "linear-gradient(135deg, #022179, #A42593)";
 const cover = article.data.image ? `background-image:url(${article.data.image})` : `background-image:${gradients[article.data.category ?? ""] ?? fallbackGradient}`;
 ---
 
-<BaseLayout lang="en" title={`${article.data.title} — ThinkTech Solutions`} description={article.data.description}>
+<BaseLayout lang="en" title={`${article.data.title} — EasyTech Group`} description={article.data.description}>
   <Header lang="en" />
   <main id="main-content">
     <section class="article-hero" style={cover}>

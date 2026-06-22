@@ -2,274 +2,234 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "services": "Services",
+    "services": "Solutions",
     "contact": "Contact",
     "news": "Actualités",
     "realisations": "Réalisations",
-    "cta": "Demander une démo"
+    "cta": "Demander un devis"
   },
   "hero": {
-    "trustBar": "Partenaire des incubateurs, cabinets de conseil et centres de formation au Cameroun",
-    "title": "Boostez la performance et la rentabilité de vos formations",
-    "subtitle": "ThinkTech Solutions conçoit et déploie des plateformes e-learning basées sur Moodle au Cameroun et en Afrique centrale, fluides et sécurisées. Offrez à vos apprenants une expérience intuitive sur tous supports, pour former sans limites, partout et en toute autonomie.",
-    "ctaPrimary": "Demander une démo",
-    "ctaSecondary": "Découvrir nos services",
-    "heroImageAlt": "Apprenant utilisant une plateforme de formation sur smartphone",
-    "platformsTitle": "Des plateformes que nous avons conçues et déployées",
-    "comingSoon": "Lien bientôt disponible",
+    "trustBar": "Partenaire de +200 fabricants et éditeurs IT mondiaux, au service des entreprises africaines",
+    "title": "Les meilleures solutions IT, accessibles en Afrique",
+    "subtitle": "EasyTech Group SA distribue des solutions informatiques de pointe, matériels et logiciels, pour équiper, sécuriser et faire évoluer les infrastructures des banques, PME et grandes entreprises à travers l'Afrique.",
+    "ctaPrimary": "Demander un devis",
+    "ctaSecondary": "Découvrir nos solutions",
+    "heroImageAlt": "Professionnel IT configurant une infrastructure réseau en entreprise",
+    "platformsTitle": "Nos marques et éditeurs partenaires",
+    "comingSoon": "Fiche disponible sur demande",
     "partnersTitle": "Ils nous font confiance",
     "metrics": [
-      {
-        "value": "2024",
-        "label": "Année de création"
-      },
-      {
-        "value": "5",
-        "label": "Experts dédiés"
-      },
-      {
-        "value": "42 000",
-        "label": "Jeunes visés (programme en cours)"
-      },
-      {
-        "value": "100%",
-        "label": "Support en français et anglais"
-      }
+      { "value": "10 ans", "label": "d'expertise IT" },
+      { "value": "+100", "label": "Experts certifiés" },
+      { "value": "+200", "label": "Partenaires fabricants" },
+      { "value": "8", "label": "Pays couverts en Afrique" }
     ],
     "platforms": [
       {
-        "name": "Bouka Creativ' Learning",
-        "description": "En partenariat avec l'incubateur Boukarou, nous avons conçu cette plateforme pour accompagner la montée en compétences de 42 000 jeunes à travers les 10 régions du Cameroun, favorisant ainsi l'inclusion numérique et l'accès à une formation de qualité.",
-        "image": "/images/platforms/bouka-creativ-home.png",
-        "url": "https://boukacreativ-learning.com/"
-      },
-      {
-        "name": "Training To Rise",
-        "description": "En collaboration avec ThinkTech Academy, nous avons déployé un LMS dédié aux formations certifiantes. Cette solution structure et digitalise l'apprentissage dans des domaines stratégiques tels que le management, la fiscalité, l'audit, la comptabilité et l'intelligence artificielle.",
-        "image": "/images/platforms/training-to-rise-home.png",
+        "name": "Cisco",
+        "description": "Leader mondial des équipements réseau et de la sécurité. Nous distribuons l'ensemble de la gamme Cisco : switches, routeurs, firewalls, Wi-Fi et solutions de collaboration unifiée pour toutes tailles d'organisations.",
+        "image": "/images/partners/cisco-logo.svg",
         "url": null
       },
       {
-        "name": "Erfolg Zentrum Online",
-        "description": "Nous avons conçu et mis en service cette plateforme pour un centre de formation basé en Allemagne. Entièrement opérationnelle, elle offre une expérience d'apprentissage fluide et intuitive, prête à accueillir les apprenants dès leur première connexion.",
-        "image": "/images/platforms/plateforme-allemand-home.png",
-        "url": "https://test.thinktech-academy.com/"
-      },
-      {
-        "name": "EST LaSalle Douala",
-        "description": "En collaboration avec l'École Supérieure Technique LaSalle de Douala, nous entamons une transformation numérique progressive : dématérialisation des contrôles continus, suivi pédagogique en ligne et structuration des parcours de formation.",
-        "image": "/images/platforms/lasalle-1.png",
+        "name": "Microsoft",
+        "description": "Partenaire Microsoft agréé, nous proposons licences, abonnements Microsoft 365, Azure et solutions d'entreprise, avec accompagnement au déploiement et au licensing adapté à votre structure.",
+        "image": "/images/partners/microsoft-logo.svg",
         "url": null
       },
       {
-        "name": "Owendo Mineral Port",
-        "description": "Pour le port minier d'Owendo au Gabon, nous avons conçu un parcours d'induction QHSE complet sur Moodle : vidéos de sensibilisation, quiz chronométrés, barre de progression gamifiée et classement en temps réel pour impliquer chaque collaborateur.",
-        "image": "/images/platforms/omp-1.png",
+        "name": "Fortinet",
+        "description": "Solutions de cybersécurité de niveau entreprise : FortiGate, FortiAnalyzer, FortiSIEM. Protection complète de vos réseaux, données et utilisateurs contre les menaces modernes.",
+        "image": "/images/partners/fortinet-logo.svg",
+        "url": null
+      },
+      {
+        "name": "HP",
+        "description": "Ordinateurs portables et fixes, serveurs, imprimantes et périphériques HP pour équiper vos collaborateurs et vos datacenters avec du matériel fiable, garanti et maintenable sur le long terme.",
+        "image": "/images/partners/hp-logo.svg",
+        "url": null
+      },
+      {
+        "name": "Dell Technologies",
+        "description": "Serveurs PowerEdge, solutions de stockage et postes de travail Dell. Des infrastructures performantes et évolutives, dimensionnées pour les besoins actuels et futurs de votre organisation.",
+        "image": "/images/partners/dell-logo.svg",
         "url": null
       }
     ],
     "partners": [
-      {
-        "name": "Boukarou",
-        "logo": "/images/partners/boukarou-logo.jpeg"
-      },
-      {
-        "name": "ThinkTech Academy",
-        "logo": "/images/partners/maximmacs-logo.png"
-      },
-      {
-        "name": "Centres de formation en allemand",
-        "logo": "/images/partners/centres-allemand-logo.jpg"
-      },
-      {
-        "name": "Erfolg Zentrum",
-        "logo": "/images/partners/erfolg-zentrum-logo.png"
-      },
-      {
-        "name": "Owendo Mineral Port",
-        "logo": "/images/partners/omp-logo.png"
-      },
-      {
-        "name": "EasyTech",
-        "logo": "/images/partners/easytech-logo.png"
-      },
-      {
-        "name": "Institut Français",
-        "logo": "/images/partners/institut-francais-logo.png"
-      },
-      {
-        "name": "Lasalle",
-        "logo": "/images/partners/lasalle-logo.png"
-      }
+      { "name": "Partenaire Banque 1", "logo": "/images/partners/client-1.png" },
+      { "name": "Partenaire Banque 2", "logo": "/images/partners/client-2.png" },
+      { "name": "Partenaire Entreprise", "logo": "/images/partners/client-3.png" },
+      { "name": "Partenaire Institution", "logo": "/images/partners/client-4.png" }
     ]
   },
   "about": {
     "title": "Qui sommes-nous ?",
-    "intro": "Fondée en 2024 à Douala, ThinkTech Solutions est née d'une conviction simple : la qualité de la formation est l'un des leviers les plus puissants pour bâtir une nation meilleure. Notre équipe de 5 experts accompagne aujourd'hui des universités, entreprises, ONG et centres de formation à travers le Cameroun et l'Afrique centrale dans la création de plateformes e-learning performantes, sécurisées et adaptées aux réalités du terrain.",
-    "intro2": "Sous l'impulsion de son fondateur Ignace MBOM ELOUGA, ThinkTech Solutions place l'accessibilité et l'accompagnement humain au cœur de chaque projet de transformation digitale.",
-    "teamImageAlt": "Équipe ThinkTech Solutions",
+    "intro": "Fondée il y a 10 ans à Douala, EasyTech Group SA s'est imposée comme un acteur de référence dans la distribution de solutions informatiques en Afrique. Grâce à un réseau de plus de 200 fabricants et éditeurs partenaires, nous donnons accès aux organisations africaines aux meilleures technologies mondiales, avec l'expertise locale pour les intégrer efficacement.",
+    "intro2": "Avec plus de 100 experts certifiés et une présence dans 8 pays (Cameroun, Tchad, Côte d'Ivoire, Sénégal, RDC, Congo, Nigeria, Kenya), EasyTech Group accompagne banques, PME et grandes entreprises dans la modernisation et la sécurisation de leur infrastructure informatique.",
+    "teamImageAlt": "Équipe EasyTech Group SA",
     "mission": {
       "title": "Mission",
-      "text": "Rendre la formation accessible à tous et pour tous."
+      "text": "Rendre les meilleures solutions IT accessibles aux organisations africaines, avec l'expertise pour les intégrer durablement."
     },
     "visionMid": {
       "title": "Vision (moyen terme)",
-      "text": "Familiariser durablement les jeunes africains à l'apprentissage grâce au numérique."
+      "text": "Devenir le partenaire IT de référence pour les entreprises en forte croissance en Afrique subsaharienne."
     },
     "visionLong": {
       "title": "Vision (long terme)",
-      "text": "Former une génération compétente et outillée pour relever les défis contemporains."
+      "text": "Bâtir une Afrique numérique souveraine, équipée des infrastructures et des compétences pour compétir à l'échelle mondiale."
     },
     "valuesTitle": "Nos valeurs",
     "values": [
       {
         "icon": "lightbulb",
-        "title": "Innovation",
-        "text": "Nous explorons sans cesse de nouvelles façons de rendre la formation plus engageante et plus efficace."
+        "title": "Expertise",
+        "text": "Nos équipes sont certifiées par les plus grands fabricants mondiaux. Chaque recommandation repose sur une maîtrise technique réelle."
       },
       {
         "icon": "handshake",
         "title": "Proximité",
-        "text": "Nous restons à l'écoute de chaque organisation, avec un accompagnement humain à chaque étape."
+        "text": "Nous sommes présents localement dans 8 pays africains. Un interlocuteur qui vous connaît, dans votre fuseau horaire."
       },
       {
         "icon": "shield",
-        "title": "Sécurité",
-        "text": "Vos données et celles de vos apprenants sont protégées selon les meilleurs standards."
+        "title": "Fiabilité",
+        "text": "Nous sélectionnons des solutions éprouvées et garantissons leur intégration selon les meilleures pratiques du marché."
       },
       {
         "icon": "award",
         "title": "Excellence",
-        "text": "Nous visons la qualité dans chaque déploiement, chaque ligne de code, chaque interaction."
+        "text": "Nous visons la performance à long terme : des solutions correctement dimensionnées, intégrées et maintenues dans la durée."
       }
     ]
   },
   "services": {
-    "eyebrow": "Notre expertise",
-    "title": "Notre expertise Moodle, à votre service",
-    "subtitle": "De la conception au support quotidien, nous prenons en charge l'ensemble du cycle de vie de votre plateforme de formation.",
+    "eyebrow": "Nos solutions",
+    "title": "Des solutions IT pour chaque besoin de votre organisation",
+    "subtitle": "De l'équipement des postes de travail à la sécurisation de votre infrastructure, EasyTech Group couvre l'ensemble de votre écosystème IT grâce à un réseau de +200 fabricants et éditeurs mondiaux.",
     "cards": [
       {
-        "icon": "rocket",
-        "title": "Déploiement de plateformes Moodle",
-        "benefit": "Une plateforme opérationnelle rapidement, configurée selon vos besoins.",
+        "icon": "network",
+        "title": "Réseau & Infrastructure",
+        "benefit": "Une infrastructure réseau performante, fiable et évolutive.",
         "points": [
-          "Installation et configuration sur mesure",
-          "Structuration des espaces de cours",
-          "Mise en ligne accompagnée"
+          "Switches, routeurs et équipements Wi-Fi professionnels",
+          "Conception et déploiement d'architecture réseau",
+          "Câblage structuré et salles serveurs"
+        ]
+      },
+      {
+        "icon": "shield",
+        "title": "Cybersécurité",
+        "benefit": "Protégez vos données et vos systèmes contre les menaces modernes.",
+        "points": [
+          "Firewalls, antivirus et solutions EDR",
+          "Audit de sécurité et tests de pénétration",
+          "Gestion des accès et authentification forte (MFA)"
         ]
       },
       {
         "icon": "server",
-        "title": "Hébergement sécurisé",
-        "benefit": "Une disponibilité constante et des données protégées.",
+        "title": "Hardware & Équipements",
+        "benefit": "Du matériel certifié, livré et garanti en Afrique.",
         "points": [
-          "Hébergement performant et surveillé",
-          "Sauvegardes régulières",
-          "Certificat HTTPS"
-        ]
-      },
-      {
-        "icon": "palette",
-        "title": "Personnalisation graphique et fonctionnelle",
-        "benefit": "Une plateforme qui porte votre image.",
-        "points": [
-          "Habillage selon votre charte graphique",
-          "Ajout de fonctionnalités spécifiques",
-          "Parcours pédagogiques adaptés"
+          "PC, laptops, serveurs et équipements de stockage",
+          "Imprimantes, écrans et périphériques professionnels",
+          "Maintenance matérielle et garantie constructeur"
         ]
       },
       {
         "icon": "plug",
-        "title": "Intégration de systèmes tiers",
-        "benefit": "Une plateforme connectée à vos outils existants.",
+        "title": "Logiciels & Licences",
+        "benefit": "Les bons logiciels, au bon tarif, avec un licensing maîtrisé.",
         "points": [
-          "Connexion à vos outils RH ou de paiement",
-          "Synchronisation des annuaires utilisateurs",
-          "API et intégrations sur mesure"
+          "Suites bureautiques, ERP, CRM et outils collaboratifs",
+          "Gestion de licences Microsoft, Adobe, et éditeurs tiers",
+          "Solutions cloud et abonnements SaaS d'entreprise"
         ]
       },
       {
-        "icon": "graduation-cap",
-        "title": "Formation des administrateurs et formateurs",
-        "benefit": "Une équipe autonome sur la durée.",
+        "icon": "wifi",
+        "title": "IoT & Solutions connectées",
+        "benefit": "Connectez vos équipements et pilotez vos opérations en temps réel.",
         "points": [
-          "Prise en main guidée de l'interface",
-          "Bonnes pratiques pédagogiques en ligne",
-          "Support documentaire fourni"
+          "Capteurs, passerelles et plateformes IoT industrielles",
+          "Supervision et monitoring d'infrastructure",
+          "Intégration IoT à vos systèmes existants"
         ]
       },
       {
         "icon": "headset",
-        "title": "Support technique et maintenance",
-        "benefit": "Une tranquillité d'esprit durable.",
+        "title": "Support & Maintenance",
+        "benefit": "Un support réactif pour garantir la continuité de vos opérations.",
         "points": [
-          "Assistance technique continue",
-          "Mises à jour de sécurité",
-          "Suivi proactif des performances"
+          "Contrats de maintenance préventive et corrective",
+          "Hotline technique et interventions sur site",
+          "Mises à jour, patches de sécurité et renouvellements"
         ]
       }
     ],
-    "whyTitle": "Pourquoi choisir ThinkTech Solutions ?",
-    "whySubtitle": "Beaucoup d'organisations en Afrique centrale connaissent Moodle. La difficulté, c'est de le configurer correctement, de le faire tenir à l'échelle, et de l'adapter à vos apprenants. C'est exactement ce que nous faisons.",
-    "ctaTitle": "Prêt à lancer votre plateforme ?",
+    "whyTitle": "Pourquoi choisir EasyTech Group ?",
+    "whySubtitle": "Avoir accès aux meilleures marques mondiales est une chose. Trouver un partenaire capable de les intégrer correctement dans votre contexte africain, c'est autre chose. C'est précisément ce que nous faisons depuis 10 ans.",
+    "ctaTitle": "Prêt à moderniser votre infrastructure ?",
     "why": [
       {
+        "icon": "layers",
+        "title": "+200 fabricants, un seul interlocuteur",
+        "text": "Au lieu de multiplier les fournisseurs et les contrats, vous disposez d'un seul partenaire capable de répondre à l'ensemble de vos besoins IT, matériels, logiciels, réseau, sécurité, avec les meilleurs fabricants mondiaux dans notre catalogue."
+      },
+      {
         "icon": "check-circle",
-        "title": "Moodle sans les complications",
-        "text": "Rôles mal définis, parcours désorganisés, interface qui rebute les apprenants : c'est le quotidien de beaucoup de plateformes mal configurées. Nous livrons une solution prête à former dès le premier jour, pas un chantier à finir vous-même."
+        "title": "Des experts certifiés sur vos technologies",
+        "text": "Nos plus de 100 experts sont certifiés par les fabricants que nous distribuons (Cisco, Microsoft, Fortinet, HP, Dell…). Vous bénéficiez d'une expertise technique réelle, pas d'un simple revendeur qui transfère une commande."
       },
       {
         "icon": "smartphone",
-        "title": "Pensé pour la réalité du terrain",
-        "text": "Connexion instable, smartphone d'entrée de gamme, apprenants en zone semi-urbaine : nos plateformes sont optimisées pour ces contraintes dès la conception, pas ajustées en catastrophe après le lancement."
-      },
-      {
-        "icon": "palette",
-        "title": "Votre image, pas un template reconnaissable",
-        "text": "Fini la plateforme Moodle générique que tout le monde reconnaît. Chaque déploiement porte vos couleurs, votre logo et votre identité. Vos apprenants se connectent sur votre plateforme, pas sur « encore un Moodle »."
+        "title": "Ancrage local, réseau mondial",
+        "text": "Présents dans 8 pays africains, nos équipes comprennent les réalités logistiques, douanières et techniques du continent. Vous accédez aux standards internationaux avec un partenaire qui connaît votre terrain."
       },
       {
         "icon": "shield",
-        "title": "Données protégées, accès maîtrisés",
-        "text": "Vos apprenants vous confient leurs données personnelles. Nous mettons en place les protections nécessaires : HTTPS, sauvegardes quotidiennes, gestion fine des droits par rôle et mises à jour de sécurité régulières."
+        "title": "Des solutions dimensionnées pour votre contexte",
+        "text": "Pas de surspécification inutile, pas de sous-dimensionnement risqué. Nous analysons vos besoins réels et recommandons des solutions adaptées à votre taille, votre secteur et votre budget, avec une vision à long terme."
+      },
+      {
+        "icon": "award",
+        "title": "10 ans d'expérience en Afrique",
+        "text": "Depuis 10 ans, nous avons déployé des centaines de projets IT sur le continent africain. Cette expérience accumulée nous permet d'anticiper les difficultés avant qu'elles surviennent et de livrer dans les délais."
       },
       {
         "icon": "headset",
-        "title": "Un interlocuteur, pas un ticket",
-        "text": "Pas de support externalisé, pas de formulaire qui disparaît dans le vide. Quand quelque chose bloque, vous avez un contact direct qui connaît votre configuration et répond dans la journée."
-      },
-      {
-        "icon": "layers",
-        "title": "De A à Z, sans vous laisser seul",
-        "text": "Installation, configuration, formation de vos administrateurs et formateurs, suivi post-lancement : nous ne disparaissons pas à la livraison. Votre succès à long terme fait partie du contrat."
+        "title": "Support après-vente sans frontières",
+        "text": "Notre relation ne s'arrête pas à la livraison. Contrats de maintenance, support technique, gestion des garanties constructeur et évolutions futures : nous restons votre partenaire sur toute la durée de vie de vos solutions."
       }
     ],
     "processTitle": "Notre processus en 4 étapes",
     "process": [
       {
-        "title": "Analyse des besoins",
-        "text": "Nous échangeons avec vous pour comprendre vos objectifs et contraintes."
+        "title": "Audit des besoins",
+        "text": "Nous analysons votre infrastructure existante et vos objectifs pour définir la solution la plus adaptée."
       },
       {
-        "title": "Déploiement",
-        "text": "Nous configurons et mettons en ligne votre plateforme."
+        "title": "Sélection & Devis",
+        "text": "Nous sélectionnons les meilleures solutions parmi +200 fabricants et vous soumettons un devis détaillé."
       },
       {
-        "title": "Formation",
-        "text": "Nous formons vos administrateurs et formateurs."
+        "title": "Livraison & Intégration",
+        "text": "Nos experts déploient et configurent les solutions dans votre environnement, avec tests et validation."
       },
       {
-        "title": "Accompagnement continu",
-        "text": "Nous restons disponibles pour le support et les évolutions."
+        "title": "Support continu",
+        "text": "Nous assurons la maintenance, les mises à jour et l'accompagnement sur toute la durée de vie des solutions."
       }
     ],
-    "cta": "Demander une démo"
+    "cta": "Demander un devis"
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Prêt à transformer votre formation ?",
-    "subtitle": "Parlons de votre projet. Basés à Douala, nous accompagnons les organisations au Cameroun et en Afrique centrale : en moins de 30 minutes, nous vous montrons comment une plateforme Moodle bien pensée peut transformer la gestion de vos formations, sans engagement.",
+    "title": "Parlons de votre projet IT",
+    "subtitle": "Basés à Douala et présents dans 8 pays africains, nos experts analysent vos besoins et vous proposent les solutions les plus adaptées parmi notre catalogue de +200 fabricants mondiaux, sans engagement.",
     "formNote": "Réponse sous 24 à 48 heures ouvrées.",
     "form": {
       "name": "Nom complet",
@@ -278,219 +238,180 @@
       "phone": "Numéro de téléphone",
       "orgType": "Type d'organisation",
       "orgTypeOptions": [
-        "Université / Établissement scolaire",
-        "Centre de formation",
-        "Entreprise",
+        "Banque / Institution financière",
+        "PME / TPE",
+        "Grande entreprise",
+        "Administration / Institution publique",
         "ONG",
-        "Institution publique",
         "Autre"
       ],
-      "need": "Besoin exprimé",
-      "needPlaceholder": "Décrivez votre projet : nombre d'apprenants estimé, type de formations, délai souhaité...",
-      "submit": "Réserver une démonstration",
-      "consent": "J'accepte que mes données personnelles (nom, email, téléphone, organisation) soient traitées par ThinkTech Solutions uniquement pour répondre à ma demande de démo.",
+      "need": "Votre besoin IT",
+      "needPlaceholder": "Décrivez votre projet : type de solutions recherchées, infrastructure existante, délai souhaité, budget approximatif...",
+      "submit": "Envoyer ma demande",
+      "consent": "J'accepte que mes données personnelles (nom, email, téléphone, organisation) soient traitées par EasyTech Group SA uniquement pour répondre à ma demande.",
       "consentLink": "Politique de confidentialité",
       "consentLinkHref": "/fr/privacy",
-      "success": "✅ Merci ! Votre demande a bien été reçue. Notre équipe vous contactera dans les 24 à 48 heures ouvrées. En attendant, n'hésitez pas à consulter notre FAQ ou à nous écrire à contact@thinktech-solutions.com.",
-      "error": "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à contact@thinktech-solutions.com."
+      "success": "✅ Merci ! Votre demande a bien été reçue. Notre équipe vous contactera dans les 24 à 48 heures ouvrées. Vous pouvez également nous écrire directement à info@easytechgroup.net.",
+      "error": "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous écrire directement à info@easytechgroup.net."
     }
   },
   "faq": {
     "title": "Questions fréquentes",
     "items": [
       {
-        "q": "Combien de temps faut-il pour déployer une plateforme Moodle ?",
-        "a": "Comptez généralement entre 2 et 6 semaines, selon la complexité de votre projet et le niveau de personnalisation souhaité. Nous démarrons toujours par une analyse de vos besoins pour vous donner un calendrier précis avant de nous engager sur quoi que ce soit."
+        "q": "Comment savoir quelle solution IT est adaptée à mon organisation ?",
+        "a": "Nos experts commencent toujours par un audit de votre infrastructure et de vos besoins avant de formuler une recommandation. Cet échange initial est gratuit et sans engagement. Nous ne recommandons que ce qui est réellement utile dans votre contexte."
       },
       {
-        "q": "Quel est le coût d'une plateforme Moodle sur mesure ?",
-        "a": "Le tarif dépend du nombre d'apprenants visés, des fonctionnalités souhaitées et du niveau d'accompagnement. Plutôt que des forfaits standardisés, nous établissons un devis adapté à votre réalité après un premier échange gratuit, sans engagement de votre part."
+        "q": "Proposez-vous du matériel garanti et maintenable en Afrique ?",
+        "a": "Oui. Nous distribuons uniquement du matériel neuf avec garantie constructeur. Notre réseau de techniciens dans 8 pays africains assure également la maintenance sur site et le remplacement de pièces défectueuses sans délais excessifs liés à l'importation."
       },
       {
-        "q": "La plateforme fonctionne-t-elle bien avec une connexion internet limitée ?",
-        "a": "Oui, c'est l'un de nos points forts : chaque plateforme est conçue mobile-first et optimisée pour une faible consommation de données, pensée pour les réalités de connexion en Afrique, y compris en zones rurales."
+        "q": "Pouvez-vous gérer l'ensemble de mon parc informatique (matériel + logiciels) ?",
+        "a": "Absolument. Grâce à notre réseau de +200 partenaires fabricants et éditeurs, nous sommes en mesure de couvrir l'intégralité de vos besoins IT : postes de travail, serveurs, réseau, sécurité, logiciels et licences. Un seul interlocuteur pour l'ensemble."
       },
       {
-        "q": "Pouvez-vous intégrer nos outils existants (paiement, RH, visioconférence) ?",
-        "a": "Oui. Nous connectons votre plateforme à vos outils déjà en place via des API ou des intégrations sur mesure, pour éviter les doubles saisies et fluidifier vos processus internes."
+        "q": "Travaillez-vous avec des PME ou seulement de grandes entreprises ?",
+        "a": "Nous accompagnons tous types d'organisations : PME, TPE, grandes entreprises, banques et institutions. Nous proposons des solutions dimensionnées à votre taille et à votre budget, sans vous vendre plus que nécessaire."
       },
       {
-        "q": "Formez-vous nos équipes à l'utilisation de la plateforme ?",
-        "a": "Systématiquement. Chaque déploiement inclut une prise en main guidée pour vos administrateurs et formateurs, accompagnée d'une documentation claire, pour que votre équipe soit autonome dès le lancement."
+        "q": "Dans quels pays êtes-vous présents ?",
+        "a": "EasyTech Group est présent au Cameroun, au Tchad, en Côte d'Ivoire, au Sénégal, en RDC, au Congo (Brazzaville/Libreville), au Nigeria et au Kenya. Nous pouvons également gérer des projets dans d'autres pays africains selon les besoins."
       },
       {
-        "q": "Que se passe-t-il après la mise en ligne ? Proposez-vous un support continu ?",
-        "a": "Oui, notre accompagnement ne s'arrête pas à la mise en ligne. Nous restons disponibles pour le support technique, les mises à jour de sécurité et les évolutions futures de votre plateforme."
+        "q": "Comment gérez-vous l'importation et les délais de livraison ?",
+        "a": "Grâce à notre expérience de 10 ans sur le continent et nos relations directes avec les fabricants, nous maîtrisons les procédures douanières et logistiques propres à chaque pays. Nous vous fournissons une estimation précise des délais de livraison dès la commande."
       },
       {
-        "q": "Comment garantissez-vous la sécurité de nos données et de celles de nos apprenants ?",
-        "a": "Hébergement surveillé, certificat HTTPS, sauvegardes régulières et testées, et gestion stricte des rôles et accès : la sécurité est intégrée dès la conception de chaque plateforme, pas ajoutée après coup."
+        "q": "Proposez-vous des contrats de maintenance après la livraison ?",
+        "a": "Oui. Nous proposons des contrats de maintenance préventive et corrective adaptés à vos équipements, incluant les interventions sur site, la gestion des garanties constructeur, les mises à jour de sécurité et une hotline technique dédiée."
       }
     ],
     "ctaText": "Une autre question ?",
-    "cta": "Demander une démo"
+    "cta": "Nous contacter"
   },
   "realisations": {
-    "eyebrow": "Nos projets",
-    "title": "Des plateformes qui forment, vraiment",
-    "subtitle": "Chaque réalisation est une preuve concrète de notre méthode : comprendre le contexte, livrer une solution qui tient à l'échelle, et rester présents après le lancement.",
+    "eyebrow": "Nos réalisations",
+    "title": "Des projets IT concrets, livrés en Afrique",
+    "subtitle": "Chaque projet est une preuve de notre méthode : comprendre votre environnement, sélectionner les solutions les plus adaptées, et assurer une intégration sans friction.",
     "ctaTitle": "Votre projet sera notre prochaine réalisation",
-    "cta": "Demander une démo",
+    "cta": "Demander un devis",
     "challengeLabel": "Le défi",
     "solutionLabel": "Notre réponse",
-    "visitLabel": "Visiter la plateforme",
+    "visitLabel": "En savoir plus",
     "projects": [
       {
-        "name": "Bouka Creativ' Learning",
-        "client": "Boukarou — Incubateur jeunesse",
-        "sector": "Inclusion numérique",
+        "name": "Sécurisation réseau d'un groupe bancaire",
+        "client": "Groupe bancaire, Afrique centrale",
+        "sector": "Banque & Finance",
         "metric": {
-          "value": "42 000",
-          "label": "jeunes ciblés"
+          "value": "12",
+          "label": "agences sécurisées"
         },
         "metric2": {
-          "value": "10",
-          "label": "régions du Cameroun couvertes"
+          "value": "0",
+          "label": "incident de sécurité depuis le déploiement"
         },
-        "tags": [
-          "Moodle",
-          "Mobile-first",
-          "Formation jeunesse"
-        ],
-        "description": "En partenariat avec l'incubateur Boukarou, nous avons conçu et déployé une plateforme e-learning pour accompagner la montée en compétences de 42 000 jeunes répartis dans les 10 régions du Cameroun. Le projet répond à un double enjeu : rendre la formation accessible sur smartphone en zone rurale, et structurer un catalogue de contenus adapté à des apprenants peu familiers avec le numérique.",
-        "challenge": "Créer une plateforme accessible en zone rurale et semi-urbaine, optimisée pour les smartphones d'entrée de gamme et capable d'absorber des milliers d'inscriptions simultanées, sans exclure les territoires à faible débit.",
-        "solution": "Architecture Moodle légère, médias compressés, UX épurée pensée pour une première expérience e-learning, et tests de charge réalisés avant le lancement pour garantir la stabilité à grande échelle.",
-        "image": "/images/platforms/bouka-creativ-home.png",
-        "url": "https://boukacreativ-learning.com/"
-      },
-      {
-        "name": "Training To Rise",
-        "client": "ThinkTech Academy — Formation certifiante",
-        "sector": "Formation professionnelle certifiante",
-        "metric": {
-          "value": "5",
-          "label": "domaines certifiants"
-        },
-        "metric2": {
-          "value": "100%",
-          "label": "parcours accessibles en ligne"
-        },
-        "tags": [
-          "LMS",
-          "Certifications",
-          "Finance & Audit"
-        ],
-        "description": "En collaboration avec ThinkTech Academy, nous avons déployé un LMS dédié aux formations certifiantes couvrant 5 domaines stratégiques : management, fiscalité, audit, comptabilité et intelligence artificielle. La plateforme permet une gestion fine des parcours, des certifications et des accès, avec une interface alignée sur l'identité visuelle du cabinet.",
-        "challenge": "Digitaliser un catalogue de formations certifiantes dans des domaines techniques exigeants, tout en préservant la rigueur, la traçabilité et la crédibilité attendues dans le secteur de l'audit et du conseil.",
-        "solution": "Parcours pédagogiques structurés par domaine avec progression verrouillée, gestion des certifications, des délais et des résultats, interface professionnelle et accompagnement des formateurs à la prise en main.",
-        "image": "/images/platforms/training-to-rise-home.png",
+        "tags": ["Cybersécurité", "Réseau", "Fortinet"],
+        "description": "Un groupe bancaire régional nous a mandatés pour sécuriser l'ensemble de son infrastructure réseau, composée de 12 agences interconnectées. Le projet couvrait le remplacement des équipements obsolètes, le déploiement de firewalls nouvelle génération et la mise en place d'une supervision centralisée de l'ensemble du parc.",
+        "challenge": "Sécuriser une infrastructure réseau vieillissante et hétérogène, interconnectant 12 sites géographiquement dispersés, sans interruption des opérations bancaires quotidiennes.",
+        "solution": "Déploiement de firewalls FortiGate sur l'ensemble des sites, mise en place d'un VPN MPLS sécurisé entre agences, supervision centralisée via FortiManager, et formation des équipes IT internes à la gestion quotidienne.",
+        "image": "/images/platforms/projet-banque.png",
         "url": null
       },
       {
-        "name": "Erfolg Zentrum Online",
-        "client": "Erfolg Zentrum — Centre de formation (Allemagne)",
-        "sector": "Formation en langue allemande",
+        "name": "Équipement complet d'un siège social",
+        "client": "PME industrielle, Cameroun",
+        "sector": "Industrie",
         "metric": {
-          "value": "J+1",
-          "label": "mise en service effective"
-        },
-        "metric2": {
-          "value": "100%",
-          "label": "déploiement à distance"
-        },
-        "tags": [
-          "Moodle",
-          "International",
-          "Clé en main"
-        ],
-        "description": "Pour ce centre de formation basé en Allemagne, nous avons livré une plateforme Moodle entièrement clé en main : configuration complète, espaces de cours prêts à l'emploi, formation des administrateurs à distance et documentation fournie dès la livraison. La plateforme était opérationnelle dès le lendemain du lancement, sans aucune intervention sur site.",
-        "challenge": "Livrer une solution complète et opérationnelle pour un client international situé à plusieurs milliers de kilomètres, avec des standards de qualité élevés et un accompagnement entièrement à distance.",
-        "solution": "Méthodologie de déploiement structurée en phases, sessions de formation en visioconférence, documentation technique et pédagogique exhaustive remise à la livraison, et support post-lancement inclus.",
-        "image": "/images/platforms/plateforme-allemand-home.png",
-        "url": "https://test.thinktech-academy.com/"
-      },
-      {
-        "name": "EST LaSalle Douala",
-        "client": "École Supérieure Technique LaSalle — Douala",
-        "sector": "Enseignement supérieur technique",
-        "metric": {
-          "value": "Phase 1",
-          "label": "dématérialisation des CC lancée"
+          "value": "150",
+          "label": "postes déployés"
         },
         "metric2": {
           "value": "3",
-          "label": "filières intégrées dès le démarrage"
+          "label": "semaines de déploiement"
         },
-        "tags": [
-          "Moodle",
-          "Université",
-          "Dématérialisation"
-        ],
-        "description": "En collaboration avec l'EST LaSalle de Douala, nous pilotons une transformation numérique progressive de l'établissement. La première phase porte sur la dématérialisation des contrôles continus : les enseignants créent et soumettent leurs évaluations en ligne, les étudiants y répondent depuis n'importe quel appareil, et les résultats sont centralisés automatiquement.",
-        "challenge": "Accompagner un établissement d'enseignement supérieur dans sa transition numérique sans perturber le calendrier pédagogique, tout en impliquant progressivement un corps enseignant peu familier avec les outils e-learning.",
-        "solution": "Approche par phases : démarrage ciblé sur les contrôles continus avec un Moodle configuré sur mesure, sessions de formation pratiques pour les enseignants, support réactif et feuille de route d'expansion validée avec la direction.",
-        "image": "/images/platforms/lasalle-1.png",
+        "tags": ["Hardware", "Réseau", "Microsoft"],
+        "description": "Une PME industrielle en pleine croissance nous a confié l'équipement complet de son nouveau siège social : postes de travail, serveurs, infrastructure réseau, licences Microsoft 365 et système de téléphonie IP. Le projet a été livré en moins de 3 semaines, dans les délais contractuels.",
+        "challenge": "Équiper 150 postes de travail et déployer une infrastructure réseau complète dans des délais serrés, tout en garantissant la compatibilité des équipements avec les applications métier existantes.",
+        "solution": "Sélection et importation de 150 PC HP, déploiement d'une baie serveur Dell, câblage réseau structuré Cat6, configuration de l'AD Microsoft, déploiement de Microsoft 365 et migration des données depuis l'ancienne infrastructure.",
+        "image": "/images/platforms/projet-pme.png",
         "url": null
       },
       {
-        "name": "Owendo Mineral Port",
-        "client": "OMP — Port Minéralier d'Owendo (Gabon)",
-        "sector": "Formation QHSE industrielle",
+        "name": "Infrastructure IoT pour un site industriel",
+        "client": "Opérateur industriel, Gabon",
+        "sector": "Industrie & IoT",
         "metric": {
-          "value": "3",
-          "label": "modules QHSE structurés"
+          "value": "200+",
+          "label": "capteurs déployés"
         },
         "metric2": {
-          "value": "10",
-          "label": "quiz chronométrés avec classement"
+          "value": "Temps réel",
+          "label": "supervision opérationnelle"
         },
-        "tags": [
-          "Moodle",
-          "QHSE",
-          "Induction"
-        ],
-        "description": "Pour le port minéralier d'Owendo au Gabon, nous avons conçu un parcours d'induction QHSE complet à destination des collaborateurs et prestataires externes. Le programme couvre les règles d'accès et de comportement sur site, l'utilisation des équipements de protection individuelle (EPIs) et la procédure de signalement des dangers — avec vidéos animées, quiz chronométrés, barre de progression et classement en temps réel.",
-        "challenge": "Former rapidement et de manière traçable des centaines de collaborateurs et prestataires aux exigences QHSE d'un site industriel portuaire à hauts risques, tout en maintenant un niveau d'engagement élevé tout au long du parcours.",
-        "solution": "Parcours Moodle en 3 sections avec contenus vidéo Powtoon, quiz à temps limité (10 questions par section), système de gamification avec points et classement, et tableau de bord administrateur pour le suivi des résultats.",
-        "image": "/images/platforms/omp-1.png",
+        "tags": ["IoT", "Infrastructure", "Supervision"],
+        "description": "Pour un opérateur industriel au Gabon, nous avons conçu et déployé une infrastructure IoT permettant la supervision en temps réel de l'ensemble des équipements du site. Plus de 200 capteurs connectés transmettent des données vers une plateforme centralisée, permettant une maintenance prédictive et une réduction significative des arrêts non planifiés.",
+        "challenge": "Déployer une solution IoT robuste dans un environnement industriel contraignant (chaleur, humidité, vibrations), avec une connectivité parfois limitée, tout en intégrant les données au système de supervision existant.",
+        "solution": "Sélection de capteurs industriels certifiés IP67, mise en place d'une architecture réseau redondante, déploiement d'une passerelle IoT locale pour le buffering des données, et intégration à la plateforme SCADA existante via API.",
+        "image": "/images/platforms/projet-iot.png",
+        "url": null
+      },
+      {
+        "name": "Migration cloud d'une institution publique",
+        "client": "Institution publique, Côte d'Ivoire",
+        "sector": "Administration publique",
+        "metric": {
+          "value": "500",
+          "label": "utilisateurs migrés"
+        },
+        "metric2": {
+          "value": "40%",
+          "label": "réduction des coûts IT"
+        },
+        "tags": ["Cloud", "Microsoft 365", "Licences"],
+        "description": "Mandatés par une institution publique ivoirienne, nous avons piloté la migration de 500 agents depuis une infrastructure bureautique vieillissante vers Microsoft 365. Le projet incluait l'audit de l'existant, la sélection du plan de licensing optimal, la migration des données et la formation des utilisateurs et des équipes IT internes.",
+        "challenge": "Migrer 500 agents vers le cloud sans interruption des services administratifs, tout en optimisant le budget licensing et en accompagnant des utilisateurs peu familiers avec les outils collaboratifs modernes.",
+        "solution": "Audit du parc existant, négociation d'un plan Microsoft 365 Government optimisé, migration en vagues de 50 utilisateurs sur 4 semaines, sessions de formation en présentiel et documentation dédiée remise à chaque département.",
+        "image": "/images/platforms/projet-cloud.png",
         "url": null
       }
     ],
-    "statProjects": "plateformes déployées",
-    "statLearners": "apprenants ciblés",
-    "statCountries": "pays",
-    "ctaSub": "Chaque projet commence par une conversation. Dites-nous ce que vous souhaitez construire.",
+    "statProjects": "projets livrés",
+    "statLearners": "postes déployés",
+    "statCountries": "pays couverts",
+    "ctaSub": "Chaque projet commence par une conversation. Parlez-nous de votre infrastructure et de vos objectifs.",
     "approachIntro": "Notre méthode, en trois temps.",
     "approachSteps": [
       {
         "num": "01",
-        "title": "Comprendre",
-        "text": "On prend le temps d'analyser votre contexte, vos apprenants et vos contraintes techniques avant d'écrire la moindre ligne de code."
+        "title": "Analyser",
+        "text": "On prend le temps d'auditer votre infrastructure existante, vos contraintes techniques et votre budget avant de formuler la moindre recommandation."
       },
       {
         "num": "02",
-        "title": "Construire",
-        "text": "Déploiement, configuration, identité visuelle, contenus de démonstration — on livre une plateforme prête à l'emploi, pas un squelette."
+        "title": "Intégrer",
+        "text": "Sélection des solutions dans notre catalogue de +200 fabricants, livraison, configuration et intégration dans votre environnement, clé en main."
       },
       {
         "num": "03",
-        "title": "Accompagner",
-        "text": "Formation des administrateurs, documentation, support post-lancement. On reste présents bien après la mise en ligne."
+        "title": "Pérenniser",
+        "text": "Formation de vos équipes, contrat de maintenance, suivi des garanties et support technique : on reste votre partenaire bien après la livraison."
       }
     ],
     "heroTitle": "Nos réalisations",
-    "heroSub": "Chaque projet livré est une plateforme qui tourne, des apprenants qui progressent, et un client qui nous fait confiance pour la suite.",
+    "heroSub": "Chaque projet livré est une infrastructure qui performe, une organisation sécurisée et un client qui nous fait confiance pour la suite.",
     "ctaEyebrow": "Travaillons ensemble",
-    "statHours": "heures de formation"
+    "statHours": "experts certifiés"
   },
   "footer": {
-    "tagline": "Basés à Douala, nous concevons et déployons des plateformes e-learning Moodle pour les universités, entreprises et ONG au Cameroun et en Afrique centrale.",
+    "tagline": "Basés à Douala, présents dans 8 pays africains. EasyTech Group SA distribue les meilleures solutions IT mondiales pour équiper et sécuriser les organisations en Afrique.",
     "navTitle": "Navigation",
     "contactTitle": "Contact",
     "socialTitle": "Suivez-nous",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
-    "copyright": "© 2026 ThinkTech Solutions SARL. Tous droits réservés."
+    "copyright": "© 2026 EasyTech Group SA. Tous droits réservés."
   },
   "theme": {
     "toggleLight": "Activer le mode clair",

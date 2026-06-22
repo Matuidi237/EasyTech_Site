@@ -1,4 +1,4 @@
-import fr from "./fr.json";
+﻿import fr from "./fr.json";
 import en from "./en.json";
 import chatbotFr from "./chatbot.fr.json";
 import chatbotEn from "./chatbot.en.json";
@@ -34,5 +34,5 @@ export function getOtherLang(lang: Lang): Lang {
 }
 
 export function highlightBrand(text: string): string {
-  return text.replace(/ThinkTech Solutions/g, '<strong class="brand-highlight">ThinkTech Solutions</strong>');
+  return text.replace(/EasyTech Group/g, '<strong class="brand-highlight">EasyTech Group</strong>');
 }

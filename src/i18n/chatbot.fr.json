@@ -1,5 +1,5 @@
-{
-  "greeting": "👋 Bonjour ! Je suis l'assistant ThinkTech. Choisissez un sujet ou posez votre question.",
+﻿{
+  "greeting": "👋 Bonjour ! Je suis l'assistant EasyTech. Choisissez un sujet ou posez votre question.",
   "fallback": "Je n'ai pas bien compris votre question. Voici les sujets sur lesquels je peux vous aider :",
   "inputPlaceholder": "Écrivez votre question...",
   "topics": [

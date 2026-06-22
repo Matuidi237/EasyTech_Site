@@ -1,4 +1,4 @@
----
+﻿---
 import type { Lang } from "../../i18n/utils";
 import { useTranslations } from "../../i18n/utils";
 
@@ -568,7 +568,7 @@ const successMsg = lang === "fr"
         const status = res.status;
         const msg = status === 429
           ? (isFr ? "Trop de tentatives. Réessayez dans quelques minutes." : "Too many attempts. Please try again in a few minutes.")
-          : (isFr ? "Une erreur est survenue. Réessayez ou écrivez-nous à contact@thinktech-solutions.com." : "An error occurred. Please retry or email us at contact@thinktech-solutions.com.");
+          : (isFr ? "Une erreur est survenue. Réessayez ou écrivez-nous à contact@easytechgroup.net." : "An error occurred. Please retry or email us at contact@easytechgroup.net.");
         if (formFeedback) { formFeedback.textContent = msg; formFeedback.className = "form-feedback error"; }
         // Restore phone for resubmission
         phoneInput.value = rawPhone;

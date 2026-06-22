@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/layout/Header.astro";
 import Footer from "../../components/layout/Footer.astro";
@@ -12,8 +12,8 @@ const t = useTranslations(lang);
 
 <BaseLayout
   lang={lang}
-  title="ThinkTech Solutions Moodle platforms for training in Africa"
-  description="Moodle expert in Cameroon. ThinkTech Solutions designs and deploys secure e-learning platforms for universities, companies and NGOs in Douala and across Central Africa."
+  title="EasyTech Group Moodle platforms for training in Africa"
+  description="Moodle expert in Cameroon. EasyTech Group designs and deploys secure e-learning platforms for universities, companies and NGOs in Douala and across Central Africa."
 >
   <Header lang={lang} />
   <main id="main-content">
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
           <p class="eyebrow">Our story</p>
           <h2 id="home-about-title">{t.about.title}</h2>
           <p>{t.about.intro}</p>
-          <a href={`/${lang}/about`} class="link-arrow">More about ThinkTech →</a>
+          <a href={`/${lang}/about`} class="link-arrow">More about EasyTech →</a>
         </div>
         <ul class="home-values">
           {t.about.values.slice(0, 4).map((v: any) => (

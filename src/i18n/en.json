@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Home",
     "about": "About",
@@ -11,7 +11,7 @@
   "hero": {
     "trustBar": "Partner to incubators, consulting firms and training centers in Cameroon",
     "title": "Boost the performance and profitability of your training",
-    "subtitle": "ThinkTech Solutions designs and deploys Moodle-based e-learning platforms in Cameroon and Central Africa, built to be smooth and secure. Give your learners an intuitive experience on every device, so they can train without limits, anywhere and fully on their own.",
+    "subtitle": "EasyTech Group designs and deploys Moodle-based e-learning platforms in Cameroon and Central Africa, built to be smooth and secure. Give your learners an intuitive experience on every device, so they can train without limits, anywhere and fully on their own.",
     "ctaPrimary": "Request a demo",
     "ctaSecondary": "Discover our services",
     "heroImageAlt": "Learner using a training platform on a smartphone",
@@ -45,7 +45,7 @@
       },
       {
         "name": "Training To Rise",
-        "description": "In collaboration with ThinkTech Academy, we deployed an LMS dedicated to certified training. This solution structures and digitizes learning in strategic fields such as management, tax, audit, accounting and artificial intelligence.",
+        "description": "In collaboration with EasyTech Academy, we deployed an LMS dedicated to certified training. This solution structures and digitizes learning in strategic fields such as management, tax, audit, accounting and artificial intelligence.",
         "image": "/images/platforms/training-to-rise-home.png",
         "url": null
       },
@@ -74,7 +74,7 @@
         "logo": "/images/partners/boukarou-logo.jpeg"
       },
       {
-        "name": "ThinkTech Academy",
+        "name": "EasyTech Academy",
         "logo": "/images/partners/maximmacs-logo.png"
       },
       {
@@ -105,9 +105,9 @@
   },
   "about": {
     "title": "Who we are",
-    "intro": "Founded in 2024 in Douala, ThinkTech Solutions was born from a simple conviction: training quality is one of the most powerful levers to build a better nation. Our team of 5 experts now supports universities, companies, NGOs and training centers across Cameroon and Central Africa in building high-performing, secure e-learning platforms adapted to real-world conditions.",
-    "intro2": "Driven by its founder Ignace MBOM ELOUGA, ThinkTech Solutions puts accessibility and human support at the heart of every digital transformation project.",
-    "teamImageAlt": "ThinkTech Solutions team",
+    "intro": "Founded in 2024 in Douala, EasyTech Group was born from a simple conviction: training quality is one of the most powerful levers to build a better nation. Our team of 5 experts now supports universities, companies, NGOs and training centers across Cameroon and Central Africa in building high-performing, secure e-learning platforms adapted to real-world conditions.",
+    "intro2": "Driven by its founder Ignace MBOM ELOUGA, EasyTech Group puts accessibility and human support at the heart of every digital transformation project.",
+    "teamImageAlt": "EasyTech Group team",
     "mission": {
       "title": "Mission",
       "text": "Make training accessible to everyone, everywhere."
@@ -210,7 +210,7 @@
         ]
       }
     ],
-    "whyTitle": "Why choose ThinkTech Solutions?",
+    "whyTitle": "Why choose EasyTech Group?",
     "whySubtitle": "Many organizations in Central Africa know Moodle exists. The challenge is configuring it properly, making it scale, and adapting it to your learners. That's exactly what we do.",
     "ctaTitle": "Ready to launch your platform?",
     "why": [
@@ -288,11 +288,11 @@
       "need": "Your needs",
       "needPlaceholder": "Describe your project: estimated number of learners, type of training, desired timeline...",
       "submit": "Book a demo",
-      "consent": "I agree that my personal data (name, email, phone, organization) may be processed by ThinkTech Solutions solely to respond to my demo request.",
+      "consent": "I agree that my personal data (name, email, phone, organization) may be processed by EasyTech Group solely to respond to my demo request.",
       "consentLink": "Privacy policy",
       "consentLinkHref": "/en/privacy",
-      "success": "✅ Thank you! Your request has been received. Our team will contact you within 24-48 business hours. Meanwhile, check our FAQ or email us at contact@thinktech-solutions.com.",
-      "error": "An error occurred while sending. Please try again or email us directly at contact@thinktech-solutions.com."
+      "success": "✅ Thank you! Your request has been received. Our team will contact you within 24-48 business hours. Meanwhile, check our FAQ or email us at contact@easytechgroup.net.",
+      "error": "An error occurred while sending. Please try again or email us directly at contact@easytechgroup.net."
     }
   },
   "faq": {
@@ -365,7 +365,7 @@
       },
       {
         "name": "Training To Rise",
-        "client": "ThinkTech Academy — Certified training",
+        "client": "EasyTech Academy — Certified training",
         "sector": "Professional certified training",
         "metric": {
           "value": "5",
@@ -380,7 +380,7 @@
           "Certifications",
           "Finance & Audit"
         ],
-        "description": "In collaboration with ThinkTech Academy, we deployed an LMS covering 5 strategic certified domains: management, tax, audit, accounting and artificial intelligence. The platform enables fine-grained management of pathways, certifications and access rights, with an interface aligned with the organisation's visual identity.",
+        "description": "In collaboration with EasyTech Academy, we deployed an LMS covering 5 strategic certified domains: management, tax, audit, accounting and artificial intelligence. The platform enables fine-grained management of pathways, certifications and access rights, with an interface aligned with the organisation's visual identity.",
         "challenge": "Digitize a catalogue of certified training in technically demanding fields while preserving the rigour, traceability and credibility expected in the audit and consulting sector.",
         "solution": "Domain-structured learning paths with locked progression, certification and deadline management, professional interface, and hands-on trainer onboarding.",
         "image": "/images/platforms/training-to-rise-home.png",
@@ -490,7 +490,7 @@
     "socialTitle": "Follow us",
     "legal": "Legal notice",
     "privacy": "Privacy policy",
-    "copyright": "© 2026 ThinkTech Solutions SARL. All rights reserved."
+    "copyright": "© 2026 EasyTech Group SA. All rights reserved."
   },
   "theme": {
     "toggleLight": "Switch to light mode",

@@ -1,4 +1,4 @@
----
+﻿---
 import "../styles/global.css";
 import type { Lang } from "../i18n/utils";
 import CookieBanner from "../components/CookieBanner.astro";
@@ -10,20 +10,20 @@ interface Props {
 }
 
 const { lang, title, description } = Astro.props;
-const canonical = `https://thinktech-solutions.com${Astro.url.pathname}`;
+const canonical = `https://easytechgroup.net${Astro.url.pathname}`;
 
 const schemas = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://thinktech-solutions.com/#organization",
-    name: "ThinkTech Solutions",
-    legalName: "ThinkTech Solutions SARL",
-    url: "https://thinktech-solutions.com",
-    logo: "https://thinktech-solutions.com/images/brand/logo-white.png",
-    image: "https://thinktech-solutions.com/images/og-cover.jpg",
-    telephone: "+237689357969",
-    email: "contact@thinktech-solutions.com",
+    "@id": "https://easytechgroup.net/#organization",
+    name: "EasyTech Group",
+    legalName: "EasyTech Group SA",
+    url: "https://easytechgroup.net",
+    logo: "https://easytechgroup.net/images/brand/logo-white.png",
+    image: "https://easytechgroup.net/images/og-cover.jpg",
+    telephone: "",
+    email: "contact@easytechgroup.net",
     foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
@@ -37,16 +37,16 @@ const schemas = [
       "https://www.tiktok.com/@thinktech.solutio"
     ],
     description: lang === "fr"
-      ? "ThinkTech Solutions conçoit et déploie des plateformes de formation Moodle sécurisées en Afrique."
-      : "ThinkTech Solutions designs and deploys secure Moodle training platforms in Africa."
+      ? "EasyTech Group conçoit et déploie des plateformes de formation Moodle sécurisées en Afrique."
+      : "EasyTech Group designs and deploys secure Moodle training platforms in Africa."
   },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://thinktech-solutions.com/#website",
-    url: "https://thinktech-solutions.com",
-    name: "ThinkTech Solutions",
-    publisher: { "@id": "https://thinktech-solutions.com/#organization" },
+    "@id": "https://easytechgroup.net/#website",
+    url: "https://easytechgroup.net",
+    name: "EasyTech Group",
+    publisher: { "@id": "https://easytechgroup.net/#organization" },
     inLanguage: [lang === "fr" ? "fr-FR" : "en-US"]
   }
 ];
@@ -61,14 +61,14 @@ const schemas = [
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  <link rel="alternate" hreflang="fr" href="https://thinktech-solutions.com/fr/" />
-  <link rel="alternate" hreflang="en" href="https://thinktech-solutions.com/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://thinktech-solutions.com/fr/" />
+  <link rel="alternate" hreflang="fr" href="https://easytechgroup.net/fr/" />
+  <link rel="alternate" hreflang="en" href="https://easytechgroup.net/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://easytechgroup.net/fr/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://thinktech-solutions.com/images/og-cover.jpg" />
+  <meta property="og:image" content="https://easytechgroup.net/images/og-cover.jpg" />
   <meta property="og:url" content={canonical} />
   <meta property="og:locale" content={lang === "fr" ? "fr_FR" : "en_US"} />
 

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 82">
+  <!-- Outer white C-arc -->
+  <path d="M 58,6 C 4,6 4,76 58,76" stroke="#FFFFFF" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <!-- Inner white C-arc (softer) -->
+  <path d="M 46,18 C 16,18 16,64 46,64" stroke="rgba(255,255,255,0.65)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- "Easy" white soft + "Tech" white bold -->
+  <text x="72" y="54" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="40" letter-spacing="-0.5">
+    <tspan fill="rgba(255,255,255,0.8)" font-weight="300">Easy</tspan><tspan fill="#FFFFFF" font-weight="700">Tech</tspan>
+  </text>
+  <!-- "Group" small white -->
+  <text x="162" y="70" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.65)" font-weight="400" letter-spacing="0.5">Group</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 60">
+  <rect width="140" height="60" fill="white"/>
+  <!-- Dell circle mark -->
+  <circle cx="28" cy="30" r="20" fill="none" stroke="#007DB8" stroke-width="4"/>
+  <!-- Dell D shape inside -->
+  <text x="18" y="38" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="22" font-weight="900" fill="#007DB8">D</text>
+  <!-- Dell text -->
+  <text x="56" y="37" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#007DB8" letter-spacing="-0.5">Dell</text>
+</svg>
