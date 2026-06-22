@@ -19,6 +19,32 @@ const t = useTranslations(lang);
   <main id="main-content">
     <Hero lang={lang} />
 
+    <section class="home-trust">
+      <div class="container">
+        <h2 class="trust-section-title">{t.hero.partnersTitle}</h2>
+        <div class="carousel" aria-label={t.hero.partnersTitle}>
+          <div class="carousel-track">
+            {t.hero.partners.map((p: any) => (
+              <div class="partner-logo">
+                {p.logo ? (
+                  <img src={p.logo} alt={p.name} loading="lazy"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                  <span class="partner-name-badge" style="display:none">{p.name}</span>
+                ) : (
+                  <span class="partner-name-badge">{p.name}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <ul class="trust-metrics">
+          {t.hero.metrics.map((m: any) => (
+            <li><strong>{m.value}</strong><span>{m.label}</span></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
     <section class="home-about" aria-labelledby="home-about-title">
       <div class="circle-deco home-about-circle-1" aria-hidden="true"></div>
       <div class="circle-deco circle-delay home-about-circle-2" aria-hidden="true"></div>
@@ -108,6 +134,34 @@ const t = useTranslations(lang);
 </BaseLayout>
 
 <style>
+  /* ── Trust section ── */
+  .home-trust { background: var(--color-bg); padding: 2.5rem 0; border-bottom: 1px solid var(--color-border); }
+  .trust-section-title { font-size: 1.1rem; font-weight: 600; color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+  .carousel { overflow: hidden; }
+  .carousel-track { display: flex; gap: 0; }
+  .partner-logo {
+    flex: 0 0 160px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    border-right: 1px solid var(--color-border);
+  }
+  .partner-logo img {
+    width: 120px;
+    height: 56px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+  .partner-name-badge { display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; color: var(--color-text); text-align: center; padding: 0.5rem; line-height: 1.2; width: 120px; height: 56px; }
+  .trust-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; list-style: none; margin: 2.5rem 0 0; border-top: 1px solid var(--color-border); }
+  .trust-metrics li { padding: 1.5rem 1.25rem 0; border-left: 1px solid var(--color-border); }
+  .trust-metrics li:first-child { border-left: none; }
+  .trust-metrics strong { display: block; font-size: 2.25rem; font-weight: 800; color: var(--color-accent); }
+  .trust-metrics span { color: var(--color-text-secondary); font-size: 0.9rem; }
+
   .home-about { background: var(--color-bg-secondary); overflow: hidden; }
   .home-about-circle-1 { top: -90px; right: 6%; width: 260px; height: 260px; }
   .home-about-circle-2 { bottom: -120px; left: -60px; width: 200px; height: 200px; }
@@ -172,9 +226,18 @@ const t = useTranslations(lang);
   }
 
   @media (max-width: 900px) {
+    .tools-orbit { margin-top: 1rem; }
     .home-about-grid { grid-template-columns: 1fr; }
     .home-values { border-left: none; padding-left: 0; border-top: 2px solid var(--color-border); padding-top: 1.5rem; }
     .home-services-inner { grid-template-columns: 1fr; }
-    .tools-orbit { margin-top: 1rem; }
+    .tools-orbit { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .trust-metrics { grid-template-columns: repeat(2, 1fr); }
+    .trust-metrics li { border-left: none; border-top: 1px solid var(--color-border); padding: 1.25rem 0 0; }
+    .trust-metrics li:nth-child(1), .trust-metrics li:nth-child(2) { border-top: none; }
+    .home-cta-inner { padding: 0 1rem; }
   }
 </style>
+

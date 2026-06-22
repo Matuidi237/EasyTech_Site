@@ -9,9 +9,10 @@
     "cta": "Demander un devis"
   },
   "hero": {
-    "trustBar": "Partenaire de +200 fabricants et éditeurs IT mondiaux, au service des entreprises africaines",
-    "title": "Les meilleures solutions IT, accessibles en Afrique",
-    "subtitle": "EasyTech Group SA distribue des solutions informatiques de pointe, matériels et logiciels, pour équiper, sécuriser et faire évoluer les infrastructures des banques, PME et grandes entreprises à travers l'Afrique.",
+    "trustBar": "Certifié par +200 fabricants mondiaux · 8 pays africains · 10 ans d'expertise",
+    "title": "L'infrastructure IT de votre entreprise,",
+    "titleLine2": "entre de bonnes mains",
+    "subtitle": "EasyTech Group SA sélectionne, livre et intègre les meilleures technologies mondiales pour équiper, sécuriser et faire évoluer vos systèmes informatiques. Réseau, cybersécurité, matériels, logiciels et IoT : nous couvrons l'ensemble de vos besoins avec l'expertise locale qui fait la différence.",
     "ctaPrimary": "Demander un devis",
     "ctaSecondary": "Découvrir nos solutions",
     "heroImageAlt": "Professionnel IT configurant une infrastructure réseau en entreprise",
@@ -27,40 +28,81 @@
     "platforms": [
       {
         "name": "Cisco",
-        "description": "Leader mondial des équipements réseau et de la sécurité. Nous distribuons l'ensemble de la gamme Cisco : switches, routeurs, firewalls, Wi-Fi et solutions de collaboration unifiée pour toutes tailles d'organisations.",
-        "image": "/images/partners/cisco-logo.svg",
-        "url": null
-      },
-      {
-        "name": "Microsoft",
-        "description": "Partenaire Microsoft agréé, nous proposons licences, abonnements Microsoft 365, Azure et solutions d'entreprise, avec accompagnement au déploiement et au licensing adapté à votre structure.",
-        "image": "/images/partners/microsoft-logo.svg",
+        "description": "Leader mondial des équipements réseau et de la sécurité. Switches, routeurs, firewalls, Wi-Fi et solutions de collaboration unifiée pour toutes tailles d'organisations.",
+        "image": "/images/platforms/cisco-partner-logo2-630x420.avif",
         "url": null
       },
       {
         "name": "Fortinet",
-        "description": "Solutions de cybersécurité de niveau entreprise : FortiGate, FortiAnalyzer, FortiSIEM. Protection complète de vos réseaux, données et utilisateurs contre les menaces modernes.",
-        "image": "/images/partners/fortinet-logo.svg",
+        "description": "Cybersécurité de niveau entreprise : FortiGate, FortiAnalyzer, FortiSIEM. Protection complète de vos réseaux, données et utilisateurs contre les menaces modernes.",
+        "image": "/images/platforms/Fortinet-Partner.png",
         "url": null
       },
       {
         "name": "HP",
-        "description": "Ordinateurs portables et fixes, serveurs, imprimantes et périphériques HP pour équiper vos collaborateurs et vos datacenters avec du matériel fiable, garanti et maintenable sur le long terme.",
-        "image": "/images/partners/hp-logo.svg",
+        "description": "Ordinateurs, serveurs, imprimantes et périphériques HP pour équiper vos collaborateurs et vos datacenters avec du matériel fiable, garanti et maintenable.",
+        "image": "/images/platforms/hp-business-partner-logo.png",
         "url": null
       },
       {
         "name": "Dell Technologies",
-        "description": "Serveurs PowerEdge, solutions de stockage et postes de travail Dell. Des infrastructures performantes et évolutives, dimensionnées pour les besoins actuels et futurs de votre organisation.",
-        "image": "/images/partners/dell-logo.svg",
+        "description": "Serveurs PowerEdge, solutions de stockage et postes de travail Dell. Des infrastructures performantes et évolutives pour les besoins actuels et futurs de votre organisation.",
+        "image": "/images/platforms/DELL.png",
+        "url": null
+      },
+      {
+        "name": "Lenovo",
+        "description": "PC ThinkPad, serveurs ThinkSystem et solutions de stockage Lenovo. Du matériel robuste et performant pour les environnements professionnels les plus exigeants.",
+        "image": "/images/platforms/Lenovo.png",
+        "url": null
+      },
+      {
+        "name": "IBM",
+        "description": "Serveurs IBM Power, solutions de stockage et logiciels d'entreprise. Une référence mondiale pour les environnements critiques et les workloads intensifs.",
+        "image": "/images/platforms/IBM.png",
+        "url": null
+      },
+      {
+        "name": "Kaspersky",
+        "description": "Solutions de cybersécurité Kaspersky : antivirus entreprise, protection des endpoints, détection des menaces avancées et sécurité des infrastructures critiques.",
+        "image": "/images/platforms/Kaspersky.png",
+        "url": null
+      },
+      {
+        "name": "Sophos",
+        "description": "Cybersécurité nouvelle génération : firewall, protection des endpoints et solutions XDR Sophos pour une défense unifiée contre les menaces modernes.",
+        "image": "/images/platforms/Sophos.png",
+        "url": null
+      },
+      {
+        "name": "Adobe",
+        "description": "Logiciels de création, de productivité et de gestion documentaire Adobe. Creative Cloud, Acrobat et solutions d'entreprise pour tous vos besoins numériques.",
+        "image": "/images/platforms/Adobe.png",
+        "url": null
+      },
+      {
+        "name": "Microsoft",
+        "description": "Partenaire Microsoft agréé : licences, Microsoft 365, Azure et solutions d'entreprise avec accompagnement au déploiement et au licensing adapté à votre structure.",
+        "image": "/images/platforms/Microsoft.png",
         "url": null
       }
     ],
     "partners": [
-      { "name": "Partenaire Banque 1", "logo": "/images/partners/client-1.png" },
-      { "name": "Partenaire Banque 2", "logo": "/images/partners/client-2.png" },
-      { "name": "Partenaire Entreprise", "logo": "/images/partners/client-3.png" },
-      { "name": "Partenaire Institution", "logo": "/images/partners/client-4.png" }
+      { "name": "BICEC", "logo": "/images/partners/Bicec.png" },
+      { "name": "Union Bank of Cameroon", "logo": "/images/partners/UBC.jpg" },
+      { "name": "AFG Bank", "logo": "/images/partners/AFG.png" },
+      { "name": "BGFI Bank", "logo": "/images/partners/BGFI.jpg" },
+      { "name": "UBA", "logo": "/images/partners/UBA.png" },
+      { "name": "Société Générale", "logo": "/images/partners/Societe-Generale.png" },
+      { "name": "MSC Cameroun", "logo": "/images/partners/MSC.png" },
+      { "name": "MUPECI", "logo": "/images/partners/MUPECI.png" },
+      { "name": "Krystal Palace Hôtel", "logo": "/images/partners/Krystal-Palace.png" },
+      { "name": "Camair-Co", "logo": "/images/partners/Camair-co.jpg" },
+      { "name": "Airtel Tchad", "logo": "/images/partners/Airtel.png" },
+      { "name": "UNHCR", "logo": "/images/partners/UNHCR.png" },
+      { "name": "CIMENCAM", "logo": "/images/partners/CIMENCAM.png" },
+      { "name": "Neptune OIL", "logo": "/images/partners/Neptune.png" },
+      { "name": "BOCOM SA", "logo": "/images/partners/BOCOM.jpg" }
     ]
   },
   "about": {
