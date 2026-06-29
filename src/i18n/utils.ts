@@ -34,5 +34,5 @@ export function getOtherLang(lang: Lang): Lang {
 }
 
 export function highlightBrand(text: string): string {
-  return text.replace(/EasyTech Group/g, '<strong class="brand-highlight">EasyTech Group</strong>');
+  return text.replace(/EasyTech Group SA/g, '<strong class="brand-highlight">EasyTech Group SA</strong>').replace(/EasyTech Group(?! SA)/g, '<strong class="brand-highlight">EasyTech Group</strong>');
 }
