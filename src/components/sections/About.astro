@@ -1,51 +1,217 @@
 ---
 import type { Lang } from "../../i18n/utils";
-import { useTranslations, highlightBrand } from "../../i18n/utils";
+import { useTranslations } from "../../i18n/utils";
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+const isEn = lang === "en";
+
+const milestones = [
+  { year: "2014", label: isEn ? "Founded in Douala" : "Création à Douala", desc: isEn ? "EasyTech Group SA is born with a mission to equip African organizations." : "EasyTech Group SA naît avec la mission d'équiper les organisations africaines." },
+  { year: "2016", label: isEn ? "First major clients" : "Premiers grands comptes", desc: isEn ? "Partnerships with major banks and telecoms operators in Cameroon." : "Partenariats avec les grandes banques et opérateurs télécoms du Cameroun." },
+  { year: "2018", label: isEn ? "Regional expansion" : "Expansion régionale", desc: isEn ? "Deployment in Chad and Côte d'Ivoire. 50+ certified experts." : "Déploiement au Tchad et en Côte d'Ivoire. 50+ experts certifiés." },
+  { year: "2021", label: isEn ? "Cisco & Fortinet certified" : "Certifiés Cisco & Fortinet", desc: isEn ? "Official certification as Cisco Partner and Fortinet reseller." : "Certification officielle Cisco Partner et revendeur agréé Fortinet." },
+  { year: "2023", label: isEn ? "6 countries" : "6 pays couverts", desc: isEn ? "Presence in 6 African countries, 150+ manufacturer partners." : "Présence dans 6 pays africains, 150+ fabricants partenaires." },
+  { year: "2024", label: isEn ? "8 countries · 200+ partners" : "8 pays · 200+ partenaires", desc: isEn ? "10 years of expertise. 100+ certified experts across 8 African nations." : "10 ans d'expertise. 100+ experts certifiés dans 8 pays africains." },
+];
+
+const countries = [
+  { code: "cm", name: isEn ? "Cameroon" : "Cameroun", city: "Douala" },
+  { code: "td", name: isEn ? "Chad" : "Tchad", city: "N'Djamena" },
+  { code: "ci", name: isEn ? "Côte d'Ivoire" : "Côte d'Ivoire", city: "Abidjan" },
+  { code: "sn", name: "Sénégal", city: "Dakar" },
+  { code: "cd", name: isEn ? "DR Congo" : "RD Congo", city: "Kinshasa" },
+  { code: "cg", name: "Congo", city: "Brazzaville" },
+  { code: "ng", name: "Nigeria", city: "Lagos" },
+  { code: "ke", name: "Kenya", city: "Nairobi" },
+];
+
+const partners = [
+  { src: "/images/platforms/cisco-partner-logo2-630x420.avif", alt: "Cisco Partner" },
+  { src: "/images/platforms/Fortinet-Partner.png", alt: "Fortinet" },
+  { src: "/images/platforms/hp-business-partner-logo.png", alt: "HP Business Partner" },
+  { src: "/images/platforms/DELL.png", alt: "Dell Technologies" },
+  { src: "/images/platforms/Lenovo.png", alt: "Lenovo" },
+  { src: "/images/platforms/IBM.png", alt: "IBM" },
+  { src: "/images/platforms/Kaspersky.png", alt: "Kaspersky" },
+  { src: "/images/platforms/Sophos.png", alt: "Sophos" },
+  { src: "/images/platforms/Adobe.png", alt: "Adobe" },
+  { src: "/images/platforms/Microsoft.png", alt: "Microsoft" },
+];
+
+const valueIcons = [
+  `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5.25 3.6 10.2 8 11.5C16.4 22.2 20 17.25 20 12V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+];
 ---
 
-<section id="about" class="about" aria-labelledby="about-title">
-  <div class="circle-deco about-circle-1" aria-hidden="true"></div>
-  <div class="circle-deco circle-delay circle-fill about-circle-2" aria-hidden="true"></div>
+<!-- ── 1. HERO ── -->
+<section class="about-hero" aria-labelledby="about-hero-title">
+  <div class="about-hero-bg" aria-hidden="true">
+    <img src="/images/hero/hero-easytech1.jpg" alt="" />
+    <div class="about-hero-overlay"></div>
+  </div>
+  <div class="container about-hero-inner">
+    <div class="about-hero-text">
+    <p class="about-hero-eyebrow">{isEn ? "About EasyTech Group SA" : "À propos d'EasyTech Group SA"}</p>
+    <h1 id="about-hero-title" class="about-hero-title">
+      {isEn ? "10 years of IT expertise" : "10 ans d'expertise IT"}<br />
+      <span class="about-hero-accent">{isEn ? "at the heart of Africa" : "au cœur de l'Afrique"}</span>
+    </h1>
+    <p class="about-hero-sub">{isEn ? "Founded in Douala, EasyTech Group SA equips African organizations with the world's best IT technologies. With 100+ certified experts and 200+ manufacturer partners, we cover your entire IT ecosystem — from network infrastructure to cybersecurity." : "Fondée à Douala, EasyTech Group SA équipe les organisations africaines avec les meilleures technologies IT mondiales. Grâce à 100+ experts certifiés et 200+ fabricants partenaires, nous couvrons l'intégralité de votre écosystème IT — du réseau à la cybersécurité."}</p>
+    <ul class="about-hero-metrics" aria-label={isEn ? "Key figures" : "Chiffres clés"}>
+      {t.hero.metrics.map((m: any) => (
+        <li>
+          <strong class="metric-count" data-value={m.value}>{m.value}</strong>
+          <span>{m.label}</span>
+        </li>
+      ))}
+    </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. TIMELINE ── -->
+<section class="about-timeline" aria-labelledby="timeline-title">
   <div class="container">
-    <p class="eyebrow reveal">Depuis 2024 à Douala</p>
-    <h2 id="about-title" class="reveal">{t.about.title}</h2>
+    <p class="eyebrow">{isEn ? "Our journey" : "Notre parcours"}</p>
+    <h2 id="timeline-title">{isEn ? "Built step by step, since 2014" : "Construits pas à pas, depuis 2014"}</h2>
+    <div class="timeline" role="list">
+      {milestones.map((m, i) => (
+        <div class="tl-item" role="listitem" data-index={i}>
+          <div class="tl-dot-wrap" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <time class="tl-year" datetime={m.year}>{m.year}</time>
+            <h3 class="tl-label">{m.label}</h3>
+            <p class="tl-desc">{m.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
-    <div class="about-content">
-      <div class="about-text reveal">
-        <p set:html={highlightBrand(t.about.intro)} />
-        <blockquote class="about-quote" set:html={highlightBrand(t.about.intro2)} />
-
-        <ul class="about-stats">
-          {t.hero.metrics.slice(0, 3).map((m: any) => (
-            <li>
-              <strong>{m.value}</strong>
-              <span>{m.label}</span>
-            </li>
-          ))}
-        </ul>
+<!-- ── 3. MISSION & VISION ── -->
+<section class="about-mv" aria-label={isEn ? "Mission and vision" : "Mission et vision"}>
+  <div class="mv-panel mv-dark">
+    <p class="eyebrow eyebrow--light">{isEn ? "Our mission" : "Notre mission"}</p>
+    <h2>{t.about.mission.title}</h2>
+    <blockquote>"{t.about.mission.text}"</blockquote>
+    <ul class="mv-proof-list" aria-label={isEn ? "How we do it" : "Comment nous le faisons"}>
+      <li>
+        <span class="mv-proof-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        {isEn ? "200+ manufacturers selected for proven reliability" : "200+ fabricants sélectionnés pour leur fiabilité prouvée"}
+      </li>
+      <li>
+        <span class="mv-proof-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        {isEn ? "Local integration by our certified teams, in your country" : "Intégration locale par nos équipes certifiées, dans votre pays"}
+      </li>
+      <li>
+        <span class="mv-proof-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        {isEn ? "Post-deployment support and maintenance guaranteed" : "Support et maintenance post-déploiement garantis"}
+      </li>
+      <li>
+        <span class="mv-proof-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        {isEn ? "Solutions tailored to African budgets and constraints" : "Solutions adaptées aux budgets et contraintes africaines"}
+      </li>
+    </ul>
+  </div>
+  <div class="mv-panel mv-light">
+    <div class="mv-vision-stack">
+      <div>
+        <p class="eyebrow">{isEn ? "Medium-term vision" : "Vision à moyen terme"}</p>
+        <h3>{t.about.visionMid.title}</h3>
+        <p>{t.about.visionMid.text}</p>
       </div>
-      <figure class="about-photo reveal">
-        <img src="/images/about/team-photo.jpg" alt={t.about.teamImageAlt} width="480" height="360" loading="lazy" />
-        <span class="about-photo-badge">2024 — Douala 🇨🇲</span>
-      </figure>
+      <div class="mv-divider" aria-hidden="true"></div>
+      <div>
+        <p class="eyebrow">{isEn ? "Long-term vision" : "Vision à long terme"}</p>
+        <h3>{t.about.visionLong.title}</h3>
+        <p>{t.about.visionLong.text}</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="about-pillars">
-      <article class="reveal"><span class="pillar-label">{t.about.mission.title}</span><p>{t.about.mission.text}</p></article>
-      <article class="reveal"><span class="pillar-label">{t.about.visionMid.title}</span><p>{t.about.visionMid.text}</p></article>
-      <article class="reveal"><span class="pillar-label">{t.about.visionLong.title}</span><p>{t.about.visionLong.text}</p></article>
+<!-- ── 4. PRÉSENCE 8 PAYS ── -->
+<section class="about-countries" aria-labelledby="countries-title">
+  <div class="container">
+    <div class="countries-head">
+      <div>
+        <p class="eyebrow">{isEn ? "Local presence" : "Présence locale"}</p>
+        <h2 id="countries-title">{isEn ? "One partner in your country, in your time zone" : "Un interlocuteur dans votre pays, dans votre fuseau horaire"}</h2>
+        <p class="countries-sub">{t.about.intro2}</p>
+      </div>
     </div>
+    <ul class="countries-grid" aria-label={isEn ? "Countries covered" : "Pays couverts"}>
+      {countries.map((c) => (
+        <li class="country-card">
+          <img
+            class="country-flag-img"
+            src={`https://flagcdn.com/w40/${c.code}.png`}
+            srcset={`https://flagcdn.com/w80/${c.code}.png 2x`}
+            width="32"
+            height="22"
+            alt={c.name}
+            loading="lazy"
+          />
+          <div>
+            <strong class="country-name">{c.name}</strong>
+            <span class="country-city">{c.city}</span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
 
-    <h3 class="values-title reveal">{t.about.valuesTitle}</h3>
-    <ul class="values-grid">
+<!-- ── 5. PARTENAIRES ── -->
+<section class="about-partners" aria-labelledby="partners-title">
+  <div class="container">
+    <div class="partners-head">
+      <div>
+        <p class="eyebrow">{isEn ? "Our portfolio" : "Notre portefeuille"}</p>
+        <h2 id="partners-title">
+          <span class="partners-count">+200</span>
+          {isEn ? " manufacturers, one point of contact" : " fabricants, un seul interlocuteur"}
+        </h2>
+      </div>
+      <p class="partners-desc">{isEn ? "EasyTech Group gives you access to the world's best technologies through a network of 200+ certified manufacturer and software publisher partners." : "EasyTech Group vous donne accès aux meilleures technologies mondiales grâce à un réseau de 200+ fabricants et éditeurs partenaires certifiés."}</p>
+    </div>
+    <div class="partners-logos" aria-label={isEn ? "Partner brands" : "Marques partenaires"}>
+      {partners.map((p) => (
+        <div class="partner-logo-card">
+          <img src={p.src} alt={p.alt} loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. VALEURS ── -->
+<section class="about-values" aria-labelledby="values-title">
+  <div class="container">
+    <p class="eyebrow">{isEn ? "What drives us" : "Ce qui nous anime"}</p>
+    <h2 id="values-title">{t.about.valuesTitle}</h2>
+    <ul class="values-grid" aria-label={t.about.valuesTitle}>
       {t.about.values.map((v: any, i: number) => (
-        <li class="value-item reveal">
-          <span class="value-num">{String(i + 1).padStart(2, "0")}</span>
-          <h4>{v.title}</h4>
+        <li class="value-card">
+          <span class="value-icon" set:html={valueIcons[i]} aria-hidden="true" />
+          <h3>{v.title}</h3>
           <p>{v.text}</p>
         </li>
       ))}
@@ -54,95 +220,476 @@ const t = useTranslations(lang);
 </section>
 
 <style>
-  .about { position: relative; overflow: hidden; }
-  .about-circle-1 { top: -60px; right: 8%; width: 200px; height: 200px; }
-  .about-circle-2 { bottom: 10%; left: -70px; width: 260px; height: 260px; }
-  .about .container { position: relative; z-index: 1; }
-
-  .about-content { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3.5rem; align-items: center; margin-bottom: 3.5rem; }
-  .about-text p { font-size: 1.05rem; }
-  .about-text p + p { margin-top: 1rem; }
-
-  .about-quote {
-    margin: 1.5rem 0 0;
-    padding-left: 1.25rem;
-    border-left: 3px solid var(--color-accent);
-    font-style: italic;
-    color: var(--color-text-secondary);
+  /* ── HERO ── */
+  .about-hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
   }
-
-  .about-stats { display: flex; gap: 2rem; list-style: none; margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
-  .about-stats strong { display: block; font-size: 1.9rem; font-weight: 800; color: var(--color-accent); }
-  .about-stats span { color: var(--color-text-secondary); font-size: 0.85rem; }
-
-  .about-photo { position: relative; margin: 0; }
-  .about-photo img {
-    border-radius: 10px;
-    width: 100%;
-    display: block;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    transform: rotate(-1.5deg);
-    box-shadow: 0 24px 48px rgba(2, 33, 121, 0.18);
-    transition: transform 0.35s ease;
-  }
-  .about-photo:hover img { transform: rotate(0deg) scale(1.02); }
-  .about-photo-badge {
+  .about-hero-bg {
     position: absolute;
-    bottom: -16px;
-    left: -16px;
-    background: var(--color-accent);
+    inset: 0;
+    z-index: 0;
+  }
+  .about-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(8,18,36,0.92) 55%, rgba(8,18,36,0.45) 100%);
+  }
+  .about-hero-inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
+    width: 100%;
+    text-align: left;
+  }
+  .about-hero-text {
+    max-width: 620px;
+    text-align: left;
+  }
+  .about-hero-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(126,200,240,0.9);
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .about-hero-title {
+    font-size: clamp(1.9rem, 4vw, 3rem);
     color: #fff;
-    font-size: 0.8rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+  .about-hero-accent { color: #7EC8F0; }
+  .about-hero-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+  .about-hero-metrics {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .about-hero-metrics li { display: flex; flex-direction: column; gap: 0.2rem; }
+  .about-hero-metrics strong {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #7EC8F0;
+    line-height: 1;
+  }
+  .about-hero-metrics span {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── TIMELINE ── */
+  .about-timeline { background: var(--color-bg); }
+  .about-timeline h2 { margin-bottom: 3rem; }
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: relative;
+    gap: 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background: var(--color-border);
+    z-index: 0;
+  }
+  /* Progress line that grows with the animation */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    height: 2px;
+    background: var(--color-accent);
+    z-index: 0;
+    width: var(--tl-progress, 0%);
+    transition: width 0.65s cubic-bezier(0.22,1,0.36,1);
+  }
+  .tl-item { position: relative; padding: 0 0.75rem; }
+  .tl-dot-wrap {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+  .tl-dot {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 2.5px solid var(--color-border);
+    transition: border-color 0.4s, background 0.4s, box-shadow 0.4s, transform 0.4s;
+  }
+  .tl-item.tl-active .tl-dot {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 5px rgba(126,200,240,0.22);
+    transform: scale(1.35);
+  }
+  .tl-item.tl-done .tl-dot {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  .tl-item:hover .tl-dot { border-color: var(--color-accent); }
+  .tl-year {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+    transition: color 0.3s, font-size 0.3s;
+  }
+  .tl-item.tl-active .tl-year {
+    color: var(--color-accent);
+    font-size: 0.88rem;
+  }
+  .tl-label {
+    font-size: 0.9rem;
     font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    box-shadow: 0 10px 20px rgba(2, 33, 121, 0.25);
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+    transition: color 0.3s;
+  }
+  .tl-item.tl-active .tl-label { color: var(--color-accent); }
+  .tl-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+  }
+  .tl-item.tl-active .tl-desc { opacity: 1; }
+  .tl-content {
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+    transition: background 0.4s;
+  }
+  .tl-item.tl-active .tl-content {
+    background: rgba(126,200,240,0.07);
   }
 
-  .about-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 4rem; }
-  .about-pillars article {
-    padding: 1.75rem 1.5rem;
+  /* ── MISSION & VISION ── */
+  .about-mv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 380px;
+  }
+  .mv-panel { padding: 4rem 3.5rem; display: flex; flex-direction: column; justify-content: center; }
+  .mv-dark {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .mv-dark h2 {
+    color: #fff;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    margin-bottom: 1.5rem;
+  }
+  .mv-dark blockquote {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    border-left: 3px solid #7EC8F0;
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  .eyebrow--light { color: rgba(126,200,240,0.85); }
+
+  .mv-proof-list {
+    list-style: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .mv-proof-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.5;
+  }
+  .mv-proof-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(126,200,240,0.18);
+    color: #7EC8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .mv-light { background: var(--color-bg-secondary); }
+  .mv-vision-stack { display: flex; flex-direction: column; gap: 1.5rem; }
+  .mv-vision-stack h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-text); }
+  .mv-vision-stack p { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7; }
+  .mv-divider {
+    height: 1px;
+    background: var(--color-border);
+  }
+
+  /* ── PAYS ── */
+  .about-countries { background: var(--color-bg); }
+  .countries-head { margin-bottom: 2.5rem; max-width: 640px; }
+  .countries-head h2 { margin-bottom: 1rem; }
+  .countries-sub { font-size: 1rem; color: var(--color-text-secondary); line-height: 1.7; }
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    list-style: none;
+  }
+  .country-card {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1.1rem 1.25rem;
     border: 1px solid var(--color-border);
     border-radius: 10px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    background: var(--color-card-bg);
+    transition: border-color 0.25s, transform 0.25s;
   }
-  .about-pillars article:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 32px rgba(2, 33, 121, 0.1);
+  .country-card:hover {
     border-color: var(--color-accent);
+    transform: translateY(-3px);
   }
-  .pillar-label { display: block; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-accent); }
+  .country-flag-img {
+    width: 32px;
+    height: 22px;
+    object-fit: cover;
+    border-radius: 3px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  }
+  .country-name { display: block; font-size: 0.95rem; font-weight: 600; color: var(--color-text); }
+  .country-city { display: block; font-size: 0.8rem; color: var(--color-text-secondary); margin-top: 0.1rem; }
 
-  .values-title { margin-bottom: 1.5rem; }
-  .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; list-style: none; }
-  .value-item {
-    padding: 1.75rem 1.5rem;
+  /* ── PARTENAIRES ── */
+  .about-partners { background: var(--color-bg-secondary); }
+  .partners-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+  }
+  .partners-count {
+    color: var(--color-accent);
+    font-size: clamp(1.85rem, 4vw, 2.6rem);
+    font-weight: 800;
+  }
+  .partners-desc { font-size: 1rem; color: var(--color-text-secondary); line-height: 1.75; padding-top: 0.5rem; }
+  .partners-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+  .partner-logo-card {
+    background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 10px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    transition: border-color 0.25s, box-shadow 0.25s;
   }
-  .value-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 32px rgba(2, 33, 121, 0.1);
+  .partner-logo-card:hover {
     border-color: var(--color-accent);
+    box-shadow: 0 6px 20px rgba(2,33,121,0.08);
   }
-  .value-num { color: var(--color-text-secondary); font-size: 0.9rem; opacity: 0.6; }
-  .value-item h4 { margin: 0.5rem 0 0.4rem; }
+  .partner-logo-card img {
+    max-width: 100%;
+    max-height: 48px;
+    object-fit: contain;
+    display: block;
+  }
 
-  /* staggered entrance */
-  .about-pillars article:nth-child(2) { transition-delay: 0.08s; }
-  .about-pillars article:nth-child(3) { transition-delay: 0.16s; }
-  .value-item:nth-child(2) { transition-delay: 0.06s; }
-  .value-item:nth-child(3) { transition-delay: 0.12s; }
-  .value-item:nth-child(4) { transition-delay: 0.18s; }
+  /* ── VALEURS ── */
+  .about-values { background: var(--color-bg); }
+  .about-values h2 { margin-bottom: 2rem; }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    list-style: none;
+  }
+  .value-card {
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-card-bg);
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  }
+  .value-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(2,33,121,0.09);
+  }
+  .value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(126,200,240,0.1);
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+  }
+  .value-card h3 { font-size: 1.05rem; margin-bottom: 0.6rem; color: var(--color-text); }
+  .value-card p { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.65; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1100px) {
+    .timeline { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .timeline::before { display: none; }
+    .tl-item { display: grid; grid-template-columns: 14px 1fr; gap: 0 1rem; align-items: start; padding: 0; }
+    .tl-dot-wrap { padding-top: 3px; }
+    .partners-logos { grid-template-columns: repeat(5, 1fr); }
+  }
 
   @media (max-width: 900px) {
-    .about-content { grid-template-columns: 1fr; }
-    .about-photo { order: -1; }
-    .about-pillars, .values-grid { grid-template-columns: 1fr; }
-    .about-stats { flex-wrap: wrap; gap: 1.5rem; }
+    .about-hero-metrics { gap: 1.5rem; flex-wrap: wrap; }
+    .about-mv { grid-template-columns: 1fr; }
+    .mv-panel { padding: 3rem 2rem; }
+    .countries-grid { grid-template-columns: repeat(2, 1fr); }
+    .partners-head { grid-template-columns: 1fr; gap: 1rem; }
+    .partners-logos { grid-template-columns: repeat(3, 1fr); }
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .timeline { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .about-hero-inner { padding-top: 3.5rem; padding-bottom: 3rem; max-width: 100%; }
+    .about-hero-title { font-size: clamp(1.75rem, 6vw, 2.2rem); }
+    .about-hero-metrics { gap: 1.25rem; }
+    .about-hero-metrics strong { font-size: 1.6rem; }
+    .timeline { grid-template-columns: 1fr; gap: 1.5rem; }
+    .tl-item { display: grid; grid-template-columns: 14px 1fr; gap: 0 1rem; align-items: start; }
+    .tl-dot-wrap { padding-top: 3px; }
+    .partners-logos { grid-template-columns: repeat(2, 1fr); }
+    .values-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .countries-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  }
+
+  @media (max-width: 480px) {
+    .about-hero-metrics { gap: 1rem; }
+    .about-hero-metrics strong { font-size: 1.4rem; }
+    .countries-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: 1fr; }
+    .partners-logos { grid-template-columns: repeat(2, 1fr); }
+    .mv-panel { padding: 2.5rem 1.25rem; }
   }
 </style>
 
-<script is:inline src="/scripts/counter.js"></script>
+<script is:inline>
+(function () {
+  /* ── Count-up animation ── */
+  function parseMetric(raw) {
+    var prefix = raw.match(/^[^0-9]*/)[0];
+    var suffix = raw.match(/[^0-9]*$/)[0];
+    var num = parseFloat(raw.replace(/[^0-9.]/g, ''));
+    return { prefix: prefix, suffix: suffix, num: isNaN(num) ? 0 : num };
+  }
+  function animateCount(el) {
+    var raw = el.getAttribute('data-value') || el.textContent;
+    var p = parseMetric(raw);
+    var duration = 1800; var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = p.prefix + Math.round(ease * p.num) + p.suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var countObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { animateCount(entry.target); countObs.unobserve(entry.target); }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.metric-count').forEach(function (el) { countObs.observe(el); });
+
+  /* ── Timeline highlight animation ── */
+  var tlItems = Array.prototype.slice.call(document.querySelectorAll('.tl-item'));
+  var tlLine = document.querySelector('.timeline');
+  if (!tlItems.length) return;
+
+  var tlIdx = 0;
+  var tlTimer = null;
+  var tlStarted = false;
+
+  function setActiveTl(i) {
+    tlItems.forEach(function (el, idx) {
+      el.classList.remove('tl-active');
+      if (idx < i) el.classList.add('tl-done');
+      else el.classList.remove('tl-done');
+    });
+    tlItems[i].classList.add('tl-active');
+    tlIdx = i;
+    /* animate progress line width */
+    if (tlLine) {
+      var pct = tlItems.length > 1 ? (i / (tlItems.length - 1)) * 100 : 100;
+      tlLine.style.setProperty('--tl-progress', pct + '%');
+    }
+  }
+
+  function startTl() {
+    if (tlTimer) return;
+    setActiveTl(0);
+    tlTimer = setInterval(function () {
+      var next = (tlIdx + 1) % tlItems.length;
+      setActiveTl(next);
+    }, 2600);
+  }
+
+  /* Start when timeline enters viewport */
+  var tlObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting && !tlStarted) {
+        tlStarted = true;
+        startTl();
+        tlObs.disconnect();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  if (tlLine) tlObs.observe(tlLine);
+})();
+</script>
