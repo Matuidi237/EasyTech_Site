@@ -306,12 +306,38 @@ const t = useTranslations(lang);
     });
   }
 
-  prev.addEventListener('click', function() { if (idx > 0) { idx--; update(); } });
-  next.addEventListener('click', function() { if (idx < maxIndex) { idx++; update(); } });
+  var autoTimer = null;
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(function() {
+      idx = idx >= maxIndex ? 0 : idx + 1;
+      update();
+    }, 3200);
+  }
+
+  function stopAuto() {
+    if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+  }
+
+  function goTo(n) { idx = n; update(); stopAuto(); startAuto(); }
+
+  prev.addEventListener('click', function() { if (idx > 0) goTo(idx - 1); });
+  next.addEventListener('click', function() { if (idx < maxIndex) goTo(idx + 1); });
   dotsEl.addEventListener('click', function(e) {
     var d = e.target.closest('.pc-dot');
-    if (d) { idx = +d.dataset.i; update(); }
+    if (d) goTo(+d.dataset.i);
   });
+
+  /* Pause quand l'utilisateur survole ou touche le carrousel */
+  var viewport = document.getElementById('platformsGrid').closest('.pc-outer');
+  if (viewport) {
+    viewport.addEventListener('mouseenter', stopAuto);
+    viewport.addEventListener('mouseleave', startAuto);
+    viewport.addEventListener('touchstart', stopAuto, { passive: true });
+    viewport.addEventListener('touchend', startAuto, { passive: true });
+  }
+
   window.addEventListener('resize', function() {
     visible = getVisible();
     maxIndex = Math.max(0, total - visible);
@@ -319,6 +345,12 @@ const t = useTranslations(lang);
     update();
   });
 
+  /* Pause si l'onglet est caché */
+  document.addEventListener('visibilitychange', function() {
+    document.hidden ? stopAuto() : startAuto();
+  });
+
   update();
+  startAuto();
 })();
 </script>
