@@ -6,6 +6,8 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
+const isEn = lang === "en";
+
 const socials = [
   {
     name: "LinkedIn",
@@ -33,18 +35,79 @@ const socials = [
     path: "M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z"
   }
 ];
+
+const offices = [
+  {
+    code: "cm",
+    country: isEn ? "Cameroon" : "Cameroun",
+    city: "Douala",
+    address: "B.P 2867 Douala",
+    phone: null,
+  },
+  {
+    code: "td",
+    country: isEn ? "Chad" : "Tchad",
+    city: "N'Djamena",
+    address: "Immeuble 42 Yantar",
+    phone: "+235 90 82 38 83",
+  },
+  {
+    code: "ci",
+    country: isEn ? "Côte d'Ivoire" : "Côte d'Ivoire",
+    city: "Abidjan",
+    address: "211 Rue Jardin Cocody",
+    phone: "+225 27 222 895 94",
+  },
+  {
+    code: "sn",
+    country: "Sénégal",
+    city: "Dakar",
+    address: "10137 VDN Villa Sacré Cœur 3",
+    phone: "+221 78 897 29 80",
+  },
+  {
+    code: "cd",
+    country: isEn ? "DR Congo" : "RD Congo",
+    city: "Kinshasa",
+    address: "N° 12 Av. de la paix, Nlle galerie présidentielle",
+    phone: "+243 83 55 70 495",
+  },
+  {
+    code: "cg",
+    country: "Congo",
+    city: "Brazzaville",
+    address: "Face Banque Postale du Congo",
+    phone: "+242 69 73 69 92",
+  },
+  {
+    code: "ng",
+    country: "Nigeria",
+    city: "Lagos",
+    address: "Ikoyi, Lagos 100243",
+    phone: "+234 81 061 635 91",
+  },
+  {
+    code: "ke",
+    country: "Kenya",
+    city: "Nairobi",
+    address: "17th Floor, Jkuat Towers",
+    phone: "+254 794 907 222",
+  },
+];
 ---
 
 <footer class="site-footer" role="contentinfo">
   <div class="circle-deco circle-fill footer-circle-1" aria-hidden="true"></div>
   <div class="circle-deco footer-circle-2" aria-hidden="true"></div>
 
-  <div class="container footer-grid">
+  <div class="container footer-top">
+
+    <!-- Brand -->
     <div class="footer-brand">
       <a href={`/${lang}/`} class="footer-logo">
         <img src="/images/brand/logo-white.png" alt="EasyTech Group" class="footer-logo-img" />
       </a>
-      <p>{t.footer.tagline}</p>
+      <p class="footer-tagline">{t.footer.tagline}</p>
       <ul class="social-links">
         {socials.map((s) => (
           <li>
@@ -56,9 +119,13 @@ const socials = [
       </ul>
     </div>
 
-    <div class="footer-col">
-      <h4>{t.footer.navTitle}</h4>
-      <ul>
+    <!-- Nav -->
+    <div class="footer-nav footer-accordion">
+      <button class="footer-col-title footer-toggle" aria-expanded="false" aria-controls="footer-nav-list">
+        {t.footer.navTitle}
+        <svg class="toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <ul id="footer-nav-list" class="footer-collapsible">
         <li><a href={`/${lang}/`}>{t.nav.home}</a></li>
         <li><a href={`/${lang}/about`}>{t.nav.about}</a></li>
         <li><a href={`/${lang}/services`}>{t.nav.services}</a></li>
@@ -68,34 +135,40 @@ const socials = [
       </ul>
     </div>
 
-    <div class="footer-col">
-      <h4>{t.footer.contactTitle}</h4>
-      <address>
-        <a href="mailto:info@easytechgroup.net">info@easytechgroup.net</a>
-        <span>B.P 2867 Douala, Cameroun</span>
-      </address>
-      <div class="footer-flags" aria-label="Pays de présence">
-        {[
-          { code: "cm", name: "Cameroun" },
-          { code: "td", name: "Tchad" },
-          { code: "ci", name: "Côte d'Ivoire" },
-          { code: "sn", name: "Sénégal" },
-          { code: "cd", name: "RD Congo" },
-          { code: "cg", name: "Congo" },
-          { code: "ng", name: "Nigeria" },
-          { code: "ke", name: "Kenya" },
-        ].map(({ code, name }) => (
-          <img
-            src={`https://flagcdn.com/24x18/${code}.png`}
-            width="24"
-            height="18"
-            alt={name}
-            title={name}
-            class="flag-img"
-          />
+    <!-- Offices -->
+    <div class="footer-offices footer-accordion">
+      <button class="footer-col-title footer-toggle" aria-expanded="false" aria-controls="footer-offices-list">
+        {isEn ? "Our offices" : "Nos bureaux"}
+        <svg class="toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div id="footer-offices-list" class="footer-collapsible">
+      <a href="mailto:info@easytechgroup.net" class="footer-email">info@easytechgroup.net</a>
+      <div class="offices-grid" role="list" aria-label={isEn ? "Offices by country" : "Bureaux par pays"}>
+        {offices.map((o) => (
+          <address class="office-card" role="listitem">
+            <span class="office-header">
+              <img
+                src={`https://flagcdn.com/w40/${o.code}.png`}
+                srcset={`https://flagcdn.com/w80/${o.code}.png 2x`}
+                width="20"
+                height="14"
+                alt={o.country}
+                class="office-flag"
+                loading="lazy"
+              />
+              <strong class="office-country">{o.country}</strong>
+              <span class="office-city">· {o.city}</span>
+            </span>
+            <span class="office-address">{o.address}</span>
+            {o.phone && (
+              <a href={`tel:${o.phone.replace(/\s/g, '')}`} class="office-phone">{o.phone}</a>
+            )}
+          </address>
         ))}
       </div>
+      </div>
     </div>
+
   </div>
 
   <div class="container footer-bottom">
@@ -105,51 +178,261 @@ const socials = [
 </footer>
 
 <style>
-  .site-footer { position: relative; overflow: hidden; padding: 4rem 0 1.5rem; margin-top: 2rem; }
+  .site-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0 1.5rem;
+    margin-top: 2rem;
+  }
   .footer-circle-1 { top: -80px; left: -60px; width: 220px; height: 220px; color: #fff; opacity: 0.06; }
   .footer-circle-2 { bottom: -60px; right: 6%; width: 170px; height: 170px; color: #fff; opacity: 0.1; }
 
-  .footer-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 3rem; align-items: start; }
+  /* ── Top grid : brand | nav | offices ── */
+  .footer-top {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 0.75fr 2.4fr;
+    gap: 3rem;
+    align-items: start;
+  }
 
-  .footer-brand { padding-right: 1rem; }
-  .footer-logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-  .footer-logo img { height: 52px; width: auto; max-width: 180px; object-fit: contain; display: block; }
-  .footer-brand p { max-width: 280px; margin-bottom: 1.5rem; }
+  /* ── Brand ── */
+  .footer-brand { padding-right: 0.5rem; }
+  .footer-logo { display: flex; align-items: center; margin-bottom: 1.1rem; }
+  .footer-logo-img { height: 52px; width: auto; max-width: 180px; object-fit: contain; display: block; }
+  .footer-tagline { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 1.5rem; }
 
-  .social-links { display: flex; gap: 0.65rem; list-style: none; }
+  .social-links { display: flex; gap: 0.6rem; list-style: none; flex-wrap: wrap; }
   .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
     background: rgba(255,255,255,0.08);
     color: #fff;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s, transform 0.2s;
   }
   .social-links a:hover { background: var(--color-accent); transform: translateY(-2px); }
 
-  .footer-col h4 { color: #fff; margin-bottom: 1.1rem; font-size: 1rem; position: relative; padding-bottom: 0.6rem; }
-  .footer-col h4::after { content: ""; position: absolute; left: 0; bottom: 0; width: 28px; height: 2px; background: var(--color-accent-light); }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-  .footer-col a, .footer-col address, .footer-brand p { color: rgba(255,255,255,0.7); }
-  .footer-col a:hover { color: #fff; }
-  .footer-col address { display: flex; flex-direction: column; gap: 0.65rem; font-style: normal; }
-  .footer-flags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; align-items: center; }
-  .flag-img { border-radius: 2px; display: block; }
+  /* ── Shared column title ── */
+  .footer-col-title {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+    position: relative;
+  }
+  .footer-col-title::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 28px; height: 2px;
+    background: var(--color-accent-light);
+  }
 
-  .footer-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.85rem; color: rgba(255,255,255,0.55); }
-  .footer-bottom a { color: rgba(255,255,255,0.55); }
+  /* ── Accordion toggle (mobile only, button resets) ── */
+  .footer-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: inherit;
+  }
+  .toggle-icon {
+    color: rgba(255,255,255,0.5);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    display: none; /* hidden on desktop */
+  }
+  .footer-collapsible { overflow: hidden; }
+  /* On desktop: always visible, no toggle behaviour */
+  @media (min-width: 601px) {
+    .footer-toggle { pointer-events: none; cursor: default; }
+    .footer-collapsible { display: block !important; max-height: none !important; }
+  }
+
+  /* ── Nav ── */
+  .footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-nav a { font-size: 0.9rem; color: rgba(255,255,255,0.68); transition: color 0.2s; }
+  .footer-nav a:hover { color: #fff; }
+
+  /* ── Offices ── */
+  .footer-email {
+    display: inline-block;
+    font-size: 0.88rem;
+    color: rgba(126,200,240,0.9);
+    margin-bottom: 1.25rem;
+    transition: color 0.2s;
+  }
+  .footer-email:hover { color: #fff; }
+
+  .offices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .office-card {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.18rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.09);
+    background: rgba(255,255,255,0.04);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .office-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(126,200,240,0.3);
+  }
+
+  .office-header {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.15rem;
+  }
+  .office-flag {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .office-country {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .office-city {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    white-space: nowrap;
+  }
+  .office-address {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.4;
+  }
+  .office-phone {
+    font-size: 0.78rem;
+    color: rgba(126,200,240,0.8);
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+  .office-phone:hover { color: #7EC8F0; }
+
+  /* ── Bottom bar ── */
+  .footer-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.83rem;
+    color: rgba(255,255,255,0.5);
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
   .footer-bottom a:hover { color: #fff; }
 
-  @media (max-width: 900px) {
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-    .footer-brand { grid-column: 1 / -1; }
+  /* ── Responsive ── */
+  @media (max-width: 1100px) {
+    .footer-top { grid-template-columns: 1fr 0.7fr 2fr; gap: 2rem; }
   }
 
-  @media (max-width: 560px) {
-    .footer-grid { grid-template-columns: 1fr; }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem 2.5rem; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-offices { grid-column: 1 / -1; }
+    .offices-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .footer-top { grid-template-columns: 1fr; gap: 0; }
+    .footer-brand { grid-column: unset; margin-bottom: 1.5rem; }
+    .footer-offices { grid-column: unset; }
+    .offices-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; }
+
+    /* Accordion on mobile */
+    .footer-accordion {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem 0;
+    }
+    .footer-toggle { pointer-events: auto; cursor: pointer; }
+    .toggle-icon { display: block; }
+    .footer-col-title { margin-bottom: 0; }
+    .footer-col-title::after { display: none; }
+
+    .footer-collapsible {
+      max-height: 0;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
   }
 </style>
+
+<script is:inline>
+(function () {
+  function isMobile() { return window.innerWidth <= 600; }
+
+  function initAccordion() {
+    document.querySelectorAll('.footer-toggle').forEach(function (btn) {
+      var targetId = btn.getAttribute('aria-controls');
+      var panel = document.getElementById(targetId);
+      if (!panel) return;
+
+      /* Set initial closed state via inline style on mobile */
+      if (isMobile()) {
+        panel.style.maxHeight = '0px';
+        panel.style.opacity = '0';
+        panel.style.overflow = 'hidden';
+        panel.style.transition = 'max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease';
+        panel.style.paddingTop = '0';
+      }
+
+      btn.addEventListener('click', function () {
+        if (!isMobile()) return;
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+        if (isOpen) {
+          /* Close */
+          btn.setAttribute('aria-expanded', 'false');
+          panel.style.maxHeight = '0px';
+          panel.style.opacity = '0';
+          panel.style.paddingTop = '0';
+          var icon = btn.querySelector('.toggle-icon');
+          if (icon) icon.style.transform = '';
+        } else {
+          /* Open */
+          btn.setAttribute('aria-expanded', 'true');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.style.opacity = '1';
+          panel.style.paddingTop = '0.85rem';
+          var icon = btn.querySelector('.toggle-icon');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAccordion);
+  } else {
+    initAccordion();
+  }
+})();
+</script>
