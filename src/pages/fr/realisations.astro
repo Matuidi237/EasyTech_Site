@@ -1,8 +1,7 @@
-﻿---
+---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/layout/Header.astro";
 import Footer from "../../components/layout/Footer.astro";
-import Realisations from "../../components/sections/Realisations.astro";
 import ChatbotWidget from "../../components/chatbot/ChatbotWidget.astro";
 
 const lang = "fr";
@@ -10,13 +9,114 @@ const lang = "fr";
 
 <BaseLayout
   lang={lang}
-  title="Nos réalisations — EasyTech Group"
-  description="Découvrez les plateformes Moodle conçues et déployées par EasyTech Group au Cameroun et en Afrique centrale : Bouka Creativ' Learning, Training To Rise et Erfolg Zentrum."
+  title="Nos réalisations — EasyTech Group SA"
+  description="Découvrez prochainement les projets et déploiements réalisés par EasyTech Group SA en Afrique : infrastructure réseau, cybersécurité, équipements et logiciels."
 >
   <Header lang={lang} />
   <main id="main-content">
-    <Realisations lang={lang} />
+    <section class="coming-soon" aria-labelledby="cs-title">
+      <div class="cs-bg" aria-hidden="true"></div>
+      <div class="container cs-inner">
+        <p class="eyebrow cs-eyebrow">Nos réalisations</p>
+        <h1 id="cs-title" class="cs-title">Bientôt disponible</h1>
+        <p class="cs-sub">
+          Nous préparons une vitrine complète de nos projets — déploiements réseau, infrastructures sécurisées, équipements grands comptes et solutions logicielles — pour vous montrer concrètement ce qu'EasyTech Group SA réalise chaque jour en Afrique.
+        </p>
+        <div class="cs-badges" aria-label="Domaines couverts">
+          <span>Réseau & Infrastructure</span>
+          <span>Cybersécurité</span>
+          <span>Hardware & Serveurs</span>
+          <span>Logiciels & Licences</span>
+          <span>IoT & Mobilité</span>
+        </div>
+        <a href="/fr/contact" class="btn btn-primary cs-cta">Discuter de votre projet</a>
+      </div>
+    </section>
   </main>
   <Footer lang={lang} />
   <ChatbotWidget lang={lang} />
 </BaseLayout>
+
+<style>
+  .coming-soon {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+  }
+  .cs-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #081224 0%, #022179 55%, #0a1a40 100%);
+    z-index: 0;
+  }
+  .cs-bg::before {
+    content: "";
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(126,200,240,0.12) 0%, transparent 70%);
+    top: -120px; right: -80px;
+  }
+  .cs-bg::after {
+    content: "";
+    position: absolute;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(164,37,147,0.14) 0%, transparent 70%);
+    bottom: -60px; left: -60px;
+  }
+  .cs-inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 660px;
+    text-align: left;
+  }
+  .cs-eyebrow {
+    color: rgba(126,200,240,0.85);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .cs-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .cs-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+  .cs-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .cs-badges span {
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.25);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.07);
+  }
+  .cs-cta { display: inline-flex; }
+
+  @media (max-width: 600px) {
+    .cs-inner { padding-top: 4rem; padding-bottom: 4rem; }
+    .cs-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  }
+</style>
