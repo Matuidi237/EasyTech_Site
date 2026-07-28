@@ -1,13 +1,45 @@
-﻿{
-  "greeting": "👋 Bonjour ! Je suis l'assistant EasyTech. Choisissez un sujet ou posez votre question.",
+{
+  "greeting": "👋 Bonjour ! Je suis l'assistant EasyTech Group. Choisissez un sujet ou posez votre question.",
   "fallback": "Je n'ai pas bien compris votre question. Voici les sujets sur lesquels je peux vous aider :",
   "inputPlaceholder": "Écrivez votre question...",
   "topics": [
-    { "id": "delai", "label": "Délai de déploiement", "keywords": ["délai", "temps", "rapide", "combien de temps"], "answer": "Selon la complexité de votre projet, une plateforme peut être opérationnelle entre 2 et 6 semaines." },
-    { "id": "mobile", "label": "Compatibilité mobile", "keywords": ["mobile", "smartphone", "tablette", "téléphone"], "answer": "Oui, toutes nos plateformes sont conçues mobile-first, avec une faible consommation de données." },
-    { "id": "securite", "label": "Sécurité des données", "keywords": ["sécurité", "données", "protection", "rgpd"], "answer": "Vos données sont protégées : hébergement sécurisé, HTTPS, sauvegardes régulières et gestion stricte des accès." },
-    { "id": "tarifs", "label": "Tarifs", "keywords": ["prix", "tarif", "coût", "combien ça coûte"], "answer": "Chaque projet est unique : le tarif dépend du nombre d'apprenants et des fonctionnalités souhaitées. Réservez une démo gratuite pour recevoir un devis adapté." },
-    { "id": "integration", "label": "Intégration d'outils tiers", "keywords": ["intégration", "api", "outils", "tiers"], "answer": "Oui, nous pouvons connecter votre plateforme à vos outils existants (paiement, RH, visioconférence...)." },
-    { "id": "humain", "label": "Parler à un humain", "keywords": ["humain", "conseiller", "appeler", "rendez-vous"], "answer": "Avec plaisir ! Cliquez ci-dessous pour réserver une démonstration avec notre équipe.", "cta": { "label": "Demander une démo", "href": "#contact" } }
+    {
+      "id": "reseau",
+      "label": "Réseau & Infrastructure",
+      "keywords": ["réseau", "cisco", "switch", "routeur", "wifi", "lan", "vlan", "infrastructure"],
+      "answer": "Nous concevons et déployons des infrastructures réseau Cisco (switches, routeurs, Wi-Fi Meraki) pour les entreprises africaines. Chaque projet commence par un audit réseau gratuit."
+    },
+    {
+      "id": "securite",
+      "label": "Cybersécurité",
+      "keywords": ["sécurité", "cybersécurité", "firewall", "fortinet", "fortigate", "virus", "ransomware", "protection"],
+      "answer": "Partenaire Fortinet agréé, nous déployons des firewalls FortiGate, la protection des endpoints (FortiEDR) et la supervision des événements de sécurité (FortiSIEM) adaptés à votre taille."
+    },
+    {
+      "id": "microsoft",
+      "label": "Microsoft 365 & Windows Server",
+      "keywords": ["microsoft", "365", "office", "teams", "windows", "server", "azure", "licences"],
+      "answer": "Revendeur Microsoft agréé, nous vous aidons à choisir le bon plan Microsoft 365, à migrer votre messagerie et vos données, et à déployer Windows Server dans votre infrastructure."
+    },
+    {
+      "id": "pays",
+      "label": "Pays couverts",
+      "keywords": ["pays", "afrique", "cameroun", "gabon", "congo", "côte", "sénégal", "burkina", "mali", "tchad", "présent"],
+      "answer": "EasyTech Group intervient dans 8 pays africains : Cameroun, Gabon, Congo-Brazzaville, RDC, Côte d'Ivoire, Sénégal, Burkina Faso et Tchad."
+    },
+    {
+      "id": "devis",
+      "label": "Obtenir un devis",
+      "keywords": ["devis", "prix", "tarif", "coût", "budget", "combien"],
+      "answer": "Chaque projet est chiffré sur mesure selon vos équipements, le nombre de sites et les services souhaités. Contactez-nous pour un devis gratuit sous 48h.",
+      "cta": { "label": "Demander un devis", "href": "/fr/contact" }
+    },
+    {
+      "id": "humain",
+      "label": "Parler à un expert",
+      "keywords": ["humain", "expert", "ingénieur", "conseiller", "appeler", "rendez-vous", "contact"],
+      "answer": "Nos ingénieurs certifiés (CCNA, CCNP, NSE) sont disponibles pour répondre à vos questions techniques. Prenez contact directement.",
+      "cta": { "label": "Nous contacter", "href": "/fr/contact" }
+    }
   ]
 }

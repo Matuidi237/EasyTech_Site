@@ -1,13 +1,45 @@
-﻿{
-  "greeting": "👋 Hi! I'm the EasyTech assistant. Pick a topic or ask your question.",
+{
+  "greeting": "👋 Hi! I'm the EasyTech Group assistant. Pick a topic or ask your question.",
   "fallback": "I didn't quite understand. Here are the topics I can help with:",
   "inputPlaceholder": "Type your question...",
   "topics": [
-    { "id": "delai", "label": "Deployment time", "keywords": ["time", "deadline", "fast", "how long"], "answer": "Depending on project complexity, a platform can be operational within 2 to 6 weeks." },
-    { "id": "mobile", "label": "Mobile compatibility", "keywords": ["mobile", "smartphone", "tablet", "phone"], "answer": "Yes, all our platforms are mobile-first, with low data consumption." },
-    { "id": "securite", "label": "Data security", "keywords": ["security", "data", "protection", "gdpr"], "answer": "Your data is protected: secure hosting, HTTPS, regular backups and strict access management." },
-    { "id": "tarifs", "label": "Pricing", "keywords": ["price", "pricing", "cost", "how much"], "answer": "Every project is unique: pricing depends on the number of learners and desired features. Book a free demo to get a tailored quote." },
-    { "id": "integration", "label": "Third-party integration", "keywords": ["integration", "api", "tools", "third-party"], "answer": "Yes, we can connect your platform to your existing tools (payment, HR, video conferencing...)." },
-    { "id": "humain", "label": "Talk to a human", "keywords": ["human", "advisor", "call", "appointment"], "answer": "Happy to help! Click below to book a demo with our team.", "cta": { "label": "Request a demo", "href": "#contact" } }
+    {
+      "id": "reseau",
+      "label": "Network & Infrastructure",
+      "keywords": ["network", "cisco", "switch", "router", "wifi", "lan", "vlan", "infrastructure"],
+      "answer": "We design and deploy Cisco network infrastructures (switches, routers, Meraki Wi-Fi) for African organizations. Every project starts with a free network audit."
+    },
+    {
+      "id": "securite",
+      "label": "Cybersecurity",
+      "keywords": ["security", "cybersecurity", "firewall", "fortinet", "fortigate", "virus", "ransomware", "protection"],
+      "answer": "As an authorized Fortinet partner, we deploy FortiGate firewalls, endpoint protection (FortiEDR) and security event monitoring (FortiSIEM) tailored to your organization."
+    },
+    {
+      "id": "microsoft",
+      "label": "Microsoft 365 & Windows Server",
+      "keywords": ["microsoft", "365", "office", "teams", "windows", "server", "azure", "licenses"],
+      "answer": "As an authorized Microsoft reseller, we help you choose the right Microsoft 365 plan, migrate your email and data, and deploy Windows Server in your infrastructure."
+    },
+    {
+      "id": "pays",
+      "label": "Countries covered",
+      "keywords": ["country", "countries", "africa", "cameroon", "gabon", "congo", "ivory coast", "senegal", "burkina", "mali", "chad", "present"],
+      "answer": "EasyTech Group operates in 8 African countries: Cameroon, Gabon, Congo-Brazzaville, DRC, Ivory Coast, Senegal, Burkina Faso and Chad."
+    },
+    {
+      "id": "devis",
+      "label": "Get a quote",
+      "keywords": ["quote", "price", "pricing", "cost", "budget", "how much"],
+      "answer": "Every project is quoted based on your equipment, number of sites and required services. Contact us for a free quote within 48 hours.",
+      "cta": { "label": "Request a quote", "href": "/en/contact" }
+    },
+    {
+      "id": "humain",
+      "label": "Talk to an expert",
+      "keywords": ["human", "expert", "engineer", "advisor", "call", "appointment", "contact"],
+      "answer": "Our certified engineers (CCNA, CCNP, NSE) are available to answer your technical questions. Get in touch directly.",
+      "cta": { "label": "Contact us", "href": "/en/contact" }
+    }
   ]
 }
