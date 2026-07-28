@@ -1,7 +1,7 @@
 ﻿---
 title: "Pourquoi équiper votre réseau avec des équipements Cisco certifiés"
 description: "Switches, routeurs, Wi-Fi professionnel : comment une infrastructure réseau Cisco bien conçue améliore la performance, la fiabilité et la sécurité de votre entreprise en Afrique."
-publishDate: 2026-06-20
+publishDate: 2026-07-28
 category: "Conseils"
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
 lang: "fr"

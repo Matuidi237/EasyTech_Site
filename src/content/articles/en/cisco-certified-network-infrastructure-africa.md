@@ -1,7 +1,7 @@
 ﻿---
 title: "Why equip your network with certified Cisco equipment"
 description: "Switches, routers, professional Wi-Fi: how a well-designed Cisco network infrastructure improves the performance, reliability and security of your business across Africa."
-publishDate: 2026-06-20
+publishDate: 2026-07-28
 category: "Tips"
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
 lang: "en"
