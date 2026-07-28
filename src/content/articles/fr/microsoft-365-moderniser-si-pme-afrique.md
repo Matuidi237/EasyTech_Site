@@ -1,8 +1,9 @@
 ---
 title: "Microsoft 365 & Windows Server : moderniser votre SI sans tout reconstruire"
-description: "Comment adopter Microsoft 365 et Windows Server pour gagner en productivité, sécuriser vos données et réduire vos coûts IT — sans bouleverser l'existant."
+description: "Comment adopter Microsoft 365 et Windows Server pour gagner en productivité, sécuriser vos données et réduire vos coûts IT sans bouleverser l'existant."
 publishDate: 2026-04-08
 category: "Conseils"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
 lang: "fr"
 ---
 

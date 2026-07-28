@@ -3,10 +3,11 @@ title: "Enterprise cybersecurity: how Fortinet protects your infrastructure"
 description: "FortiGate firewalls, endpoint protection, advanced threat detection: why Fortinet solutions have become the cybersecurity reference for African enterprises."
 publishDate: 2026-05-15
 category: "Security"
+image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
 lang: "en"
 ---
 
-Cyberattacks against African organizations have increased significantly in recent years. Ransomware, targeted phishing, attacks on banking systems — no sector is spared. Faced with this reality, deploying robust cybersecurity is no longer optional: it is an operational requirement.
+Cyberattacks against African organizations have increased significantly in recent years. Ransomware, targeted phishing, attacks on banking systems: no sector is spared. Faced with this reality, deploying robust cybersecurity is no longer optional: it is an operational requirement.
 
 Fortinet is today one of the global leaders in enterprise cybersecurity. Its solutions cover the full threat spectrum, from perimeter firewalls to endpoint protection and incident detection and response.
 

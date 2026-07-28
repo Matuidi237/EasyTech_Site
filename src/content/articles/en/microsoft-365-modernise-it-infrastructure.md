@@ -1,8 +1,9 @@
 ---
 title: "Microsoft 365 & Windows Server: modernize your IT without starting from scratch"
-description: "How to adopt Microsoft 365 and Windows Server to boost productivity, secure your data and reduce IT costs — without disrupting what already works."
+description: "How to adopt Microsoft 365 and Windows Server to boost productivity, secure your data and reduce IT costs without disrupting what already works."
 publishDate: 2026-04-08
 category: "Tips"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
 lang: "en"
 ---
 
