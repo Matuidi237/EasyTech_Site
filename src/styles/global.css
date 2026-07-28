@@ -96,10 +96,10 @@ section { padding: 4rem 0; position: relative; }
 .btn:hover { transform: scale(1.02); }
 
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--color-primary);
   color: #fff;
 }
-.btn-primary:hover { background: var(--color-accent-light); box-shadow: 0 8px 20px rgba(164, 37, 147, 0.25); }
+.btn-primary:hover { background: #2d82bb; box-shadow: 0 8px 20px rgba(59, 151, 211, 0.35); }
 
 .btn-secondary {
   background: transparent;
