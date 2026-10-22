@@ -1,62 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a1a"/>
-      <stop offset="100%" style="stop-color:#2d0a0a"/>
+      <stop offset="0%" style="stop-color:#111111"/>
+      <stop offset="100%" style="stop-color:#1e0505"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="rl" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#DA291C"/>
-      <stop offset="100%" style="stop-color:#ff5533"/>
+      <stop offset="100%" style="stop-color:#DA291C;stop-opacity:0"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#DA291C" opacity="0.15"/>
+    </pattern>
   </defs>
-
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
-
-  <!-- Subtle grid pattern -->
-  <g opacity="0.06" stroke="#DA291C" stroke-width="1">
-    <line x1="0" y1="105" x2="1200" y2="105"/>
-    <line x1="0" y1="210" x2="1200" y2="210"/>
-    <line x1="0" y1="315" x2="1200" y2="315"/>
-    <line x1="0" y1="420" x2="1200" y2="420"/>
-    <line x1="0" y1="525" x2="1200" y2="525"/>
-    <line x1="150" y1="0" x2="150" y2="630"/>
-    <line x1="300" y1="0" x2="300" y2="630"/>
-    <line x1="450" y1="0" x2="450" y2="630"/>
-    <line x1="600" y1="0" x2="600" y2="630"/>
-    <line x1="750" y1="0" x2="750" y2="630"/>
-    <line x1="900" y1="0" x2="900" y2="630"/>
-    <line x1="1050" y1="0" x2="1050" y2="630"/>
-  </g>
-
-  <!-- Large decorative circle -->
-  <circle cx="980" cy="315" r="280" fill="none" stroke="#DA291C" stroke-width="1" opacity="0.15"/>
-  <circle cx="980" cy="315" r="200" fill="none" stroke="#DA291C" stroke-width="1" opacity="0.1"/>
-  <circle cx="980" cy="315" r="120" fill="#DA291C" opacity="0.08"/>
-
-  <!-- Shield icon (simplified) -->
-  <g transform="translate(870, 200)" opacity="0.25">
-    <path d="M110 20 L200 60 L200 150 C200 210 110 260 110 260 C110 260 20 210 20 150 L20 60 Z" fill="#DA291C"/>
-    <path d="M110 70 L160 90 L160 150 C160 185 110 210 110 210 C110 210 60 185 60 150 L60 90 Z" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
-  </g>
-
-  <!-- Red accent bar -->
-  <rect x="80" y="270" width="6" height="90" fill="url(#accent)" rx="3"/>
-
-  <!-- FORTINET logo text -->
-  <text x="110" y="345" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="88" fill="white" letter-spacing="-2" filter="url(#glow)">FORTINET</text>
-
-  <!-- Tagline -->
-  <text x="112" y="390" font-family="Arial, sans-serif" font-weight="400" font-size="22" fill="#DA291C" letter-spacing="6">CYBERSECURITY LEADER</text>
-
-  <!-- Bottom accent line -->
-  <rect x="80" y="420" width="520" height="3" fill="url(#accent)" rx="2" opacity="0.7"/>
-
-  <!-- Partner badge -->
-  <rect x="80" y="450" width="220" height="44" rx="4" fill="#DA291C" opacity="0.15" stroke="#DA291C" stroke-width="1"/>
-  <text x="190" y="478" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#DA291C" text-anchor="middle" letter-spacing="2">PARTNER CONTENT</text>
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <rect width="1200" height="480" fill="url(#dots)"/>
+  <circle cx="1050" cy="240" r="320" fill="none" stroke="#DA291C" stroke-width="1" opacity="0.12"/>
+  <circle cx="1050" cy="240" r="200" fill="none" stroke="#DA291C" stroke-width="1" opacity="0.08"/>
+  <circle cx="1050" cy="240" r="100" fill="#DA291C" opacity="0.06"/>
+  <rect x="78" y="155" width="5" height="170" fill="#DA291C" rx="2"/>
+  <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiIHk9IjAiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ4Ny42IDU1Ij48cGF0aCBkPSJNMjc5LjkgMTEuN1YwaDEzLjR2NTQuOGgtMTMuNFYxMS43ek0yMjAuOSAwaDUxLjd2MTEuOGgtMjQuM3Y0My4xSDIzNVYxMS44aC0xNC4xVjB6bTI2Ni43IDB2MTEuOGgtMjQuM3Y0My4xSDQ1MFYxMS44aC0xNC4xVjBoNTEuN3pNMCAwaDU4djExLjhIMTMuNHYxMS43aDM4djExLjhoLTM4djE5LjVIMFYwem0zNzQuNSAwaDU0djExLjhoLTQwLjZ2OS44aDMzLjN2MTEuOGgtMzMuM3Y5LjhoNDEuM1Y1NWgtNTQuN1Ywem0tMTAuMyAxNS41djM5LjNoLTEzLjRWMTUuNWMwLTIuMS0xLjYtMy43LTMuNy0zLjdoLTMwdjQzLjFoLTEzLjRWMGg0NWM4LjUgMCAxNS41IDcgMTUuNSAxNS41ek0yMDAuMyAwaC00NS43djU0LjhIMTY4VjM1LjNoMzBjMS42LjEgMi45IDEuNCAyLjkgM3YxNi42aDEzLjRWMzguMWMwLTIuOS0xLjYtNS40LTQtNi44IDIuOS0yLjcgNC43LTYuNiA0LjctMTAuOHYtNS44Yy4xLTguMS02LjUtMTQuNy0xNC43LTE0Ljd6bTEuNCAyMC41YzAgMS42LTEuMyAzLTMgM0gxNjhWMTEuOGgzMC43YzEuNiAwIDMgMS4zIDMgM3Y1Ljd6Ii8+PHBhdGggZD0iTTE0NC4yIDIwLjR2MTQuMkgxMjJWMjAuNGgyMi4yek05My45IDU0LjhIMTE2VjQwLjZIOTMuOXYxNC4yem01MC4zLTQyLjljMC02LjYtNS4zLTExLjktMTEuOS0xMS45aC0xMC4ydjE0LjJoMjIuMXYtMi4zek05My45IDB2MTQuMkgxMTZWMEg5My45ek02NS43IDIwLjR2MTQuMmgyMi4xVjIwLjRINjUuN3pNMTIyIDU0LjhoMTAuMmM2LjYgMCAxMS45LTUuMyAxMS45LTExLjl2LTIuM0gxMjJ2MTQuMnpNNjUuNyA0Mi45YzAgNi42IDUuMyAxMS45IDExLjkgMTEuOWgxMC4yVjQwLjZINjUuN3YyLjN6bTAtMzF2Mi4zaDIyLjFWMEg3Ny42QzcxIDAgNjUuNyA1LjMgNjUuNyAxMS45eiIgZmlsbD0iI2RhMjkxYyIvPjwvc3ZnPg==" x="100" y="195" width="550" height="62"/>
+  <rect x="85" y="290" width="650" height="2" fill="url(#rl)"/>
+  <text x="100" y="326" font-family="Arial, sans-serif" font-size="16" fill="#DA291C" letter-spacing="5" opacity="0.85">CYBERSECURITY &amp; NETWORK SECURITY LEADER</text>
 </svg>

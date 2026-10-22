@@ -1,66 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a1628"/>
-      <stop offset="100%" style="stop-color:#0d2545"/>
+      <stop offset="0%" style="stop-color:#071828"/>
+      <stop offset="100%" style="stop-color:#0a2035"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="bl" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#049FD9"/>
-      <stop offset="100%" style="stop-color:#00c8ff"/>
+      <stop offset="100%" style="stop-color:#049FD9;stop-opacity:0"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#049FD9" opacity="0.12"/>
+    </pattern>
   </defs>
-
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
-
-  <!-- Subtle grid pattern -->
-  <g opacity="0.05" stroke="#049FD9" stroke-width="1">
-    <line x1="0" y1="105" x2="1200" y2="105"/>
-    <line x1="0" y1="210" x2="1200" y2="210"/>
-    <line x1="0" y1="315" x2="1200" y2="315"/>
-    <line x1="0" y1="420" x2="1200" y2="420"/>
-    <line x1="0" y1="525" x2="1200" y2="525"/>
-    <line x1="150" y1="0" x2="150" y2="630"/>
-    <line x1="300" y1="0" x2="300" y2="630"/>
-    <line x1="450" y1="0" x2="450" y2="630"/>
-    <line x1="600" y1="0" x2="600" y2="630"/>
-    <line x1="750" y1="0" x2="750" y2="630"/>
-    <line x1="900" y1="0" x2="900" y2="630"/>
-    <line x1="1050" y1="0" x2="1050" y2="630"/>
-  </g>
-
-  <!-- Cisco bridge/wave icon (stylized) -->
-  <g transform="translate(780, 160)" opacity="0.2">
-    <!-- Cisco's iconic bridge silhouette: 6 bars of varying height -->
-    <rect x="0"   y="120" width="38" height="80"  rx="4" fill="#049FD9"/>
-    <rect x="50"  y="80"  width="38" height="120" rx="4" fill="#049FD9"/>
-    <rect x="100" y="40"  width="38" height="160" rx="4" fill="#049FD9"/>
-    <rect x="150" y="40"  width="38" height="160" rx="4" fill="#049FD9"/>
-    <rect x="200" y="80"  width="38" height="120" rx="4" fill="#049FD9"/>
-    <rect x="250" y="120" width="38" height="80"  rx="4" fill="#049FD9"/>
-  </g>
-
-  <!-- Large decorative circle -->
-  <circle cx="1000" cy="315" r="300" fill="none" stroke="#049FD9" stroke-width="1" opacity="0.12"/>
-  <circle cx="1000" cy="315" r="200" fill="none" stroke="#049FD9" stroke-width="1" opacity="0.08"/>
-
-  <!-- Blue accent bar -->
-  <rect x="80" y="270" width="6" height="90" fill="url(#accent)" rx="3"/>
-
-  <!-- CISCO logo text -->
-  <text x="110" y="345" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="108" fill="white" letter-spacing="-2" filter="url(#glow)">CISCO</text>
-
-  <!-- Tagline -->
-  <text x="112" y="390" font-family="Arial, sans-serif" font-weight="400" font-size="22" fill="#049FD9" letter-spacing="6">NETWORKING &amp; SECURITY</text>
-
-  <!-- Bottom accent line -->
-  <rect x="80" y="420" width="480" height="3" fill="url(#accent)" rx="2" opacity="0.7"/>
-
-  <!-- Partner badge -->
-  <rect x="80" y="450" width="220" height="44" rx="4" fill="#049FD9" opacity="0.15" stroke="#049FD9" stroke-width="1"/>
-  <text x="190" y="478" font-family="Arial, sans-serif" font-weight="700" font-size="15" fill="#049FD9" text-anchor="middle" letter-spacing="2">PARTNER CONTENT</text>
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <rect width="1200" height="480" fill="url(#dots)"/>
+  <circle cx="1060" cy="240" r="320" fill="none" stroke="#049FD9" stroke-width="1" opacity="0.1"/>
+  <circle cx="1060" cy="240" r="200" fill="none" stroke="#049FD9" stroke-width="1" opacity="0.07"/>
+  <circle cx="1060" cy="240" r="100" fill="#049FD9" opacity="0.05"/>
+  <rect x="78" y="140" width="5" height="200" fill="#049FD9" rx="2"/>
+  <image href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKICAgdmVyc2lvbj0iMS4xIgogICB3aWR0aD0iMjE2IgogICBoZWlnaHQ9IjExNCIKICAgZmlsbD0iIzA0OWZkOSIKICAgaWQ9InN2ZzI0Ij4KICA8cGF0aAogICAgIGQ9Im0gMTA2LjQ4LDc2LjIzOCBjIC0wLjI4MiwtMC4wNzcgLTQuNjIxLC0xLjE5NiAtOS4yMzIsLTEuMTk2IC04LjczLDAgLTEzLjk4Niw0LjcxNCAtMTMuOTg2LDExLjczNCAwLDYuMjE0IDQuMzk3LDkuMzEzIDkuNjc0LDEwLjk4IDAuNTg1LDAuMTkzIDEuNDQ3LDAuNDYzIDIuMDIxLDAuNjUzIDIuMzQ5LDAuNzM5IDQuMjI0LDEuODM3IDQuMjI0LDMuNzM5IDAsMi4xMjcgLTIuMTY3LDMuNTA0IC02Ljg3OCwzLjUwNCAtNC4xNCwwIC04LjEwOSwtMS4xODQgLTguOTQ1LC0xLjM5NSB2IDguNjM3IGMgMC40NjYsMC4wOTkgNS4xODMsMS4wMjUgMTAuMjIyLDEuMDI1IDcuMjQ4LDAgMTUuNTM5LC0zLjE2NyAxNS41MzksLTEyLjU5NSAwLC00LjU3MyAtMi44LC04Ljc4MyAtOC45NDcsLTEwLjczNyBMIDk3LjU1OSw4OS43NTUgQyA5Niw4OS4yNjMgOTMuMjE3LDg4LjQ2NiA5My4yMTcsODYuMTgxIGMgMCwtMS44MDUgMi4wNjIsLTMuMDc2IDUuODU5LC0zLjA3NiAzLjI3NiwwIDcuMjYzLDEuMTAxIDcuNDA0LDEuMTQ1IHogbSA4MC4wNDEsMTguMjQzIGMgMCw1LjQ2MSAtNC4xODMsOS44NzkgLTkuNzk2LDkuODc5IC01LjYxOSwwIC05Ljc5MSwtNC40MTggLTkuNzkxLC05Ljg3OSAwLC01LjQ1IDQuMTcyLC05Ljg3IDkuNzkxLC05Ljg3IDUuNjEzLDAgOS43OTYsNC40MiA5Ljc5Niw5Ljg3IG0gLTkuNzk2LC0xOS40MjcgYyAtMTEuNTQ0LDAgLTE5LjgyMyw4LjcwNyAtMTkuODIzLDE5LjQyNyAwLDEwLjczNyA4LjI3OSwxOS40MzggMTkuODIzLDE5LjQzOCAxMS41NDMsMCAxOS44MzQsLTguNzAxIDE5LjgzNCwtMTkuNDM4IDAsLTEwLjcyIC04LjI5MSwtMTkuNDI3IC0xOS44MzQsLTE5LjQyNyBNIDcwLjU2MSwxMTMuMjUxIEggNjEuMDg5IFYgNzUuNzE5IGggOS40NzIiCiAgICAgaWQ9InBhdGgxMCIgLz4KICA8cGF0aAogICAgIGQ9Im0gNDguMDcsNzYuMzk5IGMgLTAuODksLTAuMjY0IC00LjE4LC0xLjM0NSAtOC42MzYsLTEuMzQ1IC0xMS41MjYsMCAtMTkuOTg3LDguMjE4IC0xOS45ODcsMTkuNDI3IDAsMTIuMDkzIDkuMzQsMTkuNDM4IDE5Ljk4NywxOS40MzggNC4yMywwIDcuNDU5LC0xLjAwMiA4LjYzNiwtMS4zMzYgdiAtMTAuMDc1IGMgLTAuNDA3LDAuMjI2IC0zLjUwMywxLjk5MiAtNy45NTcsMS45OTIgLTYuMzEsMCAtMTAuMzgsLTQuNDQxIC0xMC4zOCwtMTAuMDE5IDAsLTUuNzQ4IDQuMjQ2LC0xMC4wMTEgMTAuMzgsLTEwLjAxMSA0LjUzLDAgNy41NzYsMS44MDUgNy45NTcsMi4wMDQiCiAgICAgaWQ9InBhdGgxMiIgLz4KICA8dXNlCiAgICAgeGxpbms6aHJlZj0iI3BhdGgxMiIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5OC44NikiCiAgICAgaWQ9InVzZTE0IiAvPgogIDxnCiAgICAgaWQ9ImcyMiI+CiAgICA8cGF0aAogICAgICAgZD0ibSA2MS4wNjEsNC43NTkgYyAwLC0yLjU4NyAtMi4xMTMsLTQuNjg1IC00LjcwMywtNC42ODUgLTIuNTg5LDAgLTQuNzAyLDIuMDk4IC00LjcwMiw0LjY4NSB2IDQ5Ljg0IGMgMCwyLjYwMiAyLjExMyw0LjY5OSA0LjcwMiw0LjY5OSAyLjU5LDAgNC43MDMsLTIuMDk3IDQuNzAzLC00LjY5OSB6IE0gMzUuMjMyLDIyLjQ1MSBjIDAsLTIuNTg2IC0yLjExMiwtNC42ODcgLTQuNzAyLC00LjY4NyAtMi41OSwwIC00LjcwMiwyLjEwMSAtNC43MDIsNC42ODcgdiAyMi43ODUgYyAwLDIuNjAxIDIuMTEyLDQuNjk5IDQuNzAyLDQuNjk5IDIuNTksMCA0LjcwMiwtMi4wOTggNC43MDIsLTQuNjk5IHogTSA5LjQwNCwzNS4zODMgQyA5LjQwNCwzMi43OTYgNy4yOTIsMzAuNjk5IDQuNzAyLDMwLjY5OSAyLjExNSwzMC42OTkgMCwzMi43OTYgMCwzNS4zODMgdiA5Ljg1MyBjIDAsMi42MDEgMi4xMTUsNC42OTkgNC43MDIsNC42OTkgMi41OSwwIDQuNzAyLC0yLjA5OCA0LjcwMiwtNC42OTkiCiAgICAgICBpZD0icGF0aDE2IiAvPgogICAgPHVzZQogICAgICAgeGxpbms6aHJlZj0iI3BhdGgxNiIKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KC0xLDAsMCwxLDExMi43MTcsMCkiCiAgICAgICBpZD0idXNlMTgiIC8+CiAgPC9nPgogIDx1c2UKICAgICB4bGluazpocmVmPSIjZzIyIgogICAgIHRyYW5zZm9ybT0ibWF0cml4KC0xLDAsMCwxLDIxNiwwKSIKICAgICBpZD0idXNlMjAiIC8+Cjwvc3ZnPgo=" x="100" y="155" width="500" height="170"/>
+  <rect x="85" y="352" width="650" height="2" fill="url(#bl)"/>
+  <text x="100" y="386" font-family="Arial, sans-serif" font-size="16" fill="#049FD9" letter-spacing="5" opacity="0.85">NETWORKING — SECURITY — COLLABORATION</text>
 </svg>
