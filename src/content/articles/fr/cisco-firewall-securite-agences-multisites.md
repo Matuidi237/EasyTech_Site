@@ -3,7 +3,7 @@ title: "Sécuriser vos agences multisites avec le Cisco Secure Firewall 200"
 description: "Avec la multiplication des bureaux régionaux et le recours croissant au cloud, la sécurité des agences devient un enjeu critique. La série Cisco Secure Firewall 200 répond à ces défis."
 publishDate: 2026-10-14
 category: "Sécurité"
-image: "/images/articles/cisco-branch-firewall-200.jpg"
+image: "/images/articles/banner-cisco.svg"
 lang: "fr"
 source: "Cisco Blogs"
 sourceUrl: "https://blogs.cisco.com/security/future-proofing-branch-firewall-security-for-the-ai-era"

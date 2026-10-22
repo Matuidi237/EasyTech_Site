@@ -3,7 +3,7 @@ title: "Phishing in the AI era: how African businesses must adapt"
 description: "AI-powered phishing attacks are becoming undetectable to the naked eye. Here is how to verify identity rather than message appearance to protect your organization."
 publishDate: 2026-10-22
 category: "Security"
-image: "/images/articles/fortinet-phishing-ai-era.jpg"
+image: "/images/articles/banner-fortinet.svg"
 lang: "en"
 source: "Fortinet Blog"
 sourceUrl: "https://www.fortinet.com/blog/industry-trends/think-before-you-click-phishing-in-the-ai-era"

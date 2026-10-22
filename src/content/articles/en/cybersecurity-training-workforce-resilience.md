@@ -3,7 +3,7 @@ title: "Cybersecurity training is becoming a strategic investment"
 description: "95% of executives say better awareness would reduce cyberattacks. How to turn mandatory training into a genuine resilience lever for your teams."
 publishDate: 2026-10-13
 category: "Tips"
-image: "/images/articles/fortinet-workforce-security-awareness.png"
+image: "/images/articles/banner-fortinet.svg"
 lang: "en"
 source: "Fortinet Blog"
 sourceUrl: "https://www.fortinet.com/blog/industry-trends/measuring-workforce-readiness-what-security-awareness-success-looks-like"
