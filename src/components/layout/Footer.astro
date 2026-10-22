@@ -163,6 +163,7 @@ const offices = [
             {o.phone && (
               <a href={`tel:${o.phone.replace(/\s/g, '')}`} class="office-phone">{o.phone}</a>
             )}
+            <a href="mailto:sales@easytechgroup.net" class="office-email-local">sales@easytechgroup.net</a>
           </address>
         ))}
       </div>
@@ -330,6 +331,14 @@ const offices = [
     text-decoration: none;
   }
   .office-phone:hover { color: #7EC8F0; }
+
+  .office-email-local {
+    font-size: 0.75rem;
+    color: rgba(126,200,240,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .office-email-local:hover { color: #7EC8F0; }
 
   /* ── Bottom bar ── */
   .footer-bottom {
