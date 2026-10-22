@@ -8,7 +8,9 @@ const articles = defineCollection({
     publishDate: z.date(),
     lang: z.enum(["fr", "en"]),
     image: z.string().optional(),
-    category: z.string().optional()
+    category: z.string().optional(),
+    source: z.string().optional(),
+    sourceUrl: z.string().url().optional()
   })
 });
 
