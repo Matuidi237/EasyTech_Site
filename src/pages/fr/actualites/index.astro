@@ -35,16 +35,16 @@ const fallbackGradient = "linear-gradient(135deg, #022179, #A42593)";
           {articles.map((article, i) => (
             <li class="article-card reveal" style={`transition-delay:${(i % 3) * 0.08}s`}>
               <a href={`/fr/actualites/${article.slug.replace(/^fr\//, "")}`}>
-                <div class="article-cover" style={article.data.image ? `background-image:url(${article.data.image})` : `background-image:${gradients[article.data.category ?? ""] ?? fallbackGradient}`}>
-                  {article.data.category && <span class="article-tag">{article.data.category}</span>}
-                </div>
                 <div class="article-body">
+                  {article.data.category && <span class="article-tag">{article.data.category}</span>}
                   <h2>{article.data.title}</h2>
                   <p>{article.data.description}</p>
                   <div class="article-meta">
                     <time>{article.data.publishDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}</time>
                     <span class="article-read">Lire l'article →</span>
                   </div>
+                </div>
+                <div class="article-cover" style={article.data.image ? `background-image:url(${article.data.image})` : `background-image:${gradients[article.data.category ?? ""] ?? fallbackGradient}`}>
                 </div>
               </a>
             </li>
@@ -78,24 +78,21 @@ const fallbackGradient = "linear-gradient(135deg, #022179, #A42593)";
   .article-card a { display: block; }
 
   .article-cover {
-    position: relative;
     height: 160px;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: flex-end;
-    padding: 0.85rem;
   }
   .article-tag {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: #fff;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     padding: 0.3rem 0.7rem;
     border-radius: 999px;
+    margin-bottom: 0.75rem;
   }
 
   .article-body { padding: 1.5rem; }
