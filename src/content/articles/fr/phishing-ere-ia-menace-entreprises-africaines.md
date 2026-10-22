@@ -3,7 +3,7 @@ title: "Phishing à l'ère de l'IA : comment les entreprises africaines doivent 
 description: "Les attaques de phishing dopées à l'IA deviennent indétectables à l'œil nu. Voici comment vérifier l'identité plutôt que la forme des messages pour protéger votre entreprise."
 publishDate: 2026-10-22
 category: "Sécurité"
-image: "/images/articles/banner-fortinet.svg"
+image: "/images/articles/article-phishing.jpg"
 lang: "fr"
 source: "Fortinet Blog"
 sourceUrl: "https://www.fortinet.com/blog/industry-trends/think-before-you-click-phishing-in-the-ai-era"

@@ -3,7 +3,7 @@ title: "La formation en cybersécurité devient un investissement stratégique"
 description: "95 % des dirigeants estiment qu'une meilleure sensibilisation réduirait les cyberattaques. Comment transformer la formation obligatoire en véritable levier de résilience pour vos équipes."
 publishDate: 2026-10-13
 category: "Conseils"
-image: "/images/articles/banner-fortinet.svg"
+image: "/images/articles/article-training.jpg"
 lang: "fr"
 source: "Fortinet Blog"
 sourceUrl: "https://www.fortinet.com/blog/industry-trends/measuring-workforce-readiness-what-security-awareness-success-looks-like"

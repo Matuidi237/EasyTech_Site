@@ -3,7 +3,7 @@ title: "Securing your multi-site branches with Cisco Secure Firewall 200"
 description: "With the proliferation of regional offices and growing cloud adoption, branch security is becoming critical. The Cisco Secure Firewall 200 Series addresses these challenges head-on."
 publishDate: 2026-10-14
 category: "Security"
-image: "/images/articles/banner-cisco.svg"
+image: "/images/articles/article-datacenter.jpg"
 lang: "en"
 source: "Cisco Blogs"
 sourceUrl: "https://blogs.cisco.com/security/future-proofing-branch-firewall-security-for-the-ai-era"
